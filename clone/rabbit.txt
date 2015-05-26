@@ -1,0 +1,662 @@
+#version: ccfinder 7.3.2
+#format: classwise
+#langspec: JAVA
+#option: -b 30
+#option: -e char
+#option: -k 30
+#option: -r abcdfikmnoprsuv
+#option: -c wfg
+#option: -y 
+#begin{file description}
+0.0	105	83	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\Cache.java
+0.1	45	8	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\CacheConfiguration.java
+0.2	52	43	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\CacheEntry.java
+0.3	25	35	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\CacheException.java
+0.4	63	129	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\FileData.java
+0.5	59	80	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\FiledHook.java
+0.6	85	200	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\FiledKey.java
+0.7	27	24	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\FileHandler.java
+0.8	27	33	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\MemoryHook.java
+0.9	34	59	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\MemoryKey.java
+0.10	739	2105	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\NCache.java
+0.11	131	240	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\NCacheData.java
+0.12	72	92	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\NCacheElementBase.java
+0.13	55	57	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\ncache\NCacheEntry.java
+0.14	51	118	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\utils\CacheConfigurationBase.java
+0.15	37	64	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\cache\utils\CacheUtils.java
+0.16	214	447	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\ClientBase.java
+0.17	46	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\ClientListener.java
+0.18	73	134	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\ClientListenerAdapter.java
+0.19	38	62	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\CountingClientBaseStopper.java
+0.20	94	221	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\FileSaver.java
+0.21	80	164	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\sample\Head.java
+0.22	15	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\sample\HeadResponseListener.java
+0.23	13	25	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\sample\LogHeadToSystemOut.java
+0.24	102	258	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\client\sample\WGet.java
+0.25	32	9	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\dns\DNSHandler.java
+0.26	45	124	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\dns\DNSJavaHandler.java
+0.27	23	50	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\dns\DNSSunHandler.java
+0.28	149	416	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\AccessFilter.java
+0.29	129	343	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\AdFilter.java
+0.30	23	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\authenticate\Authenticator.java
+0.31	52	83	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\authenticate\AuthUserInfo.java
+0.32	33	61	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\authenticate\PlainFileAuthenticator.java
+0.33	87	191	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\authenticate\SQLAuthenticator.java
+0.34	46	67	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\BackgroundFilter.java
+0.35	42	67	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\BlinkFilter.java
+0.36	62	136	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\BlockFilter.java
+0.37	118	326	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\BodyFilter.java
+0.38	59	115	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\DataSourceHelper.java
+0.39	126	192	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\DontCacheFilter.java
+0.40	77	127	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\DontFilterFilter.java
+0.41	53	52	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\HtmlFilter.java
+0.42	20	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\HtmlFilterFactory.java
+0.43	503	1529	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\HttpBaseFilter.java
+0.44	54	10	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\HttpFilter.java
+0.45	89	250	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\HttpSnoop.java
+0.46	42	11	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\IPAccessFilter.java
+0.47	42	66	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\LowresImageFilter.java
+0.48	74	229	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\NoGZipEncoding.java
+0.49	144	449	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\ProxyAuth.java
+0.50	60	139	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\RevalidateFilter.java
+0.51	65	177	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\ReverseProxy.java
+0.52	53	117	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\SetHeaderFilter.java
+0.53	54	88	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\SimpleTagFilter.java
+0.54	83	193	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\filter\SQLBlockFilter.java
+0.55	603	1609	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\BaseHandler.java
+0.56	81	217	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\convert\ExternalProcessConverter.java
+0.57	23	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\convert\ImageConverter.java
+0.58	140	387	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\convert\JavaImageConverter.java
+0.59	368	975	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\FilterHandler.java
+0.60	256	651	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\GZipHandler.java
+0.61	20	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\Handler.java
+0.62	41	11	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\HandlerFactory.java
+0.63	491	1283	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\ImageHandler.java
+0.64	103	122	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\handler\MultiPartHandler.java
+0.65	219	584	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\HtmlBlock.java
+0.66	17	23	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\HtmlEscapeUtils.java
+0.67	23	37	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\HtmlParseException.java
+0.68	565	1158	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\HtmlParser.java
+0.69	221	492	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\Tag.java
+0.70	193	480	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\TagType.java
+0.71	187	302	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\Token.java
+0.72	18	9	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\html\TokenType.java
+0.73	74	160	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\ContentRangeParser.java
+0.74	199	555	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\GeneralHeader.java
+0.75	92	178	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\Header.java
+0.76	132	316	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\HttpDateParser.java
+0.77	280	635	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\HttpHeader.java
+0.78	65	128	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\HttpHeaderWithContent.java
+0.79	49	86	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\MultipartHeader.java
+0.80	129	221	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\http\StatusCode.java
+0.81	16	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\AsyncListener.java
+0.82	19	23	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\BadHttpHeaderException.java
+0.83	124	213	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\BaseSocketHandler.java
+0.84	20	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\BlockListener.java
+0.85	103	278	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\BlockSender.java
+0.86	10	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\BlockSentListener.java
+0.87	20	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\ChunkDataFeeder.java
+0.88	33	43	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\ChunkEnder.java
+0.89	317	961	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\ChunkHandler.java
+0.90	148	342	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\FileResourceSource.java
+0.91	26	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\HttpHeaderListener.java
+0.92	223	608	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\HttpHeaderParser.java
+0.93	234	679	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\HttpHeaderReader.java
+0.94	77	165	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\HttpHeaderSender.java
+0.95	10	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\HttpHeaderSentListener.java
+0.96	22	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\HttpResponseListener.java
+0.97	91	148	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\HttpResponseReader.java
+0.98	35	70	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\InOutProxyChain.java
+0.99	42	97	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\InOutProxyChainFactory.java
+0.100	12	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\LineListener.java
+0.101	51	100	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\LineReader.java
+0.102	27	36	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\ProxiedProxyChain.java
+0.103	46	72	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\ProxyResolver.java
+0.104	17	23	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\RequestLineTooLongException.java
+0.105	41	63	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\ResolvRunner.java
+0.106	29	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\ResourceSource.java
+0.107	27	37	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\SimpleProxyChain.java
+0.108	44	86	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\SimpleResolver.java
+0.109	35	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\Transferable.java
+0.110	112	241	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\TransferHandler.java
+0.111	16	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\TransferListener.java
+0.112	214	574	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\httpio\WebConnectionResourceSource.java
+0.113	67	102	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\Address.java
+0.114	27	39	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\BoundBinder.java
+0.115	40	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\BufferHandle.java
+0.116	64	163	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\CacheBufferHandle.java
+0.117	351	949	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\ConnectionHandler.java
+0.118	17	28	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\DefaultBinder.java
+0.119	38	87	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\FileHelper.java
+0.120	19	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\InetAddressListener.java
+0.121	19	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\ProxyChain.java
+0.122	24	9	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\ProxyChainFactory.java
+0.123	41	51	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\Range.java
+0.124	36	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\Resolver.java
+0.125	43	86	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\SimpleBufferHandle.java
+0.126	19	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\SocketBinder.java
+0.127	22	8	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\Storable.java
+0.128	207	440	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\WebConnection.java
+0.129	22	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\io\WebConnectionListener.java
+0.130	522	1559	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\jndi\HierContext.java
+0.131	56	59	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\jndi\HierParser.java
+0.132	23	42	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\jndi\InitCtxFactory.java
+0.133	139	338	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\BaseMetaHandler.java
+0.134	124	493	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\CacheStatus.java
+0.135	36	79	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\ClearCache.java
+0.136	63	218	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\Connections.java
+0.137	171	479	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\FileSender.java
+0.138	26	56	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\Kill.java
+0.139	29	10	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\MetaHandler.java
+0.140	82	311	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\SelectorStatus.java
+0.141	44	136	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\StackTrace.java
+0.142	104	449	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\Status.java
+0.143	110	358	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\meta\TaskTimings.java
+0.144	215	739	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\CacheChecker.java
+0.145	31	36	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\CacheResourceSource.java
+0.146	75	185	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ChunkedContentTransferHandler.java
+0.147	29	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ClientResourceHandler.java
+0.148	14	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ClientResourceListener.java
+0.149	20	7	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ClientResourceTransferredListener.java
+0.150	30	9	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ClientTrafficLogger.java
+0.151	57	159	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ClientTrafficLoggerHandler.java
+0.152	335	1259	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ConditionalChecker.java
+0.153	1165	3173	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\Connection.java
+0.154	23	33	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ConnectionId.java
+0.155	12	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ConnectionLogger.java
+0.156	67	170	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ContentTransferHandler.java
+0.157	56	122	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ETagUtils.java
+0.158	289	1075	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\FileTemplateHttpGenerator.java
+0.159	31	81	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\FileTemplateHttpGeneratorFactory.java
+0.160	120	317	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\HandlerFactoryHandler.java
+0.161	108	230	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\HtmlPage.java
+0.162	102	8	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\HttpGenerator.java
+0.163	22	6	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\HttpGeneratorFactory.java
+0.164	26	59	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\HttpHeaderFileHandler.java
+0.165	148	352	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\HttpHeaderFilterer.java
+0.166	761	1809	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\HttpProxy.java
+0.167	27	53	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\LogWriter.java
+0.168	123	395	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\MetaHandlerHandler.java
+0.169	73	177	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\MultiPartPipe.java
+0.170	53	113	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\MultiPartTransferHandler.java
+0.171	144	487	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\NotModifiedHandler.java
+0.172	87	175	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\PartialCacher.java
+0.173	52	172	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ProxyClassLoaderHelper.java
+0.174	49	142	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ProxyConnectionAcceptor.java
+0.175	146	460	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ProxyLogger.java
+0.176	79	263	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ProxyStarter.java
+0.177	167	428	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\RandomCacheResourceSource.java
+0.178	107	228	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\RequestHandler.java
+0.179	122	340	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ResourceHandlerBase.java
+0.180	67	162	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\ResourceLoader.java
+0.181	273	983	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\SCC.java
+0.182	77	186	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\SocketAccessController.java
+0.183	247	692	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\SSLHandler.java
+0.184	18	30	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\StandardHttpGeneratorFactory.java
+0.185	29	46	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\StandardOutTrafficLogger.java
+0.186	370	954	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\StandardResponseHeaders.java
+0.187	294	845	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\SWC.java
+0.188	79	126	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\TrafficLoggerHandler.java
+0.189	199	546	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\Tunnel.java
+0.190	7	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\TunnelDoneListener.java
+0.191	102	404	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\proxy\WarningsHandler.java
+0.192	235	784	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\test\TestHttpHeaderReader.java
+0.193	121	385	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\Base64.java
+0.194	275	743	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\Config.java
+0.195	42	78	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\Counter.java
+0.196	76	161	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\IPAccess.java
+0.197	26	91	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\MimeTypeMapper.java
+0.198	38	65	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\PatternHelper.java
+0.199	58	130	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\SimpleTrafficLogger.java
+0.200	116	262	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\SimpleUserHandler.java
+0.201	31	49	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\SProperties.java
+0.202	21	37	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\StackTraceUtil.java
+0.203	45	90	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\StringCache.java
+0.204	56	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\util\TrafficLogger.java
+0.205	239	721	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\webserver\Connection.java
+0.206	129	288	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\webserver\SimpleWebServer.java
+0.207	19	44	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\AfterEndState.java
+0.208	46	123	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\CommentReader.java
+0.209	37	94	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\CompressionMethodReader.java
+0.210	58	163	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\Compressor.java
+0.211	78	204	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\FExtraReader.java
+0.212	79	190	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\FlagReader.java
+0.213	13	11	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipFlags.java
+0.214	17	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipListener.java
+0.215	59	87	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipPacker.java
+0.216	20	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipPackListener.java
+0.217	34	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipPackState.java
+0.218	49	80	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipUnpacker.java
+0.219	18	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipUnpackListener.java
+0.220	25	5	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\GZipUnpackState.java
+0.221	48	107	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\HCRCReader.java
+0.222	40	88	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\HeaderWriter.java
+0.223	47	114	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\MagicReader.java
+0.224	53	146	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\NameReader.java
+0.225	48	111	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\TrailerWriter.java
+0.226	58	152	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\TrailReader.java
+0.227	81	218	C:\Users\m12mm038\Desktop\rabbit4.11\src\rabbit\zip\UnCompressor.java
+#end{file description}
+#begin{syntax error}
+#end{syntax error}
+#begin{clone}
+#begin{set}
+0.29	77,2,124	82,25,158	34
+0.53	37,2,37	42,25,71	34
+#end{set}
+#begin{set}
+0.29	49,2,60	53,3,92	29
+0.161	57,2,91	61,3,123	29
+#end{set}
+#begin{set}
+0.69	145,2,220	149,50,253	32
+0.69	164,6,286	169,13,319	32
+0.69	183,6,343	187,43,376	32
+#end{set}
+#begin{set}
+0.69	163,2,281	169,13,319	37
+0.69	182,2,338	187,43,376	37
+#end{set}
+#begin{set}
+0.69	146,2,224	150,18,255	30
+0.74	81,2,172	85,15,203	30
+0.74	98,2,227	102,15,258	30
+0.74	130,2,301	134,19,332	30
+0.74	145,2,348	149,19,379	30
+#end{set}
+#begin{set}
+0.69	165,6,290	169,15,321	30
+0.74	68,2,126	72,11,157	30
+#end{set}
+#begin{set}
+0.70	123,2,20	126,43,52	11
+0.70	172,2,412	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	127,35,60	11
+0.70	171,2,404	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	128,37,68	11
+0.70	170,2,396	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	129,39,76	11
+0.70	169,2,388	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	130,41,84	11
+0.70	168,2,380	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	131,41,92	11
+0.70	167,2,372	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	132,43,100	11
+0.70	166,2,364	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	133,41,108	11
+0.70	165,2,356	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	134,43,116	11
+0.70	164,2,348	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	135,39,124	11
+0.70	163,2,340	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	136,41,132	11
+0.70	162,2,332	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	137,37,140	11
+0.70	161,2,324	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	138,39,148	11
+0.70	160,2,316	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	139,39,156	11
+0.70	159,2,308	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	140,41,164	11
+0.70	158,2,300	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	141,33,172	11
+0.70	157,2,292	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	142,35,180	11
+0.70	156,2,284	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	143,33,188	11
+0.70	155,2,276	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	144,35,196	11
+0.70	154,2,268	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	145,39,204	11
+0.70	153,2,260	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	146,41,212	11
+0.70	152,2,252	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	147,43,220	11
+0.70	151,2,244	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	148,37,228	11
+0.70	150,2,236	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	149,39,236	11
+0.70	149,2,228	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	150,37,244	11
+0.70	148,2,220	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	151,39,252	11
+0.70	147,2,212	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	152,33,260	11
+0.70	146,2,204	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	153,37,268	11
+0.70	145,2,196	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	154,39,276	11
+0.70	144,2,188	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	155,33,284	11
+0.70	143,2,180	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	156,35,292	11
+0.70	142,2,172	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	157,31,300	11
+0.70	141,2,164	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	158,33,308	11
+0.70	140,2,156	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	159,31,316	11
+0.70	139,2,148	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	160,33,324	11
+0.70	138,2,140	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	161,33,332	11
+0.70	137,2,132	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	162,35,340	11
+0.70	136,2,124	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	163,37,348	11
+0.70	135,2,116	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	164,39,356	11
+0.70	134,2,108	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	165,35,364	11
+0.70	133,2,100	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	166,37,372	11
+0.70	132,2,92	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	167,37,380	11
+0.70	131,2,84	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	168,39,388	11
+0.70	130,2,76	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	169,39,396	11
+0.70	129,2,68	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	170,37,404	11
+0.70	128,2,60	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	171,39,412	11
+0.70	127,2,52	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	172,39,420	11
+0.70	126,2,44	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	173,41,428	11
+0.70	125,2,36	175,47,444	0
+#end{set}
+#begin{set}
+0.70	123,2,20	174,45,436	11
+0.70	124,2,28	175,47,444	4
+#end{set}
+#begin{set}
+0.74	67,12,121	72,9,155	33
+0.74	129,12,296	133,49,330	33
+0.74	144,12,343	148,41,377	33
+#end{set}
+#begin{set}
+0.74	67,43,125	72,9,155	29
+0.74	80,55,171	84,49,201	29
+0.74	97,68,226	101,43,256	29
+#end{set}
+#begin{set}
+0.74	80,12,167	88,3,210	41
+0.74	97,12,222	105,3,265	41
+#end{set}
+#begin{set}
+0.74	80,55,171	85,22,206	34
+0.74	97,68,226	102,25,261	34
+0.74	129,44,300	134,22,335	34
+#end{set}
+#begin{set}
+0.74	80,55,171	88,3,210	37
+0.74	144,44,347	152,3,386	37
+#end{set}
+#begin{set}
+0.74	97,68,226	106,6,266	37
+0.74	144,44,347	153,6,387	37
+#end{set}
+#begin{set}
+0.74	129,12,296	134,22,335	38
+0.74	144,12,343	149,22,382	38
+#end{set}
+#begin{set}
+0.76	116,2,241	121,41,271	18
+0.76	122,2,271	127,41,301	0
+#end{set}
+#begin{set}
+0.76	116,2,241	123,41,281	18
+0.76	120,2,261	127,41,301	0
+#end{set}
+#begin{set}
+0.76	116,2,241	125,41,291	18
+0.76	118,2,251	127,41,301	8
+#end{set}
+#begin{set}
+0.119	16,12,8	23,6,45	35
+0.119	30,12,46	37,6,83	35
+#end{set}
+#begin{set}
+0.130	113,2,207	120,6,240	29
+0.130	354,2,1037	360,6,1070	29
+#end{set}
+#begin{set}
+0.130	126,69,263	139,7,308	43
+0.130	331,72,978	344,7,1023	43
+#end{set}
+#begin{set}
+0.130	183,4,454	190,49,488	31
+0.130	210,4,549	217,49,583	31
+#end{set}
+#begin{set}
+0.130	185,6,456	190,49,488	29
+0.130	212,6,551	217,49,583	29
+0.130	262,6,732	267,52,764	29
+#end{set}
+#begin{set}
+0.130	277,12,790	290,6,842	48
+0.130	297,12,860	310,6,912	48
+#end{set}
+#begin{set}
+0.133	60,2,84	67,6,118	32
+0.133	110,2,260	117,6,294	32
+#end{set}
+#begin{set}
+0.136	32,2,68	38,53,108	23
+0.136	51,2,173	61,27,213	20
+#end{set}
+#begin{set}
+0.136	44,6,129	47,32,166	18
+0.142	74,6,229	77,29,266	19
+#end{set}
+#begin{set}
+0.140	77,2,266	79,62,296	17
+0.140	78,2,276	80,61,306	8
+#end{set}
+#begin{set}
+0.140	61,6,184	66,30,220	15
+0.175	134,2,383	139,18,419	14
+#end{set}
+#begin{set}
+0.142	98,2,379	100,36,413	25
+0.142	100,2,409	102,23,443	0
+#end{set}
+#begin{set}
+0.142	98,2,379	101,36,428	25
+0.142	99,2,394	102,23,443	11
+#end{set}
+#begin{set}
+0.143	59,13,168	66,50,211	41
+0.143	75,13,231	82,50,274	41
+#end{set}
+#begin{set}
+0.152	198,7,746	205,4,776	27
+0.152	209,7,799	216,4,829	27
+#end{set}
+#begin{set}
+0.152	233,6,879	240,12,909	30
+0.152	240,13,909	247,12,939	29
+#end{set}
+#begin{set}
+0.153	65,13,50	83,41,80	2
+0.153	66,13,52	84,41,82	0
+#end{set}
+#begin{set}
+0.153	811,2,2517	825,24,2547	2
+0.153	813,2,2521	827,31,2551	0
+#end{set}
+#begin{set}
+0.153	811,2,2517	826,23,2549	2
+0.153	812,2,2519	827,31,2551	0
+#end{set}
+#begin{set}
+0.158	223,22,741	227,6,771	28
+0.158	265,22,948	269,6,978	28
+0.158	271,22,979	276,6,1009	28
+#end{set}
+#begin{set}
+0.158	229,22,772	233,6,802	28
+0.158	247,22,861	251,6,891	28
+#end{set}
+#begin{set}
+0.158	278,22,1010	282,6,1040	28
+0.158	284,22,1041	288,6,1071	28
+#end{set}
+#begin{set}
+0.161	99,2,187	104,41,217	7
+0.161	100,2,192	105,42,222	2
+#end{set}
+#begin{set}
+0.171	127,2,396	132,3,431	34
+0.171	133,2,431	138,3,466	34
+#end{set}
+#begin{set}
+0.175	133,2,378	138,36,412	19
+0.175	135,2,390	140,25,424	9
+#end{set}
+#begin{set}
+0.186	135,12,335	144,6,366	30
+0.186	225,12,535	233,6,566	30
+#end{set}
+#begin{set}
+0.193	84,6,199	88,22,236	32
+0.193	105,2,302	109,18,339	32
+#end{set}
+#begin{set}
+0.193	85,6,208	90,22,238	26
+0.193	88,6,231	93,22,261	16
+#end{set}
+#begin{set}
+0.194	206,6,466	219,16,534	61
+0.194	235,6,587	248,15,655	61
+#end{set}
+#begin{set}
+0.208	26,12,44	37,32,87	42
+0.224	26,12,44	39,17,87	42
+#end{set}
+#begin{set}
+0.211	57,2,119	65,4,155	31
+0.211	61,2,137	69,20,173	14
+0.212	54,2,87	62,4,123	31
+0.212	58,2,105	66,4,141	14
+0.212	62,2,123	70,20,159	0
+0.224	38,2,79	44,13,115	31
+#end{set}
+#begin{set}
+0.211	57,2,119	69,20,173	31
+0.212	54,2,87	66,4,141	31
+0.212	58,2,105	70,20,159	14
+#end{set}
+#begin{set}
+0.211	57,2,119	71,6,183	41
+0.212	58,2,105	72,6,169	24
+#end{set}
+#begin{set}
+0.211	61,2,137	71,6,183	24
+0.212	62,2,123	72,6,169	10
+0.224	38,2,79	46,6,125	41
+#end{set}
+#begin{set}
+0.212	41,6,83	62,4,123	35
+0.224	35,6,75	44,13,115	35
+#end{set}
+#begin{set}
+0.221	30,12,56	44,17,87	31
+0.226	31,12,53	43,12,84	31
+#end{set}
+#end{clone}

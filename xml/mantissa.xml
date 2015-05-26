@@ -1,0 +1,1786 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='reportXMLtoHTML.xsl'?>
+<classycle title='mantissa-7.2.jar' date='2014-01-02'>
+  <cycles>
+    <cycle name="org.spaceroots.mantissa.algebra.Polynomial and inner classes" size="4" longestWalk="1" girth="2" radius="1" diameter="2" bestFragmentSize="2">
+      <classes>
+        <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="org.spaceroots.mantissa.algebra.Polynomial$DivisionResult" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="org.spaceroots.mantissa.algebra.Polynomial" eccentricity="1" maximumFragmentSize="2"/>
+        <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Double" eccentricity="2" maximumFragmentSize="3"/>
+      </classes>
+      <centerClasses>
+        <classRef name="org.spaceroots.mantissa.algebra.Polynomial"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="org.spaceroots.mantissa.algebra.Polynomial"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="org.spaceroots.mantissa.linalg.MatrixFactory et al." size="8" longestWalk="2" girth="2" radius="2" diameter="4" bestFragmentSize="2">
+      <classes>
+        <classRef name="org.spaceroots.mantissa.linalg.GeneralMatrix" eccentricity="4" maximumFragmentSize="7"/>
+        <classRef name="org.spaceroots.mantissa.linalg.Matrix" eccentricity="3" maximumFragmentSize="4"/>
+        <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" eccentricity="2" maximumFragmentSize="2"/>
+        <classRef name="org.spaceroots.mantissa.linalg.DiagonalMatrix" eccentricity="3" maximumFragmentSize="7"/>
+        <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" eccentricity="3" maximumFragmentSize="7"/>
+        <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" eccentricity="2" maximumFragmentSize="7"/>
+        <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" eccentricity="2" maximumFragmentSize="7"/>
+        <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" eccentricity="2" maximumFragmentSize="7"/>
+      </classes>
+      <centerClasses>
+        <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory"/>
+        <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix"/>
+        <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix"/>
+        <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="org.spaceroots.mantissa.fitting.AbstractCurveFitter and inner classes" size="2" longestWalk="4" girth="2" radius="1" diameter="1" bestFragmentSize="1">
+      <classes>
+        <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" eccentricity="1" maximumFragmentSize="1"/>
+      </classes>
+      <centerClasses>
+        <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter"/>
+        <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter"/>
+        <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement"/>
+      </bestFragmenters>
+    </cycle>
+  </cycles>
+  <classes numberOfExternalClasses="31">
+    <class name="org.spaceroots.mantissa.MantissaException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1947" usedBy="12" usesInternal="0" usesExternal="7" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.geometry.CardanEulerSingularityException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.geometry.NotARotationMatrixException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SingularMatrixException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.IntegratorException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.CostException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.NoConvergenceException" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.NotPositiveDefiniteMatrixException" type="usedBy"/>
+      <classRef name="java.util.MissingResourceException" type="usesExternal"/>
+      <classRef name="java.text.MessageFormat" type="usesExternal"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="java.util.ResourceBundle" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.MessagesResources" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2097" usedBy="0" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.util.ListResourceBundle" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.MessagesResources_fr" sources="mantissa-7.2.jar" type="class" innerClass="false" size="3364" usedBy="0" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.util.ListResourceBundle" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Chebyshev" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1069" usedBy="0" usesInternal="4" usesExternal="0" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Chebyshev$1" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Chebyshev$1" sources="mantissa-7.2.jar" type="class" innerClass="true" size="866" usedBy="1" usesInternal="2" usesExternal="0" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Chebyshev" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="2237" usedBy="9" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Chebyshev" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Chebyshev$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Hermite" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Hermite$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Laguerre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Laguerre$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Legendre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Legendre$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usedBy"/>
+      <classRef name="java.util.ArrayList" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Hermite" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1072" usedBy="0" usesInternal="4" usesExternal="0" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Hermite$1" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Hermite$1" sources="mantissa-7.2.jar" type="class" innerClass="true" size="865" usedBy="1" usesInternal="2" usesExternal="0" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Hermite" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Laguerre" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1076" usedBy="0" usesInternal="4" usesExternal="0" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Laguerre$1" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Laguerre$1" sources="mantissa-7.2.jar" type="class" innerClass="true" size="902" usedBy="1" usesInternal="2" usesExternal="0" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Laguerre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Legendre" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1065" usedBy="0" usesInternal="4" usesExternal="0" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Legendre$1" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Legendre$1" sources="mantissa-7.2.jar" type="class" innerClass="true" size="907" usedBy="1" usesInternal="2" usesExternal="0" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Legendre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="864" usedBy="4" usesInternal="4" usesExternal="0" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Chebyshev" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Hermite" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Laguerre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Legendre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Polynomial" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="1668" usedBy="5" usesInternal="4" usesExternal="3" layer="1" cycle="org.spaceroots.mantissa.algebra.Polynomial and inner classes">
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$DivisionResult" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Double" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.PolynomialFraction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Double" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$DivisionResult" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usesInternal"/>
+      <classRef name="java.math.BigInteger" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Polynomial$DivisionResult" sources="mantissa-7.2.jar" type="class" innerClass="true" size="790" usedBy="3" usesInternal="2" usesExternal="1" layer="1" cycle="org.spaceroots.mantissa.algebra.Polynomial and inner classes">
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.PolynomialFraction" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Polynomial$Double" sources="mantissa-7.2.jar" type="class" innerClass="true" size="6100" usedBy="1" usesInternal="3" usesExternal="8" layer="1" cycle="org.spaceroots.mantissa.algebra.Polynomial and inner classes">
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usedBy"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.util.Arrays" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.Polynomial$Rational" sources="mantissa-7.2.jar" type="class" innerClass="true" size="8020" usedBy="5" usesInternal="3" usesExternal="8" layer="1" cycle="org.spaceroots.mantissa.algebra.Polynomial and inner classes">
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$DivisionResult" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Double" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.PolynomialFraction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$DivisionResult" type="usesInternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usesInternal"/>
+      <classRef name="java.math.BigInteger" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.util.Arrays" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.PolynomialFraction" sources="mantissa-7.2.jar" type="class" innerClass="false" size="6016" usedBy="0" usesInternal="4" usesExternal="6" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.RationalNumber" type="usesInternal"/>
+      <classRef name="java.lang.ArithmeticException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="java.math.BigInteger" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$DivisionResult" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.algebra.RationalNumber" sources="mantissa-7.2.jar" type="class" innerClass="false" size="5205" usedBy="14" usesInternal="0" usesExternal="6" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.algebra.Chebyshev" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Chebyshev$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.CoefficientsGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Hermite" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Hermite$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Laguerre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Laguerre$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Legendre" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Legendre$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.OrthogonalPolynomial" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Double" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.Polynomial$Rational" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.algebra.PolynomialFraction" type="usedBy"/>
+      <classRef name="java.lang.ArithmeticException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="java.math.BigInteger" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.estimation.EstimatedParameter" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1418" usedBy="9" usesInternal="0" usesExternal="3" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationProblem" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.LevenbergMarquardtEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.WeightedMeasurement" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.PolynomialCoefficient" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.PolynomialFitter" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.estimation.EstimationException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="832" usedBy="6" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.Estimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.LevenbergMarquardtEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.estimation.EstimationProblem" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="357" usedBy="4" usesInternal="2" usesExternal="1" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.Estimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.LevenbergMarquardtEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.WeightedMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.estimation.Estimator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="373" usedBy="5" usesInternal="2" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.LevenbergMarquardtEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.PolynomialFitter" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationProblem" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="3990" usedBy="2" usesInternal="9" usesExternal="6" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.PolynomialFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SymetricalMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SingularMatrixException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.Estimator" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationProblem" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.WeightedMeasurement" type="usesInternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.estimation.LevenbergMarquardtEstimator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="12610" usedBy="0" usesInternal="5" usesExternal="7" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.Estimator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.WeightedMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationProblem" type="usesInternal"/>
+      <classRef name="java.util.Arrays" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.estimation.WeightedMeasurement" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="1204" usedBy="6" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationProblem" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.LevenbergMarquardtEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="3204" usedBy="6" usesInternal="6" usesExternal="4" layer="4" cycle="org.spaceroots.mantissa.fitting.AbstractCurveFitter and inner classes">
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.PolynomialFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+      <classRef name="java.util.ArrayList" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.WeightedMeasurement" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationProblem" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="java.util.List" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.Estimator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" sources="mantissa-7.2.jar" type="class" innerClass="true" size="1273" usedBy="5" usesInternal="3" usesExternal="0" layer="4" cycle="org.spaceroots.mantissa.fitting.AbstractCurveFitter and inner classes">
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.estimation.WeightedMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.F2FP2Iterator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1749" usedBy="1" usesInternal="7" usesExternal="2" layer="6" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.FFPIterator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2029" usedBy="2" usesInternal="6" usesExternal="2" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" sources="mantissa-7.2.jar" type="class" innerClass="false" size="3593" usedBy="1" usesInternal="10" usesExternal="4" layer="7" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegratorSampler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.HarmonicFitter" sources="mantissa-7.2.jar" type="class" innerClass="false" size="4120" usedBy="0" usesInternal="10" usesExternal="5" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimationException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter$FitMeasurement" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.Estimator" type="usesInternal"/>
+      <classRef name="java.util.List" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.WeightedMeasurement" type="usesInternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.PolynomialCoefficient" sources="mantissa-7.2.jar" type="class" innerClass="false" size="754" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.PolynomialFitter" type="usedBy"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.fitting.PolynomialFitter" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2354" usedBy="0" usesInternal="5" usesExternal="3" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.PolynomialCoefficient" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usesInternal"/>
+      <classRef name="java.lang.RuntimeException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.fitting.AbstractCurveFitter" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.Estimator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.estimation.EstimatedParameter" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.ExhaustedSampleException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="665" usedBy="22" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.SampledFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.SampledFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.FunctionException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="824" usedBy="35" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicFitter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.ComputableFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.GaussLegendreIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.SampledFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.ComputableFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.GaussLegendreIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.SampledFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.BrentSolver" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.RootsFinder" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.scalar.BasicSampledFunctionIterator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1429" usedBy="0" usesInternal="5" usesExternal="2" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="291" usedBy="6" usesInternal="1" usesExternal="2" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.ComputableFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.GaussLegendreIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.BrentSolver" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.RootsFinder" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.scalar.ComputableFunctionSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2058" usedBy="0" usesInternal="4" usesExternal="4" layer="3" cycle="">
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunction" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.scalar.SampledFunction" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="418" usedBy="2" usesInternal="2" usesExternal="3" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.scalar.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="428" usedBy="8" usesInternal="3" usesExternal="1" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.scalar.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.SampledFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1028" usedBy="10" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.scalar.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.vectorial.BasicSampledFunctionIterator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1550" usedBy="0" usesInternal="5" usesExternal="2" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.vectorial.ComputableFunction" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="324" usedBy="3" usesInternal="1" usesExternal="2" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.ComputableFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.GaussLegendreIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.vectorial.ComputableFunctionSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2194" usedBy="0" usesInternal="4" usesExternal="4" layer="3" cycle="">
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunction" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.vectorial.SampledFunction" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="450" usedBy="2" usesInternal="2" usesExternal="3" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="466" usedBy="11" usesInternal="3" usesExternal="1" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.SampledFunctionIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" sources="mantissa-7.2.jar" type="class" innerClass="false" size="616" usedBy="13" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.F2FP2Iterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.FFPIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.BasicSampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunctionSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegratorSampler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegratorSampler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.geometry.CardanEulerSingularityException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="599" usedBy="1" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.geometry.Rotation" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.geometry.NotARotationMatrixException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="587" usedBy="1" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.geometry.Rotation" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.geometry.Rotation" sources="mantissa-7.2.jar" type="class" innerClass="false" size="13969" usedBy="0" usesInternal="4" usesExternal="7" layer="2" cycle="">
+      <classRef name="java.lang.ArithmeticException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.geometry.NotARotationMatrixException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.geometry.Vector3D" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.geometry.CardanEulerSingularityException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.geometry.RotationOrder" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.geometry.RotationOrder" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1856" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.geometry.Rotation" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.geometry.Vector3D" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.geometry.Vector3D" sources="mantissa-7.2.jar" type="class" innerClass="false" size="5421" usedBy="2" usesInternal="0" usesExternal="5" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.geometry.Rotation" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.geometry.RotationOrder" type="usedBy"/>
+      <classRef name="java.lang.ArithmeticException" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.DiagonalMatrix" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2965" usedBy="2" usesInternal="4" usesExternal="3" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" type="usedBy"/>
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SingularMatrixException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.NonNullRange" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.GeneralMatrix" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2131" usedBy="3" usesInternal="2" usesExternal="3" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.NonNullRange" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" sources="mantissa-7.2.jar" type="class" innerClass="false" size="5686" usedBy="2" usesInternal="7" usesExternal="5" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SymetricalMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" type="usesInternal"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SingularMatrixException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.NonNullRange" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" sources="mantissa-7.2.jar" type="class" innerClass="false" size="4291" usedBy="2" usesInternal="5" usesExternal="5" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usedBy"/>
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SingularMatrixException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.NonNullRange" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.Matrix" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="5903" usedBy="10" usesInternal="2" usesExternal="7" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.DiagonalMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SymetricalMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.NonNullRange" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usesInternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.MatrixFactory" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1146" usedBy="4" usesInternal="6" usesExternal="1" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.DiagonalMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralMatrix" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.NonNullRange" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1121" usedBy="6" usesInternal="0" usesExternal="3" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.linalg.DiagonalMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.SingularMatrixException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="496" usedBy="6" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.DiagonalMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.SquareMatrix" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="1379" usedBy="4" usesInternal="3" usesExternal="0" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.linalg.DiagonalMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.LowerTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.DiagonalMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SingularMatrixException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.SymetricalMatrix" sources="mantissa-7.2.jar" type="class" innerClass="false" size="3290" usedBy="4" usesInternal="2" usesExternal="4" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.estimation.GaussNewtonEstimator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.VectorialSampleStatistics" type="usedBy"/>
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.linalg.UpperTriangularMatrix" sources="mantissa-7.2.jar" type="class" innerClass="false" size="4313" usedBy="2" usesInternal="5" usesExternal="5" layer="2" cycle="org.spaceroots.mantissa.linalg.MatrixFactory et al.">
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralSquareMatrix" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usedBy"/>
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SingularMatrixException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.NonNullRange" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SquareMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.MatrixFactory" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="4123" usedBy="7" usesInternal="2" usesExternal="8" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.ContinuousOutputModel" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usedBy"/>
+      <classRef name="java.lang.CloneNotSupportedException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.io.IOException" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Cloneable" type="usesExternal"/>
+      <classRef name="java.io.ObjectOutput" type="usesExternal"/>
+      <classRef name="java.io.ObjectInput" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="4716" usedBy="2" usesInternal="8" usesExternal="4" layer="7" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.IntegratorException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepHandler" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1055" usedBy="0" usesInternal="3" usesExternal="1" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaStepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1456" usedBy="1" usesInternal="2" usesExternal="1" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.ContinuousOutputModel" sources="mantissa-7.2.jar" type="class" innerClass="false" size="4964" usedBy="0" usesInternal="4" usesExternal="9" layer="4" cycle="">
+      <classRef name="java.util.ArrayList" type="usesExternal"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.lang.RuntimeException" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="java.util.Iterator" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.DerivativeException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="698" usedBy="27" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ContinuousOutputModel" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince54StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince853StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.EulerStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderConverter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GillStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.HighamHall54StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.MidpointStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SecondOrderDifferentialEquations" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SecondOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepNormalizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ThreeEighthesStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.DormandPrince54Integrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2593" usedBy="0" usesInternal="3" usesExternal="2" layer="9" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince54StepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.DormandPrince54StepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2806" usedBy="1" usesInternal="3" usesExternal="1" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince54Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.DormandPrince853Integrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="4476" usedBy="0" usesInternal="3" usesExternal="2" layer="9" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince853StepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.DormandPrince853StepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="7835" usedBy="1" usesInternal="3" usesExternal="6" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince853Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.io.IOException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="java.io.ObjectOutput" type="usesExternal"/>
+      <classRef name="java.io.ObjectInput" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.DummyStepHandler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1062" usedBy="2" usesInternal="2" usesExternal="2" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.DummyStepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1685" usedBy="3" usesInternal="2" usesExternal="6" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.io.IOException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usesInternal"/>
+      <classRef name="java.io.ObjectOutput" type="usesExternal"/>
+      <classRef name="java.io.ObjectInput" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.EulerIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="874" usedBy="0" usesInternal="3" usesExternal="1" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.EulerStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.EulerStepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1152" usedBy="1" usesInternal="2" usesExternal="1" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.EulerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.FirstOrderConverter" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1378" usedBy="0" usesInternal="3" usesExternal="2" layer="3" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SecondOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="316" usedBy="9" usesInternal="1" usesExternal="1" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince54StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince853StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderConverter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="708" usedBy="2" usesInternal="5" usesExternal="2" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.IntegratorException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.FixedStepHandler" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="172" usedBy="1" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.StepNormalizer" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.GillIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1119" usedBy="0" usesInternal="3" usesExternal="2" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.GillStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.GillStepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1636" usedBy="1" usesInternal="2" usesExternal="2" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.GillIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="12484" usedBy="0" usesInternal="11" usesExternal="6" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.IntegratorException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.GraggBulirschStoerStepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="5194" usedBy="1" usesInternal="2" usesExternal="7" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.io.IOException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.ObjectOutput" type="usesExternal"/>
+      <classRef name="java.io.ObjectInput" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.HighamHall54Integrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2515" usedBy="0" usesInternal="3" usesExternal="2" layer="9" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.HighamHall54StepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.HighamHall54StepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1726" usedBy="1" usesInternal="2" usesExternal="1" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.HighamHall54Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.IntegratorException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="553" usedBy="6" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SecondOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.MidpointIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="920" usedBy="0" usesInternal="3" usesExternal="1" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.MidpointStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.MidpointStepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1236" usedBy="1" usesInternal="2" usesExternal="1" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.MidpointIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="6397" usedBy="3" usesInternal="10" usesExternal="6" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince54Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince853Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.HighamHall54Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.IntegratorException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="5583" usedBy="5" usesInternal="12" usesExternal="6" layer="7" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.EulerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GillIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.MidpointIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ThreeEighthesIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.IntegratorException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepHandler" type="usesInternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="2526" usedBy="18" usesInternal="3" usesExternal="6" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ClassicalRungeKuttaStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince54Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince54StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince853Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DormandPrince853StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.EulerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.EulerStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GillIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GillStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.HighamHall54Integrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.HighamHall54StepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.MidpointIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.MidpointStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ThreeEighthesIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ThreeEighthesStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.io.IOException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="java.io.ObjectOutput" type="usesExternal"/>
+      <classRef name="java.io.ObjectInput" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.SecondOrderDifferentialEquations" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="326" usedBy="2" usesInternal="1" usesExternal="1" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderConverter" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SecondOrderIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.SecondOrderIntegrator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="564" usedBy="0" usesInternal="4" usesExternal="2" layer="4" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SecondOrderDifferentialEquations" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.IntegratorException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.StepHandler" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="339" usedBy="9" usesInternal="2" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ContinuousOutputModel" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepHandler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SecondOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepNormalizer" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.StepInterpolator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="435" usedBy="10" usesInternal="1" usesExternal="2" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AbstractStepInterpolator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.ContinuousOutputModel" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.DummyStepHandler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepNormalizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Externalizable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.StepNormalizer" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1972" usedBy="0" usesInternal="4" usesExternal="3" layer="4" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.FixedStepHandler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.SwitchState" sources="mantissa-7.2.jar" type="class" innerClass="false" size="4233" usedBy="1" usesInternal="8" usesExternal="6" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.BrentSolver" type="usesInternal"/>
+      <classRef name="java.lang.RuntimeException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.roots.ConvergenceChecker" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.roots.RootsFinder" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.SwitchingFunction" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="454" usedBy="6" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.FirstOrderIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.SwitchingFunctionsHandler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2859" usedBy="4" usesInternal="4" usesExternal="6" layer="6" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.AdaptiveStepsizeIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.GraggBulirschStoerIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaFehlbergIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usedBy"/>
+      <classRef name="java.util.ArrayList" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+      <classRef name="java.lang.RuntimeException" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.SwitchingFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.StepInterpolator" type="usesInternal"/>
+      <classRef name="java.util.Iterator" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.ThreeEighthesIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1042" usedBy="0" usesInternal="3" usesExternal="1" layer="8" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.ThreeEighthesStepInterpolator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaIntegrator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.ode.ThreeEighthesStepInterpolator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1479" usedBy="1" usesInternal="2" usesExternal="1" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.ThreeEighthesIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.ode.RungeKuttaStepInterpolator" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.ode.DerivativeException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.ConvergenceChecker" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="233" usedBy="1" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.PointCostPair" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.CostException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="871" usedBy="4" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.CostFunction" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.MultiDirectional" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.NelderMead" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.CostFunction" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="244" usedBy="1" usesInternal="1" usesExternal="1" layer="2" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.CostException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" sources="mantissa-7.2.jar" type="abstract class" innerClass="false" size="7809" usedBy="2" usesInternal="14" usesExternal="8" layer="5" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.MultiDirectional" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.NelderMead" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.UncorrelatedRandomVectorGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.UniformRandomGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.VectorialSampleStatistics" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.PointCostPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.NoConvergenceException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer$1" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.util.Comparator" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.CostFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.RandomVectorGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.ConvergenceChecker" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.CostException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.NotPositiveDefiniteMatrixException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.util.Arrays" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="java.lang.Double" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.random.NormalizedRandomGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SymetricalMatrix" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer$1" sources="mantissa-7.2.jar" type="class" innerClass="true" size="783" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.PointCostPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.util.Comparator" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.MultiDirectional" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1738" usedBy="0" usesInternal="3" usesExternal="0" layer="6" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.PointCostPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.CostException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.NelderMead" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2450" usedBy="0" usesInternal="3" usesExternal="0" layer="6" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.PointCostPair" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.optimization.CostException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.NoConvergenceException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="580" usedBy="1" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.optimization.PointCostPair" sources="mantissa-7.2.jar" type="class" innerClass="false" size="499" usedBy="5" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.ConvergenceChecker" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer$1" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.MultiDirectional" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.optimization.NelderMead" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.ComputableFunctionIntegrator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="348" usedBy="1" usesInternal="2" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.GaussLegendreIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1417" usedBy="0" usesInternal="6" usesExternal="1" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegratorSampler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.SampledFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegratorSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1829" usedBy="1" usesInternal="4" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.GaussLegendreIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2295" usedBy="0" usesInternal="3" usesExternal="2" layer="4" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.ComputableFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1377" usedBy="0" usesInternal="6" usesExternal="1" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegratorSampler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.SampledFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegratorSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1398" usedBy="1" usesInternal="4" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.SampledFunctionIntegrator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="411" usedBy="3" usesInternal="3" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1387" usedBy="0" usesInternal="6" usesExternal="1" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegratorSampler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.SampledFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegratorSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1425" usedBy="1" usesInternal="4" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.scalar.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ScalarValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.ComputableFunctionIntegrator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="355" usedBy="1" usesInternal="2" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.GaussLegendreIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1446" usedBy="0" usesInternal="6" usesExternal="1" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegratorSampler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.SampledFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegratorSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2287" usedBy="2" usesInternal="4" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.fitting.HarmonicCoefficientsGuesser" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.GaussLegendreIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2516" usedBy="0" usesInternal="3" usesExternal="2" layer="4" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.ComputableFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1406" usedBy="0" usesInternal="6" usesExternal="1" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegratorSampler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.SampledFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegratorSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1720" usedBy="1" usesInternal="4" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.SampledFunctionIntegrator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="418" usedBy="3" usesInternal="3" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.EnhancedSimpsonIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.RiemannIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegrator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1416" usedBy="0" usesInternal="6" usesExternal="1" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegratorSampler" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.SampledFunctionIntegrator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegratorSampler" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1775" usedBy="1" usesInternal="4" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.quadrature.vectorial.TrapezoidIntegrator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.VectorialValuedPair" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.vectorial.SampledFunctionIterator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.ExhaustedSampleException" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="4294" usedBy="1" usesInternal="7" usesExternal="6" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SymetricalMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.GeneralMatrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.NotPositiveDefiniteMatrixException" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.random.RandomVectorGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.linalg.Matrix" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.NormalizedRandomGenerator" type="usesInternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.FourTapRandom" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1170" usedBy="0" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="java.util.Random" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.GaussianRandomGenerator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1090" usedBy="0" usesInternal="2" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.random.MersenneTwister" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.random.NormalizedRandomGenerator" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.MersenneTwister" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2651" usedBy="2" usesInternal="0" usesExternal="3" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.random.GaussianRandomGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.UniformRandomGenerator" type="usedBy"/>
+      <classRef name="java.util.Random" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.NormalizedRandomGenerator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="217" usedBy="5" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.GaussianRandomGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.UncorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.UniformRandomGenerator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.NotPositiveDefiniteMatrixException" sources="mantissa-7.2.jar" type="class" innerClass="false" size="649" usedBy="2" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.MantissaException" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.RandomVectorGenerator" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="182" usedBy="3" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.CorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.UncorrelatedRandomVectorGenerator" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.ScalarSampleStatistics" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1727" usedBy="0" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.UncorrelatedRandomVectorGenerator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1660" usedBy="1" usesInternal="2" usesExternal="4" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.io.Serializable" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.random.RandomVectorGenerator" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.random.NormalizedRandomGenerator" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.UniformRandomGenerator" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1277" usedBy="1" usesInternal="2" usesExternal="2" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.random.MersenneTwister" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.random.NormalizedRandomGenerator" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.random.VectorialSampleStatistics" sources="mantissa-7.2.jar" type="class" innerClass="false" size="3128" usedBy="1" usesInternal="1" usesExternal="1" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.optimization.DirectSearchOptimizer" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.linalg.SymetricalMatrix" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.roots.BrentSolver" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2574" usedBy="1" usesInternal="4" usesExternal="2" layer="4" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.roots.RootsFinder" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.roots.ConvergenceChecker" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.roots.ConvergenceChecker" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="280" usedBy="3" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.BrentSolver" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.RootsFinder" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.roots.RootsFinder" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="378" usedBy="2" usesInternal="3" usesExternal="1" layer="3" cycle="">
+      <classRef name="org.spaceroots.mantissa.ode.SwitchState" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.roots.BrentSolver" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.scalar.ComputableFunction" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.roots.ConvergenceChecker" type="usesInternal"/>
+      <classRef name="org.spaceroots.mantissa.functions.FunctionException" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.utilities.ArrayMapper" sources="mantissa-7.2.jar" type="class" innerClass="false" size="2195" usedBy="0" usesInternal="2" usesExternal="3" layer="2" cycle="">
+      <classRef name="java.util.ArrayList" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.utilities.ArrayMapperEntry" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.utilities.ArraySliceMappable" type="usesInternal"/>
+      <classRef name="java.util.Iterator" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.utilities.ArrayMapperEntry" sources="mantissa-7.2.jar" type="class" innerClass="false" size="559" usedBy="1" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="org.spaceroots.mantissa.utilities.ArrayMapper" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.utilities.ArraySliceMappable" type="usesInternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.utilities.ArraySliceMappable" sources="mantissa-7.2.jar" type="interface" innerClass="false" size="248" usedBy="4" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.utilities.ArrayMapper" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.utilities.ArrayMapperEntry" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.utilities.MappableArray" type="usedBy"/>
+      <classRef name="org.spaceroots.mantissa.utilities.MappableScalar" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.utilities.Interval" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1995" usedBy="1" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="org.spaceroots.mantissa.utilities.IntervalsList" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.utilities.IntervalsList" sources="mantissa-7.2.jar" type="class" innerClass="false" size="5528" usedBy="0" usesInternal="1" usesExternal="5" layer="1" cycle="">
+      <classRef name="java.util.ArrayList" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.utilities.Interval" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.util.List" type="usesExternal"/>
+      <classRef name="java.util.Iterator" type="usesExternal"/>
+      <classRef name="java.lang.Math" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.utilities.MappableArray" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1184" usedBy="0" usesInternal="1" usesExternal="2" layer="1" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.utilities.ArraySliceMappable" type="usesInternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+    </class>
+    <class name="org.spaceroots.mantissa.utilities.MappableScalar" sources="mantissa-7.2.jar" type="class" innerClass="false" size="1026" usedBy="0" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="org.spaceroots.mantissa.utilities.ArraySliceMappable" type="usesInternal"/>
+    </class>
+  </classes>
+  <packageCycles>
+  </packageCycles>
+  <packages>
+    <package name="org.spaceroots.mantissa" sources="mantissa-7.2.jar"  size="3" usedBy="7" usesInternal="0" usesExternal="3" layer="0" cycle="">
+      <packageRef name="org.spaceroots.mantissa.estimation" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.geometry" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.linalg" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.ode" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.optimization" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.random" type="usedBy"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="java.text" type="usesExternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.algebra" sources="mantissa-7.2.jar"  size="16" usedBy="1" usesInternal="1" usesExternal="4" layer="0" cycle="">
+      <packageRef name="org.spaceroots.mantissa.algebra" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.algebra" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+      <packageRef name="java.math" type="usesExternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.estimation" sources="mantissa-7.2.jar"  size="7" usedBy="2" usesInternal="3" usesExternal="3" layer="2" cycle="">
+      <packageRef name="org.spaceroots.mantissa.estimation" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.fitting" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.estimation" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.linalg" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.fitting" sources="mantissa-7.2.jar"  size="8" usedBy="1" usesInternal="5" usesExternal="3" layer="4" cycle="">
+      <packageRef name="org.spaceroots.mantissa.fitting" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.estimation" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.fitting" type="usesInternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions.vectorial" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.vectorial" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.functions" sources="mantissa-7.2.jar"  size="2" usedBy="7" usesInternal="1" usesExternal="1" layer="1" cycle="">
+      <packageRef name="org.spaceroots.mantissa.fitting" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.functions.scalar" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.functions.vectorial" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.ode" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.scalar" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.vectorial" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.roots" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.functions.scalar" sources="mantissa-7.2.jar"  size="6" usedBy="4" usesInternal="2" usesExternal="2" layer="2" cycle="">
+      <packageRef name="org.spaceroots.mantissa.functions.scalar" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.ode" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.scalar" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.roots" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usesInternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions.scalar" type="usesInternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.functions.vectorial" sources="mantissa-7.2.jar"  size="6" usedBy="3" usesInternal="2" usesExternal="2" layer="2" cycle="">
+      <packageRef name="org.spaceroots.mantissa.fitting" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.functions.vectorial" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.vectorial" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usesInternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions.vectorial" type="usesInternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.geometry" sources="mantissa-7.2.jar"  size="5" usedBy="1" usesInternal="2" usesExternal="2" layer="1" cycle="">
+      <packageRef name="org.spaceroots.mantissa.geometry" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa" type="usesInternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.geometry" type="usesInternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.linalg" sources="mantissa-7.2.jar"  size="11" usedBy="4" usesInternal="2" usesExternal="2" layer="1" cycle="">
+      <packageRef name="org.spaceroots.mantissa.estimation" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.linalg" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.optimization" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.random" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.linalg" type="usesInternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.ode" sources="mantissa-7.2.jar"  size="40" usedBy="1" usesInternal="5" usesExternal="3" layer="4" cycle="">
+      <packageRef name="org.spaceroots.mantissa.ode" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.ode" type="usesInternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.roots" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions.scalar" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.optimization" sources="mantissa-7.2.jar"  size="9" usedBy="1" usesInternal="4" usesExternal="2" layer="3" cycle="">
+      <packageRef name="org.spaceroots.mantissa.optimization" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.optimization" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.random" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.linalg" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.quadrature.scalar" sources="mantissa-7.2.jar"  size="9" usedBy="1" usesInternal="3" usesExternal="1" layer="3" cycle="">
+      <packageRef name="org.spaceroots.mantissa.quadrature.scalar" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions.scalar" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.scalar" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.quadrature.vectorial" sources="mantissa-7.2.jar"  size="9" usedBy="2" usesInternal="3" usesExternal="1" layer="3" cycle="">
+      <packageRef name="org.spaceroots.mantissa.fitting" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.vectorial" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions.vectorial" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.quadrature.vectorial" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.random" sources="mantissa-7.2.jar"  size="11" usedBy="2" usesInternal="3" usesExternal="3" layer="2" cycle="">
+      <packageRef name="org.spaceroots.mantissa.optimization" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.random" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.linalg" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.random" type="usesInternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.roots" sources="mantissa-7.2.jar"  size="3" usedBy="2" usesInternal="3" usesExternal="1" layer="3" cycle="">
+      <packageRef name="org.spaceroots.mantissa.ode" type="usedBy"/>
+      <packageRef name="org.spaceroots.mantissa.roots" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.roots" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions.scalar" type="usesInternal"/>
+      <packageRef name="org.spaceroots.mantissa.functions" type="usesInternal"/>
+    </package>
+    <package name="org.spaceroots.mantissa.utilities" sources="mantissa-7.2.jar"  size="7" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="">
+      <packageRef name="org.spaceroots.mantissa.utilities" type="usedBy"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="org.spaceroots.mantissa.utilities" type="usesInternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+    </package>
+  </packages>
+</classycle>

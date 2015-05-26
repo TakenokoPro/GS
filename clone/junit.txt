@@ -1,0 +1,178 @@
+#version: ccfinder 7.3.2
+#format: classwise
+#langspec: JAVA
+#option: -b 30
+#option: -e char
+#option: -k 30
+#option: -r abcdfikmnoprsuv
+#option: -c wfg
+#option: -y 
+#begin{file description}
+0.0	22	62	C:\Users\m12mm038\Desktop\junit3.8.2\junit\samples\AllTests.java
+0.1	42	5	C:\Users\m12mm038\Desktop\junit3.8.2\junit\samples\money\IMoney.java
+0.2	73	285	C:\Users\m12mm038\Desktop\junit3.8.2\junit\samples\money\Money.java
+0.3	132	584	C:\Users\m12mm038\Desktop\junit3.8.2\junit\samples\money\MoneyBag.java
+0.4	142	688	C:\Users\m12mm038\Desktop\junit3.8.2\junit\samples\money\MoneyTest.java
+0.5	65	116	C:\Users\m12mm038\Desktop\junit3.8.2\junit\samples\SimpleTest.java
+0.6	66	280	C:\Users\m12mm038\Desktop\junit3.8.2\junit\samples\VectorTest.java
+0.7	23	60	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\AllTests.java
+0.8	63	226	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\extensions\ActiveTestTest.java
+0.9	24	63	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\extensions\AllTests.java
+0.10	64	243	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\extensions\ExceptionTestCaseTest.java
+0.11	92	264	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\extensions\ExtensionTest.java
+0.12	61	189	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\extensions\RepeatedTestTest.java
+0.13	30	94	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\AllTests.java
+0.14	147	440	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\AssertTest.java
+0.15	102	394	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\ComparisonCompactorTest.java
+0.16	23	55	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\ComparisonFailureTest.java
+0.17	59	148	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\DoublePrecisionAssertTest.java
+0.18	13	20	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\Failure.java
+0.19	9	15	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\InheritedTestCase.java
+0.20	9	16	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\NoArgTestCaseTest.java
+0.21	10	15	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\NoTestCaseClass.java
+0.22	11	16	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\NoTestCases.java
+0.23	13	22	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\NotPublicTestCase.java
+0.24	14	25	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\NotVoidTestCase.java
+0.25	15	29	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\OneTestCase.java
+0.26	9	15	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\OverrideTestCase.java
+0.27	16	22	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\Success.java
+0.28	98	470	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\SuiteTest.java
+0.29	179	633	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\TestCaseTest.java
+0.30	53	148	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\TestImplementorTest.java
+0.31	68	195	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\framework\TestListenerTest.java
+0.32	37	119	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\AllTests.java
+0.33	35	76	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\BaseTestRunnerTest.java
+0.34	26	105	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\ClassLoaderTest.java
+0.35	18	64	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\LoadedFromJar.java
+0.36	14	35	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\SimpleTestCollectorTest.java
+0.37	28	107	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\SorterTest.java
+0.38	45	158	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\StackFilterTest.java
+0.39	46	102	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\TestCaseClassLoaderTest.java
+0.40	100	424	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\TextFeedbackTest.java
+0.41	74	209	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\TextRunnerSingleMethodTest.java
+0.42	60	191	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\runner\TextRunnerTest.java
+0.43	14	20	C:\Users\m12mm038\Desktop\junit3.8.2\junit\tests\WasRun.java
+#end{file description}
+#begin{syntax error}
+#end{syntax error}
+#begin{clone}
+#begin{set}
+0.2	39,9,106	44,34,147	37
+0.3	52,9,168	58,43,209	37
+#end{set}
+#begin{set}
+0.4	102,9,509	107,3,539	28
+0.4	108,9,540	113,3,570	28
+#end{set}
+#begin{set}
+0.8	22,3,31	27,3,62	20
+0.8	31,3,75	36,3,106	20
+0.8	40,3,119	45,3,150	20
+0.8	49,3,163	54,3,194	20
+#end{set}
+#begin{set}
+0.8	29,9,63	36,3,106	32
+0.8	38,9,107	45,3,150	32
+0.8	47,9,151	54,3,194	32
+#end{set}
+#begin{set}
+0.9	16,9,22	21,46,55	18
+0.32	17,9,23	22,48,56	18
+#end{set}
+#begin{set}
+0.12	29,9,55	35,3,88	31
+0.12	37,10,89	43,3,122	31
+0.12	45,10,123	51,3,156	31
+#end{set}
+#begin{set}
+0.13	20,3,44	24,53,74	9
+0.13	21,3,50	25,51,80	3
+0.13	22,3,56	26,55,86	0
+0.32	19,3,32	23,46,62	9
+#end{set}
+#begin{set}
+0.13	20,3,44	25,51,80	9
+0.13	21,3,50	26,55,86	3
+#end{set}
+#begin{set}
+0.14	95,9,247	103,3,277	30
+0.14	105,9,278	113,3,308	30
+#end{set}
+#begin{set}
+0.28	24,3,43	27,57,75	12
+0.28	30,3,91	33,60,123	0
+#end{set}
+#begin{set}
+0.28	24,3,43	28,55,83	12
+0.28	29,3,83	33,60,123	0
+#end{set}
+#begin{set}
+0.28	24,3,43	29,59,91	12
+0.28	28,3,75	33,60,123	0
+#end{set}
+#begin{set}
+0.28	24,3,43	30,54,99	12
+0.28	27,3,67	33,60,123	0
+#end{set}
+#begin{set}
+0.28	24,3,43	31,53,107	12
+0.28	26,3,59	33,60,123	0
+#end{set}
+#begin{set}
+0.28	24,3,43	32,52,115	12
+0.28	25,3,51	33,60,123	5
+#end{set}
+#begin{set}
+0.28	49,9,190	54,14,223	28
+0.28	72,9,309	77,14,342	28
+#end{set}
+#begin{set}
+0.28	58,3,239	62,3,269	19
+0.29	146,3,462	150,3,492	19
+#end{set}
+#begin{set}
+0.29	161,2,525	166,3,559	23
+0.29	167,2,560	172,3,594	23
+0.29	173,2,595	178,3,629	23
+#end{set}
+#begin{set}
+0.38	16,3,27	21,60,57	5
+0.38	26,3,77	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	22,70,62	5
+0.38	25,3,72	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	23,75,67	5
+0.38	24,3,67	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	24,75,72	5
+0.38	23,3,62	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	25,81,77	5
+0.38	22,3,57	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	26,84,82	5
+0.38	21,3,52	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	27,75,87	5
+0.38	20,3,47	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	28,71,92	5
+0.38	19,3,42	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	29,77,97	5
+0.38	18,3,37	31,76,107	0
+#end{set}
+#begin{set}
+0.38	16,3,27	30,84,102	5
+0.38	17,3,32	31,76,107	0
+#end{set}
+#end{clone}

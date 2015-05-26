@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Component Rank Calculator 使い方マニュアル</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<style type="text/css">
+* {margin: 0;padding: 0;}
+body {color: #333;font-family: "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;font-size: 0.8em;text-align: center;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+th,td {color: #333;font-size: 13px;}
+th {font-weight: bold;}
+p,li,dt,dl {line-height: 1.6;}
+li {list-style-type: none;}
+img {border: 0;}
+address,cite {font-style: normal;}
+pre {font-family: "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;}
+pre code {font-family: sans-serif;font-size: 1.0em;}
+hr {display: none;}
+fieldset {border: 0;}
+input {font-family: Verdana, "ＭＳ Ｐゴシック", sans-serif;font-size: 1.3em;color: #333;}
+textarea {font-family: Verdana, "ＭＳ Ｐゴシック", sans-serif;font-size: 1.0em;color: 333;}
+q:before, q:after {content: '';}
+.clear {clear: both;}
+
+a:link {color: #D71213;text-decoration: underline;}
+a:visited {color: #D71213;text-decoration: underline;}
+a:hover {color: #D71213;text-decoration: none;}
+a:active {color: #D71213;text-decoration: none;}
+
+div#page {width: 1000px;text-align: left;margin: 50px auto;}
+
+div#header {text-align: center;}
+div#header h1 {font-size: 2.0em;font-weight: bold;margin: 0 0 20px 0;}
+
+div#main h2 {padding: 2px 0 2px 13px;border-left: #9E9C9B 10px solid;border-bottom: #9E9C9B 1px solid;margin: 0 0 20px 0;font-size: 1.1em;font-weight: bold;}
+div#main h2 a:link {color: #CC3C20;text-decoration: none;font-weight: bold;}
+div#main h2 a:visited {color: #CC3C20;text-decoration: none;font-weight: bold;}
+div#main h2 a:hover {color: #3180C2;text-decoration: none;font-weight: bold;}
+div#main h2 a:active {color: #3180C2;text-decoration: none;font-weight: bold;}
+
+div#main h3 {margin: 0 0 0 0; font-weight: bold;font-size: 1.0em;}
+div#main p {margin: 0 0 2.0em 0;}
+div#main blockquote {background: #424242 url(image/quote.png) no-repeat 10px 5px;color: #FFF;padding: 10px 10px 10px 50px;margin: 0 0 2.0em 0;}
+div#main blockquote p {margin: 0;}
+div#main blockquote pre {margin: 0;padding: 0;background: transparent;overflow: visible;}
+div#main ul {margin: 0 0 2.0em 0;}
+div#main ul li {padding: 0 0 0 25px;background: url(image/list.png) no-repeat 5px 4px;}
+div#main ol {margin: 0 0 2.0em 0;}
+div#main ol li {margin: 0 0 0 35px;list-style-type: decimal;}
+div#main cite {}
+div#main sup {vertical-align: text-top;font-size: 0.8em;line-height: 1.0em;}
+div#main sub {vertical-align: text-bottom;font-size: 0.8em;line-height: 1.0em;}
+div#main pre {font-size: 0.9em;line-height: 1.6;overflow: hidden;margin: 0 0 2.0em 0;padding: 10px;background: #EEEDEC;border: #9E9C9B 1px solid ;}
+div#main pre code {}
+div#main table {margin: 0 0 2.0em 0;border-collapse: collapse;border-spacing: 0;border: #777 1px solid;}
+div#main caption {text-align: left;font-weight: bold;}
+div#main th {padding: 3px 5px;border-right: #777 1px solid;border-bottom: #777 1px solid;background: #CCC;font-weight: bold;}
+div#main td {padding: 3px 5px;border-right: #777 1px solid;border-bottom: #777 1px solid;background: #EEE;}
+div#main dl {margin: 0 0 2.0em 0;}
+div#main dt {font-weight: bold;}
+div#main dd {margin: 0 0 2.0em 0;}
+div#main ins {text-decoration: none;}
+div#main del {text-decoration: line-through;}
+div#main em {font-style: normal;font-weight: bold;}
+div#main strong {font-style: normal;font-weight: bold;color: #D90000;}
+div#main img {margin: 0 0 20px 0;}
+
+div#footer {margin: 0 auto;text-align: center;background: #424242 url(image/footer.png) repeat-x top;color: #D1D1D1;clear: both;border-top: #1E1E1E 2px solid;}
+div#copyright {width: 860px;margin: 0 auto;padding: 20px 0;font-family: Verdana, sans-serif;}
+div#copyright a:link {color: #CC3C20;text-decoration: none;font-weight: bold;}
+div#copyright a:visited {color: #CC3C20;text-decoration: none;font-weight: bold;}
+div#copyright a:hover {color: #3180C2;text-decoration: none;font-weight: bold;}
+div#copyright a:active {color: #3180C2;text-decoration: none;font-weight: bold;}
+
+div#copyright p {font-family: Verdana, sans-serif;display: inline;margin: 0 auto;text-align: left;padding: 10px 0 10px 30px;background: url(image/logo_footer.gif) no-repeat left center;}
+
+</style>
+</head>
+<body>
+<div id="page">
+<div id="header"><h1>Component Rank Calculator 使い方マニュアル</h1></div>
+<div id="main">
+
+<h2>このツールとは</h2>
+
+<p>コンポーネントランク <a href="#cr">[1]</a> の手法に基づいて、各 Java クラスの評価値を求めるツールです。
+評価値は0～1の範囲で表現され、値が大きい方がそのソフトウェアにおける重要度が高いということになります。</p>
+<p>このツールが従来のコンポーネントランクと違う点は、コードクローンの関係を評価値の計算に組み込んでいる点です。
+コードクローンの存在している部品を1つの部品とみなし、評価値を計算します。</p>
+
+<h2>解析の手順</h2>
+
+<p>このツールを利用する準備として、 Classycle <a href="#cla">[2]</a> と CCFinder <a href="#ccf">[3]</a> という2つのツールを使います。
+次のような手順で解析をおこなうことになります。</p>
+
+<ol>
+<li>部品群の利用関係を Classycle で解析し、 XML ファイルを取得</li>
+<li>部品群のコードクローンを CCFinder で解析し、 TXT ファイルを取得</li>
+<li>上で得られた XML ファイルと TXT ファイルをこのツールで解析</li>
+</ol>
+
+<h2>使い方</h2>
+
+<p>まず、<a href="http://httpd.apache.org/">Apache</a> と <a href="http://windows.php.net/">PHP</a> をインストールしてください。インストール方法はインターネットで調べればいくらでも出てきます。<a href="http://phpjavascriptroom.com/?t=php&p=apachephpwindows7">ここ</a>あたりが参考になるかもしれません。</p>
+<p>Apache と PHP がインストールできたら、「 C:\Apache\htdocs 」などに「 crc 」フォルダを丸ごと置きます。あとは設定をおこない、ブラウザで crc.php を開くだけです。crc.php をエディタで開くと先頭付近に次のような記述があります。
+ツールをただ使うだけであれば、変更が必要なのはこの部分だけです。</p>
+
+<pre><code>    // -----------------------------------------------------
+    // 設定
+    // -----------------------------------------------------
+
+    // Classycleファイルの設定
+    $file_class = "○○.xml";
+
+    // CCFinderファイルの設定
+    $file_clone = "○○.txt";
+
+    // 「遠い」と判断するクラス間の距離の定義（これ「以上」だと遠いと判断）
+    $far_dist = 4;
+
+    // 実行環境の設定
+    ini_set('memory_limit' ,'512M');
+    ini_set('max_execution_time' ,'60');
+</code></pre>
+
+<dl>
+<dt>「Classycleファイルの設定」「CCFinderファイルの設定」</dt>
+<dd>XML ファイルと TXT ファイルのファイル名に応じて ○○.xml と ○○.txt の部分を書き換えて下さい。</dd>
+<dt>クラス間の距離の定義</dt>
+<dd>どこまでをコードクローンとみなすかの定義です。初期値は4となっています。
+これは「コードクローンの存在する部品に4つ以上階層を移動しないと辿り着けない場合、1つの部品とみなす意味が小さいのでコードクローンを無視する」という意味になります。
+必要に応じて変えて下さい。特別な理由がなければ、4のままで良いと思います。</dd>
+<dt>実行環境の設定</dt>
+<dd>memory_limit はこのツールを動かすメモリの設定です。
+動かす PC が貧弱な時は 256M や 128M などと値を小さくすると良いかもしれません。
+特別な理由がなければ、このままで良いと思います。</dd>
+<dd>max_execution_time は最大計算時間の設定です。
+このツールを動かしている PHP という言語には、処理時間に制限があり、制限を超えると処理を打ち切るという仕様があります。
+「Fatal error: Maximum execution time ～」といったエラーは、計算量が多く、処理時間の制限に達してしまっている証拠です。
+そのときはこの、 max_execution_time を120や240といったより大きな値にすると計算を完了できるかもしれません。
+値が大きいほど PC に負担をかけることになるので、特別な理由がなければ、このままで良いと思います。</dd>
+</dl>
+
+<h2>結果の見方</h2>
+
+<p>表の赤い行は、コードクローンが存在したので統合したクラスです。一番上の行をクリックすると、その項目についてソートできます。例えば、「Class Name」をクリックするとクラス名を辞書順に並べ替えます。ただし、あくまで辞書順に並べ替えるだけなので、数字の大きさ順にはならないことに注意してください。（1→10→2 のように並んでしまう）</p>
+
+<img src="result_example.png" width="1000" height="333" alt="結果の例" />
+
+<dl>
+<dt>Class Name</dt>
+<dd>このクラスの名前です。</dd>
+<dt>usedBy</dt>
+<dd>このクラスが使われているクラスの数です。</dd>
+<dt>usesIn</dt>
+<dd>このクラスが使っている、このソフトウェア内のクラスの数です。</dd>
+<dt>usesEx</dt>
+<dd>このクラスが使っている、このソフトウェア外のクラスの数です。 Java の標準パッケージクラスなどのことで、あまり関係はない数字です。</dd>
+<dt>Before</dt>
+<dd>コードクローンの存在するクラスを統合する前の各クラスの評価値です。</dd>
+<dt>After</dt>
+<dd>コードクローンの存在するクラスを統合した後の各クラスの評価値です。</dd>
+<dt>Up/Down</dt>
+<dd>評価値の変動率を示します。</dd>
+<dt>Rank</dt>
+<dd>全クラス中の順位の変動を示します。</dd>
+</dl>
+
+<h2>参考</h2>
+<ol>
+<li id="cr">Katsuro Inoue, Reishi Yokomori, Tetsuo Yamamoto, Makoto Matsushita, and Shinji Kusumoto, “Ranking Significance of Software Components Based on Use Relations, ” Transactions on Software Engineering, vol. 31, no. 3, pp. 213-225, 2005.</li>
+<li id="cla">Franz-Josef Elmer, “Classycle: Analysing Tools for Java Class and Package Dependencies, ”<a href="http://classycle.sourceforge.net/">http://classycle.sourceforge.net/</a></li>
+<li id="ccf"> Toshihiro Kamiya, Shinji Kusumoto, and Katsuro Inoue, “CCFinder: A Multi-Linguistic Tokenbased Code Clone Detection System for Large Scale Source Code, ” IEEE Trans. Software Engineering, vol. 28, no. 7, pp. 654-670, 2002.</a></li>
+</ol>
+
+
+</div>
+</div>
+</body>
+</html>

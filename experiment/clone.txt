@@ -1,0 +1,31 @@
+#version: ccfinder 7.3.2
+#format: classwise
+#langspec: JAVA
+#option: -b 30
+#option: -e char
+#option: -k 30
+#option: -r abcdfikmnoprsuv
+#option: -c w-fg
+#option: -y 
+#begin{file description}
+0.0	100	1000	E:\class01.java
+0.1	100	1000	E:\class02.java
+0.2	100	1000	E:\class03.java
+0.3	100	1000	E:\class04.java
+0.4	100	1000	E:\class05.java
+0.5	100	1000	E:\class06.java
+0.6	100	1000	E:\class07.java
+0.7	100	1000	E:\class08.java
+0.8	100	1000	E:\class09.java
+0.9	100	1000	E:\class10.java
+0.10	100	1000	E:\class11.java
+0.11	100	1000	E:\class12.java
+#end{file description}
+#begin{syntax error}
+#end{syntax error}
+#begin{clone}
+#begin{set}
+0.3 130,9,219	132,129,255	10
+0.6	324,9,866	326,123,902	9
+#end{set}
+#end{clone}

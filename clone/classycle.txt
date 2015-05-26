@@ -1,0 +1,148 @@
+#version: ccfinder 7.3.2
+#format: classwise
+#langspec: JAVA
+#option: -b 30
+#option: -e char
+#option: -k 30
+#option: -r abcdfikmnoprsuv
+#option: -c wfg
+#option: -y 
+#begin{file description}
+0.0	587	1236	C:\Users\m12mm038\Desktop\classycle\Analyser.java
+0.1	158	265	C:\Users\m12mm038\Desktop\classycle\AnalyserCommandLine.java
+0.2	156	310	C:\Users\m12mm038\Desktop\classycle\ant\ClassycleTask.java
+0.3	209	264	C:\Users\m12mm038\Desktop\classycle\ant\DependencyCheckingTask.java
+0.4	176	204	C:\Users\m12mm038\Desktop\classycle\ant\ReportTask.java
+0.5	147	204	C:\Users\m12mm038\Desktop\classycle\ClassAttributes.java
+0.6	73	101	C:\Users\m12mm038\Desktop\classycle\classfile\ClassConstant.java
+0.7	134	253	C:\Users\m12mm038\Desktop\classycle\classfile\Constant.java
+0.8	73	124	C:\Users\m12mm038\Desktop\classycle\classfile\ConstantPoolPrinter.java
+0.9	50	43	C:\Users\m12mm038\Desktop\classycle\classfile\DoubleConstant.java
+0.10	42	33	C:\Users\m12mm038\Desktop\classycle\classfile\FieldRefConstant.java
+0.11	50	43	C:\Users\m12mm038\Desktop\classycle\classfile\FloatConstant.java
+0.12	50	43	C:\Users\m12mm038\Desktop\classycle\classfile\IntConstant.java
+0.13	42	33	C:\Users\m12mm038\Desktop\classycle\classfile\InterfaceMethodRefConstant.java
+0.14	50	43	C:\Users\m12mm038\Desktop\classycle\classfile\LongConstant.java
+0.15	42	33	C:\Users\m12mm038\Desktop\classycle\classfile\MethodRefConstant.java
+0.16	73	109	C:\Users\m12mm038\Desktop\classycle\classfile\NameAndTypeConstant.java
+0.17	64	87	C:\Users\m12mm038\Desktop\classycle\classfile\RefConstant.java
+0.18	59	69	C:\Users\m12mm038\Desktop\classycle\classfile\StringConstant.java
+0.19	54	43	C:\Users\m12mm038\Desktop\classycle\classfile\UTF8Constant.java
+0.20	225	510	C:\Users\m12mm038\Desktop\classycle\ClassNameExtractor.java
+0.21	154	242	C:\Users\m12mm038\Desktop\classycle\CommandLine.java
+0.22	111	249	C:\Users\m12mm038\Desktop\classycle\dependency\CheckCyclesStatement.java
+0.23	78	144	C:\Users\m12mm038\Desktop\classycle\dependency\CheckSetStatement.java
+0.24	129	205	C:\Users\m12mm038\Desktop\classycle\dependency\CyclesResult.java
+0.25	97	98	C:\Users\m12mm038\Desktop\classycle\dependency\DefaultPreferenceFactory.java
+0.26	95	191	C:\Users\m12mm038\Desktop\classycle\dependency\DefaultResultRenderer.java
+0.27	121	179	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyChecker.java
+0.28	116	221	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyCheckerCommandLine.java
+0.29	484	1340	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyDefinitionParser.java
+0.30	25	5	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyPathRenderer.java
+0.31	145	309	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyPathsRenderer.java
+0.32	76	56	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyProcessor.java
+0.33	65	93	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyProperties.java
+0.34	110	136	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyResult.java
+0.35	176	445	C:\Users\m12mm038\Desktop\classycle\dependency\DependencyStatement.java
+0.36	66	87	C:\Users\m12mm038\Desktop\classycle\dependency\LayerDefinitionRepository.java
+0.37	109	212	C:\Users\m12mm038\Desktop\classycle\dependency\LayeringStatement.java
+0.38	63	77	C:\Users\m12mm038\Desktop\classycle\dependency\PatternVertexCondition.java
+0.39	33	5	C:\Users\m12mm038\Desktop\classycle\dependency\Preference.java
+0.40	33	5	C:\Users\m12mm038\Desktop\classycle\dependency\PreferenceFactory.java
+0.41	38	5	C:\Users\m12mm038\Desktop\classycle\dependency\Result.java
+0.42	87	124	C:\Users\m12mm038\Desktop\classycle\dependency\ResultContainer.java
+0.43	49	39	C:\Users\m12mm038\Desktop\classycle\dependency\ResultRenderer.java
+0.44	71	106	C:\Users\m12mm038\Desktop\classycle\dependency\SetDefinitionRepository.java
+0.45	58	68	C:\Users\m12mm038\Desktop\classycle\dependency\ShowStatement.java
+0.46	35	6	C:\Users\m12mm038\Desktop\classycle\dependency\Statement.java
+0.47	66	54	C:\Users\m12mm038\Desktop\classycle\dependency\TextResult.java
+0.48	262	686	C:\Users\m12mm038\Desktop\classycle\dependency\XMLResultRenderer.java
+0.49	94	99	C:\Users\m12mm038\Desktop\classycle\graph\AtomicVertex.java
+0.50	36	9	C:\Users\m12mm038\Desktop\classycle\graph\Attributes.java
+0.51	89	5	C:\Users\m12mm038\Desktop\classycle\graph\GraphAttributes.java
+0.52	118	130	C:\Users\m12mm038\Desktop\classycle\graph\GraphProcessor.java
+0.53	106	189	C:\Users\m12mm038\Desktop\classycle\graph\LongestWalkProcessor.java
+0.54	56	65	C:\Users\m12mm038\Desktop\classycle\graph\NameAttributes.java
+0.55	266	497	C:\Users\m12mm038\Desktop\classycle\graph\PathsFinder.java
+0.56	317	884	C:\Users\m12mm038\Desktop\classycle\graph\StrongComponent.java
+0.57	94	132	C:\Users\m12mm038\Desktop\classycle\graph\StrongComponentAnalyser.java
+0.58	166	392	C:\Users\m12mm038\Desktop\classycle\graph\StrongComponentProcessor.java
+0.59	175	245	C:\Users\m12mm038\Desktop\classycle\graph\Vertex.java
+0.60	43	5	C:\Users\m12mm038\Desktop\classycle\graph\VertexCondition.java
+0.61	140	336	C:\Users\m12mm038\Desktop\classycle\GraphBuilder.java
+0.62	86	105	C:\Users\m12mm038\Desktop\classycle\NameAndSourceAttributes.java
+0.63	62	84	C:\Users\m12mm038\Desktop\classycle\PackageAttributes.java
+0.64	144	309	C:\Users\m12mm038\Desktop\classycle\PackageProcessor.java
+0.65	43	45	C:\Users\m12mm038\Desktop\classycle\PackageVertex.java
+0.66	358	786	C:\Users\m12mm038\Desktop\classycle\Parser.java
+0.67	81	187	C:\Users\m12mm038\Desktop\classycle\renderer\AbstractStrongComponentRenderer.java
+0.68	48	7	C:\Users\m12mm038\Desktop\classycle\renderer\AtomicVertexRenderer.java
+0.69	72	121	C:\Users\m12mm038\Desktop\classycle\renderer\PlainClassRenderer.java
+0.70	59	126	C:\Users\m12mm038\Desktop\classycle\renderer\PlainStrongComponentRenderer.java
+0.71	37	6	C:\Users\m12mm038\Desktop\classycle\renderer\StrongComponentRenderer.java
+0.72	111	165	C:\Users\m12mm038\Desktop\classycle\renderer\TemplateBasedClassRenderer.java
+0.73	69	76	C:\Users\m12mm038\Desktop\classycle\renderer\TemplateBasedStrongComponentRenderer.java
+0.74	78	166	C:\Users\m12mm038\Desktop\classycle\renderer\XMLAtomicVertexRenderer.java
+0.75	55	44	C:\Users\m12mm038\Desktop\classycle\renderer\XMLClassRenderer.java
+0.76	159	426	C:\Users\m12mm038\Desktop\classycle\renderer\XMLStrongComponentRenderer.java
+0.77	90	146	C:\Users\m12mm038\Desktop\classycle\UnresolvedNode.java
+0.78	64	77	C:\Users\m12mm038\Desktop\classycle\util\AndStringPattern.java
+0.79	61	61	C:\Users\m12mm038\Desktop\classycle\util\NotStringPattern.java
+0.80	65	76	C:\Users\m12mm038\Desktop\classycle\util\OrStringPattern.java
+0.81	39	5	C:\Users\m12mm038\Desktop\classycle\util\StringPattern.java
+0.82	80	122	C:\Users\m12mm038\Desktop\classycle\util\StringPatternSequence.java
+0.83	88	129	C:\Users\m12mm038\Desktop\classycle\util\Text.java
+0.84	44	28	C:\Users\m12mm038\Desktop\classycle\util\TrueStringPattern.java
+0.85	144	208	C:\Users\m12mm038\Desktop\classycle\util\WildCardPattern.java
+0.86	60	47	C:\Users\m12mm038\Desktop\classycle\XMLPackageRenderer.java
+0.87	60	58	C:\Users\m12mm038\Desktop\classycle\XMLPackageStrongComponentRenderer.java
+#end{file description}
+#begin{syntax error}
+#end{syntax error}
+#begin{clone}
+#begin{set}
+0.0	409,7,650	419,6,682	32
+0.0	425,5,699	434,4,731	20
+#end{set}
+#begin{set}
+0.0	457,7,790	466,22,829	37
+0.0	473,5,857	482,20,896	37
+#end{set}
+#begin{set}
+0.1	58,5,47	65,6,79	21
+0.1	64,12,71	71,6,103	0
+#end{set}
+#begin{set}
+0.1	58,5,47	68,6,91	21
+0.1	61,12,59	71,6,103	10
+#end{set}
+#begin{set}
+0.1	70,7,94	84,11,151	41
+0.1	77,7,122	91,11,179	24
+#end{set}
+#begin{set}
+0.7	70,11,71	81,72,111	24
+0.7	74,11,86	85,66,126	10
+#end{set}
+#begin{set}
+0.7	83,11,116	91,59,152	8
+0.7	86,11,128	94,57,164	7
+#end{set}
+#begin{set}
+0.16	50,10,26	57,4,58	30
+0.16	60,10,59	67,4,91	30
+0.18	46,10,22	53,4,54	30
+#end{set}
+#begin{set}
+0.29	172,5,351	178,11,381	27
+0.29	178,12,381	186,11,411	0
+#end{set}
+#begin{set}
+0.29	172,5,351	182,11,396	27
+0.29	175,12,366	186,11,411	13
+#end{set}
+#begin{set}
+0.69	50,7,22	61,8,62	34
+0.72	92,5,92	103,6,132	33
+#end{set}
+#end{clone}

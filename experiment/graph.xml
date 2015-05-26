@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='reportXMLtoHTML.xsl'?>
+<classycle title='Classycle 1.3.3' date='2008-05-24'>
+  <classes numberOfExternalClasses="66">
+    <class name="class01" usedBy="0" usesInternal="0" usesExternal="0">
+    </class>
+    <class name="class02" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class01" type="usesInternal"/>
+    </class>
+    <class name="class03" usedBy="0" usesInternal="0" usesExternal="0">
+    </class>
+    <class name="class04" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class01" type="usesInternal"/>
+      <classRef name="class02" type="usesInternal"/>
+      <classRef name="class03" type="usesInternal"/>
+    </class>
+    <class name="class05" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class01" type="usesInternal"/>
+      <classRef name="class02" type="usesInternal"/>
+      <classRef name="class03" type="usesInternal"/>
+    </class>
+    <class name="class06" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class01" type="usesInternal"/>
+      <classRef name="class02" type="usesInternal"/>
+      <classRef name="class03" type="usesInternal"/>
+    </class>
+    <class name="class07" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class01" type="usesInternal"/>
+      <classRef name="class04" type="usesInternal"/>
+      <classRef name="class05" type="usesInternal"/>
+      <classRef name="class06" type="usesInternal"/>
+    </class>
+    <class name="class08" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class01" type="usesInternal"/>
+      <classRef name="class04" type="usesInternal"/>
+      <classRef name="class05" type="usesInternal"/>
+      <classRef name="class07" type="usesInternal"/>
+    </class>
+    <class name="class09" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class02" type="usesInternal"/>
+      <classRef name="class04" type="usesInternal"/>
+      <classRef name="class05" type="usesInternal"/>
+      <classRef name="class06" type="usesInternal"/>
+    </class>
+    <class name="class10" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class03" type="usesInternal"/>
+      <classRef name="class05" type="usesInternal"/>
+      <classRef name="class06" type="usesInternal"/>
+      <classRef name="class07" type="usesInternal"/>
+    </class>
+    <class name="class11" usedBy="0" usesInternal="0" usesExternal="0">
+      <classRef name="class08" type="usesInternal"/>
+      <classRef name="class09" type="usesInternal"/>
+      <classRef name="class10" type="usesInternal"/>
+    </class>
+  </classes>
+</classycle>

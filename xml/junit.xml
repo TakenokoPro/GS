@@ -1,0 +1,1040 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='reportXMLtoHTML.xsl'?>
+<classycle title='junit' date='2013-11-01'>
+  <cycles>
+    <cycle name="junit.samples.money.IMoney et al." size="3" longestWalk="0" girth="2" radius="1" diameter="1" bestFragmentSize="2">
+      <classes>
+        <classRef name="junit.samples.money.IMoney" eccentricity="1" maximumFragmentSize="2"/>
+        <classRef name="junit.samples.money.Money" eccentricity="1" maximumFragmentSize="2"/>
+        <classRef name="junit.samples.money.MoneyBag" eccentricity="1" maximumFragmentSize="2"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.samples.money.IMoney"/>
+        <classRef name="junit.samples.money.Money"/>
+        <classRef name="junit.samples.money.MoneyBag"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.samples.money.IMoney"/>
+        <classRef name="junit.samples.money.Money"/>
+        <classRef name="junit.samples.money.MoneyBag"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.extensions.ActiveTestTest and inner classes" size="2" longestWalk="0" girth="2" radius="1" diameter="1" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.extensions.ActiveTestTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.extensions.ActiveTestTest$SuccessTest" eccentricity="1" maximumFragmentSize="1"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.extensions.ActiveTestTest"/>
+        <classRef name="junit.tests.extensions.ActiveTestTest$SuccessTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.extensions.ActiveTestTest"/>
+        <classRef name="junit.tests.extensions.ActiveTestTest$SuccessTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.extensions.ExceptionTestCaseTest and inner classes" size="4" longestWalk="0" girth="2" radius="1" diameter="2" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.extensions.ExceptionTestCaseTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowExceptionTestCase" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowRuntimeExceptionTestCase" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowNoExceptionTestCase" eccentricity="2" maximumFragmentSize="3"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.extensions.ExceptionTestCaseTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.extensions.ExceptionTestCaseTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.extensions.RepeatedTestTest and inner classes" size="2" longestWalk="0" girth="2" radius="1" diameter="1" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.extensions.RepeatedTestTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.extensions.RepeatedTestTest$SuccessTest" eccentricity="1" maximumFragmentSize="1"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.extensions.RepeatedTestTest"/>
+        <classRef name="junit.tests.extensions.RepeatedTestTest$SuccessTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.extensions.RepeatedTestTest"/>
+        <classRef name="junit.tests.extensions.RepeatedTestTest$SuccessTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.framework.TestImplementorTest and inner classes" size="4" longestWalk="0" girth="2" radius="2" diameter="3" bestFragmentSize="2">
+      <classes>
+        <classRef name="junit.tests.framework.TestImplementorTest" eccentricity="2" maximumFragmentSize="2"/>
+        <classRef name="junit.tests.framework.TestImplementorTest$2" eccentricity="3" maximumFragmentSize="3"/>
+        <classRef name="junit.tests.framework.TestImplementorTest$DoubleTestCase" eccentricity="2" maximumFragmentSize="2"/>
+        <classRef name="junit.tests.framework.TestImplementorTest$1" eccentricity="2" maximumFragmentSize="3"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.framework.TestImplementorTest"/>
+        <classRef name="junit.tests.framework.TestImplementorTest$DoubleTestCase"/>
+        <classRef name="junit.tests.framework.TestImplementorTest$1"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.framework.TestImplementorTest"/>
+        <classRef name="junit.tests.framework.TestImplementorTest$DoubleTestCase"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.framework.TestListenerTest and inner classes" size="4" longestWalk="0" girth="2" radius="1" diameter="2" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.framework.TestListenerTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.framework.TestListenerTest$1" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="junit.tests.framework.TestListenerTest$2" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="junit.tests.framework.TestListenerTest$3" eccentricity="2" maximumFragmentSize="3"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.framework.TestListenerTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.framework.TestListenerTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.runner.BaseTestRunnerTest and inner classes" size="3" longestWalk="0" girth="2" radius="1" diameter="2" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.runner.BaseTestRunnerTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.runner.BaseTestRunnerTest$MockRunner" eccentricity="2" maximumFragmentSize="2"/>
+        <classRef name="junit.tests.runner.BaseTestRunnerTest$NonStatic" eccentricity="2" maximumFragmentSize="2"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.runner.BaseTestRunnerTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.runner.BaseTestRunnerTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.runner.SorterTest and inner classes" size="2" longestWalk="0" girth="2" radius="1" diameter="1" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.runner.SorterTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.runner.SorterTest$Swapper" eccentricity="1" maximumFragmentSize="1"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.runner.SorterTest"/>
+        <classRef name="junit.tests.runner.SorterTest$Swapper"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.runner.SorterTest"/>
+        <classRef name="junit.tests.runner.SorterTest$Swapper"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.runner.TextFeedbackTest and inner classes" size="9" longestWalk="0" girth="2" radius="1" diameter="2" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.runner.TextFeedbackTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$TestResultPrinter" eccentricity="2" maximumFragmentSize="8"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$1" eccentricity="2" maximumFragmentSize="8"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$2" eccentricity="2" maximumFragmentSize="8"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$3" eccentricity="2" maximumFragmentSize="8"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$4" eccentricity="2" maximumFragmentSize="8"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$5" eccentricity="2" maximumFragmentSize="8"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$6" eccentricity="2" maximumFragmentSize="8"/>
+        <classRef name="junit.tests.runner.TextFeedbackTest$7" eccentricity="2" maximumFragmentSize="8"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.runner.TextFeedbackTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.runner.TextFeedbackTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.runner.TextRunnerSingleMethodTest and inner classes" size="4" longestWalk="0" girth="2" radius="1" diameter="2" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.runner.TextRunnerSingleMethodTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$NullResultPrinter" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$1" eccentricity="2" maximumFragmentSize="3"/>
+        <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$InvocationTest" eccentricity="2" maximumFragmentSize="3"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.runner.TextRunnerSingleMethodTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.runner.TextRunnerSingleMethodTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.runner.TextRunnerTest and inner classes" size="2" longestWalk="0" girth="2" radius="1" diameter="1" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.runner.TextRunnerTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.runner.TextRunnerTest$1" eccentricity="1" maximumFragmentSize="1"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.runner.TextRunnerTest"/>
+        <classRef name="junit.tests.runner.TextRunnerTest$1"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.runner.TextRunnerTest"/>
+        <classRef name="junit.tests.runner.TextRunnerTest$1"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.extensions.ExtensionTest and inner classes" size="7" longestWalk="1" girth="2" radius="1" diameter="2" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.extensions.ExtensionTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.extensions.ExtensionTest$1" eccentricity="2" maximumFragmentSize="6"/>
+        <classRef name="junit.tests.extensions.ExtensionTest$2" eccentricity="2" maximumFragmentSize="6"/>
+        <classRef name="junit.tests.extensions.ExtensionTest$3" eccentricity="2" maximumFragmentSize="6"/>
+        <classRef name="junit.tests.extensions.ExtensionTest$4" eccentricity="2" maximumFragmentSize="6"/>
+        <classRef name="junit.tests.extensions.ExtensionTest$TornDown" eccentricity="2" maximumFragmentSize="6"/>
+        <classRef name="junit.tests.extensions.ExtensionTest$5" eccentricity="2" maximumFragmentSize="6"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.extensions.ExtensionTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.extensions.ExtensionTest"/>
+      </bestFragmenters>
+    </cycle>
+    <cycle name="junit.tests.framework.TestCaseTest and inner classes" size="12" longestWalk="1" girth="2" radius="1" diameter="2" bestFragmentSize="1">
+      <classes>
+        <classRef name="junit.tests.framework.TestCaseTest" eccentricity="1" maximumFragmentSize="1"/>
+        <classRef name="junit.tests.framework.TestCaseTest$1" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$2" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$TornDown" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$3" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$4" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$5" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$6" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$7" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$8" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$9" eccentricity="2" maximumFragmentSize="11"/>
+        <classRef name="junit.tests.framework.TestCaseTest$10" eccentricity="2" maximumFragmentSize="11"/>
+      </classes>
+      <centerClasses>
+        <classRef name="junit.tests.framework.TestCaseTest"/>
+      </centerClasses>
+      <bestFragmenters>
+        <classRef name="junit.tests.framework.TestCaseTest"/>
+      </bestFragmenters>
+    </cycle>
+  </cycles>
+  <classes numberOfExternalClasses="55">
+    <class name="junit.samples.AllTests" sources="junit" type="class" innerClass="false" size="1464" usedBy="0" usesInternal="2" usesExternal="9" layer="3" cycle="">
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.samples.VectorTest" type="usesInternal"/>
+      <classRef name="junit.tests.AllTests" type="usesInternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.samples.SimpleTest" sources="junit" type="class" innerClass="false" size="2081" usedBy="0" usesInternal="0" usesExternal="11" layer="0" cycle="">
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.Long" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.samples.VectorTest" sources="junit" type="class" innerClass="false" size="2923" usedBy="1" usesInternal="0" usesExternal="13" layer="0" cycle="">
+      <classRef name="junit.samples.AllTests" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="java.util.Vector" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.ArrayIndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="junit.samples.money.IMoney" sources="junit" type="interface" innerClass="false" size="552" usedBy="3" usesInternal="2" usesExternal="1" layer="0" cycle="junit.samples.money.IMoney et al.">
+      <classRef name="junit.samples.money.Money" type="usedBy"/>
+      <classRef name="junit.samples.money.MoneyBag" type="usedBy"/>
+      <classRef name="junit.samples.money.MoneyTest" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.samples.money.Money" type="usesInternal"/>
+      <classRef name="junit.samples.money.MoneyBag" type="usesInternal"/>
+    </class>
+    <class name="junit.samples.money.Money" sources="junit" type="class" innerClass="false" size="2723" usedBy="3" usesInternal="2" usesExternal="3" layer="0" cycle="junit.samples.money.IMoney et al.">
+      <classRef name="junit.samples.money.IMoney" type="usedBy"/>
+      <classRef name="junit.samples.money.MoneyBag" type="usedBy"/>
+      <classRef name="junit.samples.money.MoneyTest" type="usedBy"/>
+      <classRef name="junit.samples.money.IMoney" type="usesInternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.samples.money.MoneyBag" type="usesInternal"/>
+    </class>
+    <class name="junit.samples.money.MoneyBag" sources="junit" type="class" innerClass="false" size="4204" usedBy="3" usesInternal="2" usesExternal="5" layer="0" cycle="junit.samples.money.IMoney et al.">
+      <classRef name="junit.samples.money.IMoney" type="usedBy"/>
+      <classRef name="junit.samples.money.Money" type="usedBy"/>
+      <classRef name="junit.samples.money.MoneyTest" type="usedBy"/>
+      <classRef name="java.util.Vector" type="usesExternal"/>
+      <classRef name="junit.samples.money.Money" type="usesInternal"/>
+      <classRef name="junit.samples.money.IMoney" type="usesInternal"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.util.Enumeration" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.samples.money.MoneyTest" sources="junit" type="class" innerClass="false" size="5432" usedBy="0" usesInternal="3" usesExternal="7" layer="1" cycle="">
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.samples.money.Money" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.samples.money.IMoney" type="usesInternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.samples.money.MoneyBag" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.AllTests" sources="junit" type="class" innerClass="false" size="937" usedBy="1" usesInternal="3" usesExternal="6" layer="2" cycle="">
+      <classRef name="junit.samples.AllTests" type="usedBy"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.tests.framework.AllTests" type="usesInternal"/>
+      <classRef name="junit.tests.runner.AllTests" type="usesInternal"/>
+      <classRef name="junit.tests.extensions.AllTests" type="usesInternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.WasRun" sources="junit" type="class" innerClass="false" size="392" usedBy="2" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ActiveTestTest" sources="junit" type="class" innerClass="false" size="1843" usedBy="1" usesInternal="1" usesExternal="5" layer="0" cycle="junit.tests.extensions.ActiveTestTest and inner classes">
+      <classRef name="junit.tests.extensions.ActiveTestTest$SuccessTest" type="usedBy"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.extensions.RepeatedTest" type="usesExternal"/>
+      <classRef name="junit.extensions.ActiveTestSuite" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ActiveTestTest$SuccessTest" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ActiveTestTest$SuccessTest" sources="junit" type="class" innerClass="true" size="500" usedBy="1" usesInternal="1" usesExternal="1" layer="0" cycle="junit.tests.extensions.ActiveTestTest and inner classes">
+      <classRef name="junit.tests.extensions.ActiveTestTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ActiveTestTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.extensions.AllTests" sources="junit" type="class" innerClass="false" size="1812" usedBy="1" usesInternal="0" usesExternal="9" layer="0" cycle="">
+      <classRef name="junit.tests.AllTests" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExceptionTestCaseTest" sources="junit" type="class" innerClass="false" size="2604" usedBy="3" usesInternal="3" usesExternal="7" layer="0" cycle="junit.tests.extensions.ExceptionTestCaseTest and inner classes">
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowExceptionTestCase" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowNoExceptionTestCase" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowRuntimeExceptionTestCase" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowExceptionTestCase" type="usesInternal"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowRuntimeExceptionTestCase" type="usesInternal"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest$ThrowNoExceptionTestCase" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.extensions.ExceptionTestCase" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExceptionTestCaseTest$ThrowExceptionTestCase" sources="junit" type="class" innerClass="true" size="753" usedBy="1" usesInternal="1" usesExternal="4" layer="0" cycle="junit.tests.extensions.ExceptionTestCaseTest and inner classes">
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.IndexOutOfBoundsException" type="usesExternal"/>
+      <classRef name="junit.extensions.ExceptionTestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExceptionTestCaseTest$ThrowNoExceptionTestCase" sources="junit" type="class" innerClass="true" size="701" usedBy="1" usesInternal="1" usesExternal="3" layer="0" cycle="junit.tests.extensions.ExceptionTestCaseTest and inner classes">
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest" type="usedBy"/>
+      <classRef name="junit.extensions.ExceptionTestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExceptionTestCaseTest$ThrowRuntimeExceptionTestCase" sources="junit" type="class" innerClass="true" size="765" usedBy="1" usesInternal="1" usesExternal="4" layer="0" cycle="junit.tests.extensions.ExceptionTestCaseTest and inner classes">
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.RuntimeException" type="usesExternal"/>
+      <classRef name="junit.extensions.ExceptionTestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExceptionTestCaseTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExtensionTest" sources="junit" type="class" innerClass="false" size="2364" usedBy="6" usesInternal="7" usesExternal="6" layer="1" cycle="junit.tests.extensions.ExtensionTest and inner classes">
+      <classRef name="junit.tests.extensions.ExtensionTest$1" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$2" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$3" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$4" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$5" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$TornDown" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$1" type="usesInternal"/>
+      <classRef name="junit.extensions.TestSetup" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$2" type="usesInternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$3" type="usesInternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="junit.tests.WasRun" type="usesInternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$4" type="usesInternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$5" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$TornDown" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExtensionTest$1" sources="junit" type="class" innerClass="true" size="671" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="junit.tests.extensions.ExtensionTest and inner classes">
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExtensionTest$2" sources="junit" type="class" innerClass="true" size="671" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="junit.tests.extensions.ExtensionTest and inner classes">
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExtensionTest$3" sources="junit" type="class" innerClass="true" size="685" usedBy="1" usesInternal="1" usesExternal="3" layer="1" cycle="junit.tests.extensions.ExtensionTest and inner classes">
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExtensionTest$4" sources="junit" type="class" innerClass="true" size="763" usedBy="1" usesInternal="2" usesExternal="1" layer="1" cycle="junit.tests.extensions.ExtensionTest and inner classes">
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$TornDown" type="usesInternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usesInternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExtensionTest$5" sources="junit" type="class" innerClass="true" size="683" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="junit.tests.extensions.ExtensionTest and inner classes">
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usedBy"/>
+      <classRef name="junit.extensions.TestSetup" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usesInternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.ExtensionTest$TornDown" sources="junit" type="class" innerClass="true" size="617" usedBy="2" usesInternal="1" usesExternal="2" layer="1" cycle="junit.tests.extensions.ExtensionTest and inner classes">
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usedBy"/>
+      <classRef name="junit.tests.extensions.ExtensionTest$4" type="usedBy"/>
+      <classRef name="junit.extensions.TestSetup" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.ExtensionTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.extensions.RepeatedTestTest" sources="junit" type="class" innerClass="false" size="1827" usedBy="1" usesInternal="1" usesExternal="7" layer="0" cycle="junit.tests.extensions.RepeatedTestTest and inner classes">
+      <classRef name="junit.tests.extensions.RepeatedTestTest$SuccessTest" type="usedBy"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.RepeatedTestTest$SuccessTest" type="usesInternal"/>
+      <classRef name="junit.extensions.RepeatedTest" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="java.lang.IllegalArgumentException" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.extensions.RepeatedTestTest$SuccessTest" sources="junit" type="class" innerClass="true" size="508" usedBy="1" usesInternal="1" usesExternal="1" layer="0" cycle="junit.tests.extensions.RepeatedTestTest and inner classes">
+      <classRef name="junit.tests.extensions.RepeatedTestTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.extensions.RepeatedTestTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.AllTests" sources="junit" type="class" innerClass="false" size="2509" usedBy="1" usesInternal="1" usesExternal="9" layer="1" cycle="">
+      <classRef name="junit.tests.AllTests" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.tests.framework.SuiteTest" type="usesInternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.AssertTest" sources="junit" type="class" innerClass="false" size="2935" usedBy="0" usesInternal="0" usesExternal="6" layer="0" cycle="">
+      <classRef name="junit.framework.AssertionFailedError" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.framework.ComparisonFailure" type="usesExternal"/>
+      <classRef name="java.lang.Integer" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.ComparisonCompactorTest" sources="junit" type="class" innerClass="false" size="3975" usedBy="0" usesInternal="0" usesExternal="4" layer="0" cycle="">
+      <classRef name="junit.framework.ComparisonCompactor" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.ComparisonFailureTest" sources="junit" type="class" innerClass="false" size="1042" usedBy="0" usesInternal="0" usesExternal="3" layer="0" cycle="">
+      <classRef name="junit.framework.ComparisonFailure" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.DoublePrecisionAssertTest" sources="junit" type="class" innerClass="false" size="1432" usedBy="0" usesInternal="0" usesExternal="2" layer="0" cycle="">
+      <classRef name="junit.framework.AssertionFailedError" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.Failure" sources="junit" type="class" innerClass="false" size="389" usedBy="0" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.InheritedTestCase" sources="junit" type="class" innerClass="false" size="402" usedBy="0" usesInternal="1" usesExternal="0" layer="1" cycle="">
+      <classRef name="junit.tests.framework.OneTestCase" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.NoArgTestCaseTest" sources="junit" type="class" innerClass="false" size="399" usedBy="0" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.NoTestCaseClass" sources="junit" type="class" innerClass="false" size="385" usedBy="0" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.NoTestCases" sources="junit" type="class" innerClass="false" size="380" usedBy="0" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.NotPublicTestCase" sources="junit" type="class" innerClass="false" size="471" usedBy="0" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.NotVoidTestCase" sources="junit" type="class" innerClass="false" size="468" usedBy="0" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.OneTestCase" sources="junit" type="class" innerClass="false" size="532" usedBy="2" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.tests.framework.InheritedTestCase" type="usedBy"/>
+      <classRef name="junit.tests.framework.OverrideTestCase" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.OverrideTestCase" sources="junit" type="class" innerClass="false" size="402" usedBy="0" usesInternal="1" usesExternal="0" layer="1" cycle="">
+      <classRef name="junit.tests.framework.OneTestCase" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.Success" sources="junit" type="class" innerClass="false" size="436" usedBy="0" usesInternal="0" usesExternal="1" layer="0" cycle="">
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.SuiteTest" sources="junit" type="class" innerClass="false" size="4663" usedBy="1" usesInternal="0" usesExternal="8" layer="0" cycle="">
+      <classRef name="junit.tests.framework.AllTests" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest" sources="junit" type="class" innerClass="false" size="5471" usedBy="11" usesInternal="12" usesExternal="14" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest$1" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$10" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$2" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$3" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$4" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$5" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$6" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$7" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$8" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$9" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$TornDown" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$1" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$2" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$3" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$4" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$5" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$TornDown" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$6" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$7" type="usesInternal"/>
+      <classRef name="junit.tests.WasRun" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$8" type="usesInternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.framework.TestFailure" type="usesExternal"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$9" type="usesInternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$10" type="usesInternal"/>
+      <classRef name="junit.framework.AssertionFailedError" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.util.Enumeration" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$1" sources="junit" type="class" innerClass="true" size="676" usedBy="1" usesInternal="1" usesExternal="3" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$10" sources="junit" type="class" innerClass="true" size="494" usedBy="1" usesInternal="1" usesExternal="1" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$2" sources="junit" type="class" innerClass="true" size="763" usedBy="1" usesInternal="2" usesExternal="1" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$TornDown" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$3" sources="junit" type="class" innerClass="true" size="741" usedBy="1" usesInternal="1" usesExternal="3" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$4" sources="junit" type="class" innerClass="true" size="638" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$5" sources="junit" type="class" innerClass="true" size="662" usedBy="1" usesInternal="1" usesExternal="2" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$6" sources="junit" type="class" innerClass="true" size="744" usedBy="1" usesInternal="1" usesExternal="3" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$7" sources="junit" type="class" innerClass="true" size="668" usedBy="1" usesInternal="2" usesExternal="1" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$TornDown" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$8" sources="junit" type="class" innerClass="true" size="719" usedBy="1" usesInternal="2" usesExternal="2" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest$TornDown" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$9" sources="junit" type="class" innerClass="true" size="904" usedBy="1" usesInternal="1" usesExternal="5" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestCaseTest$TornDown" sources="junit" type="class" innerClass="true" size="677" usedBy="4" usesInternal="1" usesExternal="3" layer="1" cycle="junit.tests.framework.TestCaseTest and inner classes">
+      <classRef name="junit.tests.framework.TestCaseTest" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$2" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$7" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestCaseTest$8" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestCaseTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestImplementorTest" sources="junit" type="class" innerClass="false" size="1190" usedBy="3" usesInternal="2" usesExternal="2" layer="0" cycle="junit.tests.framework.TestImplementorTest and inner classes">
+      <classRef name="junit.tests.framework.TestImplementorTest$1" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestImplementorTest$2" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestImplementorTest$DoubleTestCase" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestImplementorTest$2" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestImplementorTest$DoubleTestCase" type="usesInternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestImplementorTest$1" sources="junit" type="class" innerClass="true" size="1033" usedBy="1" usesInternal="2" usesExternal="4" layer="0" cycle="junit.tests.framework.TestImplementorTest and inner classes">
+      <classRef name="junit.tests.framework.TestImplementorTest$DoubleTestCase" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.framework.Protectable" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestImplementorTest$DoubleTestCase" type="usesInternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestImplementorTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.TestImplementorTest$2" sources="junit" type="class" innerClass="true" size="594" usedBy="1" usesInternal="1" usesExternal="1" layer="0" cycle="junit.tests.framework.TestImplementorTest and inner classes">
+      <classRef name="junit.tests.framework.TestImplementorTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestImplementorTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.TestImplementorTest$DoubleTestCase" sources="junit" type="class" innerClass="true" size="1423" usedBy="2" usesInternal="2" usesExternal="5" layer="0" cycle="junit.tests.framework.TestImplementorTest and inner classes">
+      <classRef name="junit.tests.framework.TestImplementorTest" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestImplementorTest$1" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestImplementorTest$1" type="usesInternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.framework.Protectable" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestImplementorTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.framework.TestListenerTest" sources="junit" type="class" innerClass="false" size="2192" usedBy="3" usesInternal="3" usesExternal="7" layer="0" cycle="junit.tests.framework.TestListenerTest and inner classes">
+      <classRef name="junit.tests.framework.TestListenerTest$1" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestListenerTest$2" type="usedBy"/>
+      <classRef name="junit.tests.framework.TestListenerTest$3" type="usedBy"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestListenerTest$1" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestListenerTest$2" type="usesInternal"/>
+      <classRef name="junit.tests.framework.TestListenerTest$3" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.framework.TestListener" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+      <classRef name="junit.framework.AssertionFailedError" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestListenerTest$1" sources="junit" type="class" innerClass="true" size="696" usedBy="1" usesInternal="1" usesExternal="3" layer="0" cycle="junit.tests.framework.TestListenerTest and inner classes">
+      <classRef name="junit.tests.framework.TestListenerTest" type="usedBy"/>
+      <classRef name="java.lang.Error" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestListenerTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestListenerTest$2" sources="junit" type="class" innerClass="true" size="682" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="junit.tests.framework.TestListenerTest and inner classes">
+      <classRef name="junit.tests.framework.TestListenerTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestListenerTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.framework.TestListenerTest$3" sources="junit" type="class" innerClass="true" size="658" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="junit.tests.framework.TestListenerTest and inner classes">
+      <classRef name="junit.tests.framework.TestListenerTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.framework.TestListenerTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.AllTests" sources="junit" type="class" innerClass="false" size="2631" usedBy="1" usesInternal="0" usesExternal="11" layer="0" cycle="">
+      <classRef name="junit.tests.AllTests" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.runner.BaseTestRunner" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.BaseTestRunnerTest" sources="junit" type="class" innerClass="false" size="814" usedBy="2" usesInternal="2" usesExternal="4" layer="0" cycle="junit.tests.runner.BaseTestRunnerTest and inner classes">
+      <classRef name="junit.tests.runner.BaseTestRunnerTest$MockRunner" type="usedBy"/>
+      <classRef name="junit.tests.runner.BaseTestRunnerTest$NonStatic" type="usedBy"/>
+      <classRef name="junit.tests.runner.BaseTestRunnerTest$MockRunner" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.BaseTestRunnerTest$NonStatic" type="usesInternal"/>
+      <classRef name="junit.runner.BaseTestRunner" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.BaseTestRunnerTest$MockRunner" sources="junit" type="class" innerClass="true" size="965" usedBy="1" usesInternal="1" usesExternal="4" layer="0" cycle="junit.tests.runner.BaseTestRunnerTest and inner classes">
+      <classRef name="junit.tests.runner.BaseTestRunnerTest" type="usedBy"/>
+      <classRef name="junit.runner.BaseTestRunner" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+      <classRef name="junit.tests.runner.BaseTestRunnerTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.BaseTestRunnerTest$NonStatic" sources="junit" type="class" innerClass="true" size="516" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="junit.tests.runner.BaseTestRunnerTest and inner classes">
+      <classRef name="junit.tests.runner.BaseTestRunnerTest" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.tests.runner.BaseTestRunnerTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.ClassLoaderTest" sources="junit" type="class" innerClass="false" size="1877" usedBy="0" usesInternal="0" usesExternal="7" layer="0" cycle="">
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.Assert" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.ClassLoader" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.LoadedFromJar" sources="junit" type="class" innerClass="false" size="1507" usedBy="0" usesInternal="0" usesExternal="7" layer="0" cycle="">
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="junit.framework.Assert" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.ClassLoader" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.SimpleTestCollectorTest" sources="junit" type="class" innerClass="false" size="808" usedBy="0" usesInternal="0" usesExternal="5" layer="0" cycle="">
+      <classRef name="junit.runner.SimpleTestCollector" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.util.Hashtable" type="usesExternal"/>
+      <classRef name="java.util.Enumeration" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.SorterTest" sources="junit" type="class" innerClass="false" size="1027" usedBy="1" usesInternal="1" usesExternal="6" layer="0" cycle="junit.tests.runner.SorterTest and inner classes">
+      <classRef name="junit.tests.runner.SorterTest$Swapper" type="usedBy"/>
+      <classRef name="java.util.Vector" type="usesExternal"/>
+      <classRef name="junit.tests.runner.SorterTest$Swapper" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="junit.runner.Sorter" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.runner.Sorter$Swapper" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.SorterTest$Swapper" sources="junit" type="class" innerClass="true" size="813" usedBy="1" usesInternal="1" usesExternal="4" layer="0" cycle="junit.tests.runner.SorterTest and inner classes">
+      <classRef name="junit.tests.runner.SorterTest" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.runner.Sorter$Swapper" type="usesExternal"/>
+      <classRef name="java.util.Vector" type="usesExternal"/>
+      <classRef name="junit.tests.runner.SorterTest" type="usesInternal"/>
+      <classRef name="junit.runner.Sorter" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.StackFilterTest" sources="junit" type="class" innerClass="false" size="2199" usedBy="0" usesInternal="0" usesExternal="6" layer="0" cycle="">
+      <classRef name="java.io.StringWriter" type="usesExternal"/>
+      <classRef name="java.io.PrintWriter" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.runner.BaseTestRunner" type="usesExternal"/>
+      <classRef name="java.io.Writer" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TestCaseClassLoaderTest" sources="junit" type="class" innerClass="false" size="1753" usedBy="0" usesInternal="0" usesExternal="8" layer="0" cycle="">
+      <classRef name="junit.runner.TestCaseClassLoader" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.reflect.Method" type="usesExternal"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="java.net.URL" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest" sources="junit" type="class" innerClass="false" size="4085" usedBy="8" usesInternal="8" usesExternal="14" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest$1" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$2" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$3" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$4" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$5" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$6" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$7" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$TestResultPrinter" type="usedBy"/>
+      <classRef name="java.lang.ClassNotFoundException" type="usesExternal"/>
+      <classRef name="java.lang.NoClassDefFoundError" type="usesExternal"/>
+      <classRef name="java.io.ByteArrayOutputStream" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$TestResultPrinter" type="usesInternal"/>
+      <classRef name="java.io.PrintStream" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$1" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$2" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$3" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$4" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$5" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$6" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$7" type="usesInternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.io.OutputStream" type="usesExternal"/>
+      <classRef name="java.lang.Class" type="usesExternal"/>
+      <classRef name="junit.textui.ResultPrinter" type="usesExternal"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$1" sources="junit" type="class" innerClass="true" size="567" usedBy="1" usesInternal="1" usesExternal="1" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$2" sources="junit" type="class" innerClass="true" size="567" usedBy="1" usesInternal="1" usesExternal="1" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$3" sources="junit" type="class" innerClass="true" size="567" usedBy="1" usesInternal="1" usesExternal="1" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$4" sources="junit" type="class" innerClass="true" size="986" usedBy="1" usesInternal="2" usesExternal="3" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$TestResultPrinter" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+      <classRef name="java.io.PrintStream" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$5" sources="junit" type="class" innerClass="true" size="621" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="junit.framework.AssertionFailedError" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$6" sources="junit" type="class" innerClass="true" size="982" usedBy="1" usesInternal="2" usesExternal="3" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$TestResultPrinter" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+      <classRef name="java.io.PrintStream" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$7" sources="junit" type="class" innerClass="true" size="637" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextFeedbackTest$TestResultPrinter" sources="junit" type="class" innerClass="true" size="654" usedBy="3" usesInternal="1" usesExternal="3" layer="0" cycle="junit.tests.runner.TextFeedbackTest and inner classes">
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$4" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest$6" type="usedBy"/>
+      <classRef name="junit.textui.ResultPrinter" type="usesExternal"/>
+      <classRef name="java.io.PrintStream" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextFeedbackTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextRunnerSingleMethodTest" sources="junit" type="class" innerClass="false" size="1430" usedBy="3" usesInternal="3" usesExternal="7" layer="0" cycle="junit.tests.runner.TextRunnerSingleMethodTest and inner classes">
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$1" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$InvocationTest" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$NullResultPrinter" type="usedBy"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$NullResultPrinter" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$1" type="usesInternal"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$InvocationTest" type="usesInternal"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="java.io.PrintStream" type="usesExternal"/>
+      <classRef name="junit.textui.ResultPrinter" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TextRunnerSingleMethodTest$1" sources="junit" type="class" innerClass="true" size="257" usedBy="2" usesInternal="1" usesExternal="1" layer="0" cycle="junit.tests.runner.TextRunnerSingleMethodTest and inner classes">
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest" type="usedBy"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$NullResultPrinter" type="usedBy"/>
+      <classRef name="java.lang.Object" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextRunnerSingleMethodTest$InvocationTest" sources="junit" type="class" innerClass="true" size="738" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="junit.tests.runner.TextRunnerSingleMethodTest and inner classes">
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest" type="usedBy"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest" type="usesInternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TextRunnerSingleMethodTest$NullResultPrinter" sources="junit" type="class" innerClass="true" size="3122" usedBy="1" usesInternal="2" usesExternal="9" layer="0" cycle="junit.tests.runner.TextRunnerSingleMethodTest and inner classes">
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest" type="usedBy"/>
+      <classRef name="junit.textui.ResultPrinter" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest" type="usesInternal"/>
+      <classRef name="java.io.PrintStream" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+      <classRef name="java.lang.Throwable" type="usesExternal"/>
+      <classRef name="junit.framework.AssertionFailedError" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="junit.framework.TestFailure" type="usesExternal"/>
+      <classRef name="java.util.Enumeration" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerSingleMethodTest$1" type="usesInternal"/>
+    </class>
+    <class name="junit.tests.runner.TextRunnerTest" sources="junit" type="class" innerClass="false" size="2717" usedBy="1" usesInternal="1" usesExternal="15" layer="0" cycle="junit.tests.runner.TextRunnerTest and inner classes">
+      <classRef name="junit.tests.runner.TextRunnerTest$1" type="usedBy"/>
+      <classRef name="java.lang.StringBuffer" type="usesExternal"/>
+      <classRef name="java.lang.String" type="usesExternal"/>
+      <classRef name="java.io.PrintStream" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerTest$1" type="usesInternal"/>
+      <classRef name="junit.framework.TestSuite" type="usesExternal"/>
+      <classRef name="junit.framework.TestCase" type="usesExternal"/>
+      <classRef name="java.lang.Exception" type="usesExternal"/>
+      <classRef name="java.lang.Process" type="usesExternal"/>
+      <classRef name="java.io.InputStream" type="usesExternal"/>
+      <classRef name="junit.framework.TestResult" type="usesExternal"/>
+      <classRef name="java.lang.System" type="usesExternal"/>
+      <classRef name="java.io.File" type="usesExternal"/>
+      <classRef name="java.lang.Runtime" type="usesExternal"/>
+      <classRef name="junit.textui.TestRunner" type="usesExternal"/>
+      <classRef name="java.io.OutputStream" type="usesExternal"/>
+      <classRef name="junit.framework.Test" type="usesExternal"/>
+    </class>
+    <class name="junit.tests.runner.TextRunnerTest$1" sources="junit" type="class" innerClass="true" size="627" usedBy="1" usesInternal="1" usesExternal="2" layer="0" cycle="junit.tests.runner.TextRunnerTest and inner classes">
+      <classRef name="junit.tests.runner.TextRunnerTest" type="usedBy"/>
+      <classRef name="java.io.OutputStream" type="usesExternal"/>
+      <classRef name="junit.tests.runner.TextRunnerTest" type="usesInternal"/>
+      <classRef name="java.io.IOException" type="usesExternal"/>
+    </class>
+  </classes>
+  <packageCycles>
+    <packageCycle name="junit.tests et al." size="3" longestWalk="1" girth="1" radius="1" diameter="2" bestFragmentSize="1">
+      <packages>
+        <packageRef name="junit.tests" eccentricity="1" maximumFragmentSize="1"/>
+        <packageRef name="junit.tests.framework" eccentricity="2" maximumFragmentSize="2"/>
+        <packageRef name="junit.tests.extensions" eccentricity="2" maximumFragmentSize="2"/>
+      </packages>
+      <centerPackages>
+        <packageRef name="junit.tests"/>
+      </centerPackages>
+      <bestFragmenters>
+        <packageRef name="junit.tests"/>
+      </bestFragmenters>
+    </packageCycle>
+  </packageCycles>
+  <packages>
+    <package name="junit.samples" sources="junit"  size="3" usedBy="1" usesInternal="2" usesExternal="4" layer="2" cycle="">
+      <packageRef name="junit.samples" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="junit.framework" type="usesExternal"/>
+      <packageRef name="junit.textui" type="usesExternal"/>
+      <packageRef name="junit.samples" type="usesInternal"/>
+      <packageRef name="junit.tests" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+    </package>
+    <package name="junit.samples.money" sources="junit"  size="4" usedBy="1" usesInternal="1" usesExternal="4" layer="0" cycle="">
+      <packageRef name="junit.samples.money" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="junit.samples.money" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="junit.framework" type="usesExternal"/>
+      <packageRef name="junit.textui" type="usesExternal"/>
+    </package>
+    <package name="junit.tests" sources="junit"  size="2" usedBy="3" usesInternal="3" usesExternal="3" layer="1" cycle="junit.tests et al.">
+      <packageRef name="junit.samples" type="usedBy"/>
+      <packageRef name="junit.tests.extensions" type="usedBy"/>
+      <packageRef name="junit.tests.framework" type="usedBy"/>
+      <packageRef name="junit.framework" type="usesExternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="junit.textui" type="usesExternal"/>
+      <packageRef name="junit.tests.framework" type="usesInternal"/>
+      <packageRef name="junit.tests.runner" type="usesInternal"/>
+      <packageRef name="junit.tests.extensions" type="usesInternal"/>
+    </package>
+    <package name="junit.tests.extensions" sources="junit"  size="16" usedBy="2" usesInternal="2" usesExternal="4" layer="1" cycle="junit.tests et al.">
+      <packageRef name="junit.tests" type="usedBy"/>
+      <packageRef name="junit.tests.extensions" type="usedBy"/>
+      <packageRef name="junit.framework" type="usesExternal"/>
+      <packageRef name="junit.extensions" type="usesExternal"/>
+      <packageRef name="junit.tests.extensions" type="usesInternal"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="junit.textui" type="usesExternal"/>
+      <packageRef name="junit.tests" type="usesInternal"/>
+    </package>
+    <package name="junit.tests.framework" sources="junit"  size="36" usedBy="2" usesInternal="2" usesExternal="4" layer="1" cycle="junit.tests et al.">
+      <packageRef name="junit.tests" type="usedBy"/>
+      <packageRef name="junit.tests.framework" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="junit.framework" type="usesExternal"/>
+      <packageRef name="junit.textui" type="usesExternal"/>
+      <packageRef name="junit.tests.framework" type="usesInternal"/>
+      <packageRef name="junit.tests" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+    </package>
+    <package name="junit.tests.runner" sources="junit"  size="26" usedBy="2" usesInternal="1" usesExternal="8" layer="0" cycle="">
+      <packageRef name="junit.tests" type="usedBy"/>
+      <packageRef name="junit.tests.runner" type="usedBy"/>
+      <packageRef name="java.lang" type="usesExternal"/>
+      <packageRef name="junit.framework" type="usesExternal"/>
+      <packageRef name="junit.textui" type="usesExternal"/>
+      <packageRef name="junit.runner" type="usesExternal"/>
+      <packageRef name="junit.tests.runner" type="usesInternal"/>
+      <packageRef name="java.util" type="usesExternal"/>
+      <packageRef name="java.io" type="usesExternal"/>
+      <packageRef name="java.lang.reflect" type="usesExternal"/>
+      <packageRef name="java.net" type="usesExternal"/>
+    </package>
+  </packages>
+</classycle>
