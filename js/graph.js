@@ -54,7 +54,7 @@ Canvas = (function() {
 
   Canvas.prototype.line = function(fromX, fromY, toX, toY, color, width) {
     if (color == null) {
-      color = '#444';
+      color = '#999';
     }
     if (width == null) {
       width = 2;
@@ -145,7 +145,7 @@ Node = (function() {
 
   Node._lastID = 0;
 
-  colorPalette = ['#556270', '#4ECDC4', '#C7F464', '#FF6B6B', '#C44D58'];
+  colorPalette = ['#556270', '#4ECDC4', '#C7F464', '#FF6B6B', '#C44D58', '#FE5F55', '#777DA7', '#94C9A9', '#885053', '#DDFC74', '#D3F9B5', '#D9B8C4'];
 
   function Node(value, x1, y1, background, r1) {
     var idx;
@@ -181,11 +181,11 @@ Node = (function() {
 })();
 
 ForceDirectedGraph = (function() {
-  ForceDirectedGraph.BOUNCE = 0.1;
+  ForceDirectedGraph.BOUNCE = 0.04;//バネ定数(BOUNCE < 0.1[推奨])
 
-  ForceDirectedGraph.ATTENUATION = 0.8;
+  ForceDirectedGraph.ATTENUATION = 0.7;//減衰定数(ATTENUATION < 1[必須])
 
-  ForceDirectedGraph.COULOMB = 600;
+  ForceDirectedGraph.COULOMB = 100;//クーロン数
 
   function ForceDirectedGraph(nodes1) {
     this.nodes = nodes1;
@@ -200,7 +200,7 @@ ForceDirectedGraph = (function() {
     return this.nodes[b].connect(this.nodes[a]);
   };
 
-  ForceDirectedGraph.prototype.balance = function() {
+  ForceDirectedGraph.prototype.balance = function(max) {
     var distX, distY, fx, fy, k, l, len, len1, len2, m, n, number, ref, ref1, ref2, results, rsq, targetNode;
     ref = this.nodes;
     results = [];
@@ -233,7 +233,7 @@ ForceDirectedGraph = (function() {
       }
       targetNode.vx = (targetNode.vx + fx) * ForceDirectedGraph.ATTENUATION;
       targetNode.vy = (targetNode.vy + fy) * ForceDirectedGraph.ATTENUATION;
-      if (number !== 0) {
+      if (number !== max) {
         targetNode.x += targetNode.vx;
         results.push(targetNode.y += targetNode.vy);
       } else {
