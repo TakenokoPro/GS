@@ -34,16 +34,16 @@ $(function(){
 	// Classycleファイルの設定
 //	$file_class = "xml/jmp.xml";
 //	$file_class = "xml/junit.xml";
-	$file_class = "xml/classycle.xml";
-//	$file_class = "xml/jgraphx.xml";
+//	$file_class = "xml/classycle.xml";
+	$file_class = "xml/jgraphx.xml";
 //	$file_class = "xml/rabbit.xml";
 //	$file_class = "xml/mantissa.xml";
 
 	// CCFinderファイルの設定
 //	$file_clone = "clone/jmp.txt";
 //	$file_clone = "clone/junit.txt";
-	$file_clone = "clone/classycle.txt";
-//	$file_clone = "clone/jgraphx.txt";
+//	$file_clone = "clone/classycle.txt";
+	$file_clone = "clone/jgraphx.txt";
 //	$file_clone = "clone/rabbit.txt";
 //	$file_clone = "clone/mantissa.txt";
 
@@ -469,12 +469,17 @@ $(function(){
 	// 表の出力
 	echo("<table summary=\"解析結果\" id=\"result\">\n");
 	echo("<thead>\n");
-	echo("<th>Class Name</th><th>usedBy</th><th>usesIn</th><th>usesEx</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th>\n");
+	//echo("<th>Class Name</th><th>usedBy</th><th>usesIn</th><th>usesEx</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th>\n");
+	echo("<th>Class Name</th><th>usesIn_before</th><th>usesIn_after</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th>\n");
 	echo("</thead>\n");
 	echo("<tbody>\n");
 	for($i = 0;$i < (count($xml->classes->class));$i++){
 		// 統合されたクラスかどうかで異なる表示
 		if(strpos($xml->classes->class[$i]->attributes()->name, "+") == true){
+
+/**************/
+/*統合されている*/
+/**************/
 			// 統合されたクラスなら強調表示
 			echo("<tr class=\"combined\">");
 			echo("<td class=\"class_name\">".str_replace(" + ", "<br />", $xml->classes->class[$i]->attributes()->name)."</td>");
@@ -482,14 +487,61 @@ $(function(){
 			$combine_before = explode(" + ", $xml->classes->class[$i]->attributes()->name);
 			for($j = 0;$j < count($combine_before);$j++){
 				$key_before = array_search($combine_before[$j], $list_xml_before);
-				$combine_used_by_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usedBy;
-				$combine_uses_in_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usesInternal;
-				$combine_uses_ex_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usesExternal;
+				//$combine_used_by_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usedBy;
+				$combine_uses_in_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usesInternal;	
+				//$combine_uses_ex_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usesExternal;
 				$combine_rank_before[$j] = $rank_before[$key_before];
 			}
-			echo("<td>".implode("<br />", $combine_used_by_before)."</td>");
-			echo("<td>".implode("<br />", $combine_uses_in_before)."</td>");
-			echo("<td>".implode("<br />", $combine_uses_ex_before)."</td>");
+			//echo("<td>".implode("<br />", $combine_used_by_before)."</td>");
+			//echo("<td>".implode("<br />", $combine_uses_in_before)."</td>");
+			
+			/***********************************************************************/
+			/**add(5/27)
+			/***********************************************************************/
+			$str1_st = "<tr><td align=\"left\"><font size=\"-0\">";
+			$str1_ed = "</tr></td>";
+			$str2_st = "<tr><td align=\"left\"><font size=\"-0\" color=\"#FF0000\">";
+			$str2_ed = "</tr></td></font>";
+			/***********************************************************************/
+			echo("<td>");
+			for($j = 0;$j < count($combine_before);$j++){
+				echo($combine_uses_in_before[$j]);
+				echo("<table class=\"usesIn\">");
+				$key_before = array_search($combine_before[$j], $list_xml_before);
+				/**debug***************
+				echo("<br>【combine_before[j]=".$combine_before[$j]."】");
+				echo (" 【key=".$key_before."】");
+				/**********************/
+				for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
+					if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal")
+						echo($str1_st.$xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name.$str1_ed);
+				}
+				echo("</table>");
+			}
+			echo("</td>");
+			/***********************************************************************/
+			/**add(5/28)
+			/***********************************************************************/
+			echo("<td>");
+		  echo($xml->classes->class[$i]->attributes()->usesInternal);
+			echo("<table class=\"usesIn\">");
+			for($j = 0;$j < (count($xml->classes->class[$i]->classRef));$j++){
+				if($xml->classes->class[$i]->classRef[$j]->attributes()->type == "usesInternal")
+					if (strpos($xml->classes->class[$i]->classRef[$j]->attributes()->name, "+") === FALSE){
+						echo($str1_st.$xml->classes->class[$i]->classRef[$j]->attributes()->name.$str1_ed);
+				}else{
+						echo($str2_st.str_replace("+", $str2_ed.$str2_st,$xml->classes->class[$i]->classRef[$j]->attributes()->name).$str2_ed);
+					}
+			}
+			echo("</table>");
+			echo("</td>");
+			/***********************************************************************/
+			/**add(5/28)
+			/***********************************************************************/
+			
+			
+			//echo("<td>".implode("<br />", $combine_uses_ex_before)."</td>");
+			
 			echo("<td>");
 			for($j = 0;$j < count($combine_rank_before);$j++){
 				echo sprintf("%.5f", $combine_rank_before[$j]);
@@ -526,13 +578,58 @@ $(function(){
 			unset($combine_before, $combine_used_by_before, $combine_uses_in_before, $combine_uses_ex_before, $combine_rank_before);
 
 		}else{
+			
+/****************/
+/*統合されていない*/
+/***************/
 			echo("<tr>");
 			echo("<td class=\"class_name\">".$xml->classes->class[$i]->attributes()->name."</td>");
-			echo("<td>".$xml->classes->class[$i]->attributes()->usedBy."</td>");
+			//echo("<td>".$xml->classes->class[$i]->attributes()->usedBy."</td>");
+			
+			/***********************************************************************/
+			/**add(5/28)
+			/***********************************************************************/
+			$str1_st = "<tr><td align=\"left\"><font size=\"-0\">";
+			$str1_ed = "</tr></td>";
+			$str2_st = "<tr><td align=\"left\"><font size=\"-0\" color=\"#FF0000\">";
+			$str2_ed = "</tr></td></font>";
+			/***********************************************************************/
 			echo("<td>");
 		  echo($xml->classes->class[$i]->attributes()->usesInternal);
+			echo("<table class=\"usesIn\">");
+			$not_combine_before = (string)$xml->classes->class[$i]->attributes()->name;
+			/****************
+			echo("<br />".$not_combine_before);
+			/****************/
+			$key_before = array_search($not_combine_before, $list_xml_before);
+			for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
+				if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal")
+					echo($str1_st.$xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name.$str1_ed);
+			}
+			echo("</table>");
 			echo("</td>");
-			echo("<td>".$xml->classes->class[$i]->attributes()->usesExternal."</td>");
+			/***********************************************************************/
+			/**add(5/27)
+			/***********************************************************************/
+			echo("<td>");
+		  echo($xml->classes->class[$i]->attributes()->usesInternal);
+			echo("<table class=\"usesIn\">");
+			for($j = 0;$j < (count($xml->classes->class[$i]->classRef));$j++){
+				if($xml->classes->class[$i]->classRef[$j]->attributes()->type == "usesInternal")
+					if (strpos($xml->classes->class[$i]->classRef[$j]->attributes()->name, "+") === FALSE){
+						echo($str1_st.$xml->classes->class[$i]->classRef[$j]->attributes()->name.$str1_ed);
+				}else{
+						echo($str2_st.str_replace("+", $str2_ed.$str2_st,$xml->classes->class[$i]->classRef[$j]->attributes()->name).$str2_ed);
+					}
+			}
+			echo("</table>");
+			echo("</td>");
+			/***********************************************************************/
+			/**add(5/27)
+			/***********************************************************************/
+			
+	
+			//echo("<td>".$xml->classes->class[$i]->attributes()->usesExternal."</td>");
 			$key_before = array_search($xml->classes->class[$i]->attributes()->name, $list_xml_before);
 			echo sprintf("<td>%.5f</td>", $rank_before[$key_before]);
 			echo sprintf("<td>%.5f</td>", $rank[$i]);
