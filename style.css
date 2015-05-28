@@ -23,7 +23,7 @@ a:visited {color: #D71213;text-decoration: underline;}
 a:hover {color: #D71213;text-decoration: none;}
 a:active {color: #D71213;text-decoration: none;}
 
-div#page {width: 1000px;margin: 0 auto;}
+div#page {width:auto;margin: 0 auto;}
 
 div#header {width: 1000px;margin: 0 auto 20px auto;padding: 40px 0 20px 0;}
 div#header h1 {margin: 0 auto;font-weight: bold;}
@@ -32,10 +32,10 @@ div#main {white-space: nowrap;}
 
 div#info {margin: 0 auto 20px auto;padding: 10px;background: #D0CFCE;border: #9E9C9B 1px solid;}
 
-div#main table {width: 1000px;margin: 0 auto 20px auto;border-collapse: collapse;border-spacing: 0;border: #9E9C9B 1px solid;}
+div#main table {width: 1500px;margin: 0 auto 20px auto;border-collapse: collapse;border-spacing: 0;border: #9E9C9B 1px solid;}
 div#main th {width: auto;padding: 3px 5px;border-right: #9E9C9B 1px solid;border-bottom: #9E9C9B 1px solid;background: #D0CFCE;font-weight: bold;}
 div#main td {width: 100px;padding: 3px 5px;border-right: #9E9C9B 1px solid;border-bottom: #9E9C9B 1px solid;background: #EEEDEC;}
-div#main td.class_name {width: auto;text-align: left;}
+div#main td.class_name {width: auto;text-align: left5;}
 div#main tr.combined td {background: #FFD2CA;}
 div#main td.rank_up {color: #E5443E;}
 div#main td.rank_down {color: #4285F4;}
@@ -46,3 +46,12 @@ div#main span.rank_up {}
 
 
 div#footer {width: 1000px;margin: 0 auto 40px auto;padding: 20px 0;}
+
+/********************************************************/
+div#main table.usesIn{
+	width: auto;
+	margin: 5px auto 5px 5px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: #9E9C9B 1px solid;
+}
