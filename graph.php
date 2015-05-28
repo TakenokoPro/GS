@@ -466,202 +466,92 @@ $(function(){
 	echo sprintf("解析時間: %.5f 秒\n", $calc_time);
 	echo("</div>\n");
 
-	// 表の出力
-	echo("<table summary=\"解析結果\" id=\"result\">\n");
-	echo("<thead>\n");
-	//echo("<th>Class Name</th><th>usedBy</th><th>usesIn</th><th>usesEx</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th>\n");
-	echo("<th>Class Name</th><th>usesIn_before</th><th>usesIn_after</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th>\n");
-	echo("</thead>\n");
-	echo("<tbody>\n");
-	for($i = 0;$i < (count($xml->classes->class));$i++){
-		// 統合されたクラスかどうかで異なる表示
-		if(strpos($xml->classes->class[$i]->attributes()->name, "+") == true){
 
-/**************/
-/*統合されている*/
-/**************/
-			// 統合されたクラスなら強調表示
-			echo("<tr class=\"combined\">");
-			echo("<td class=\"class_name\">".str_replace(" + ", "<br />", $xml->classes->class[$i]->attributes()->name)."</td>");
-			// 統合されたクラスなので、統合される前のXMLから情報を取得
-			$combine_before = explode(" + ", $xml->classes->class[$i]->attributes()->name);
-			for($j = 0;$j < count($combine_before);$j++){
-				$key_before = array_search($combine_before[$j], $list_xml_before);
-				//$combine_used_by_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usedBy;
-				$combine_uses_in_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usesInternal;	
-				//$combine_uses_ex_before[$j] = $xml_before->classes->class[$key_before]->attributes()->usesExternal;
-				$combine_rank_before[$j] = $rank_before[$key_before];
-			}
-			//echo("<td>".implode("<br />", $combine_used_by_before)."</td>");
-			//echo("<td>".implode("<br />", $combine_uses_in_before)."</td>");
-			
-			/***********************************************************************/
-			/**add(5/27)
-			/***********************************************************************/
-			$str1_st = "<tr><td align=\"left\"><font size=\"-0\">";
-			$str1_ed = "</tr></td>";
-			$str2_st = "<tr><td align=\"left\"><font size=\"-0\" color=\"#FF0000\">";
-			$str2_ed = "</tr></td></font>";
-			/***********************************************************************/
-			echo("<td>");
-			for($j = 0;$j < count($combine_before);$j++){
-				echo($combine_uses_in_before[$j]);
-				echo("<table class=\"usesIn\">");
-				$key_before = array_search($combine_before[$j], $list_xml_before);
-				/**debug***************
-				echo("<br>【combine_before[j]=".$combine_before[$j]."】");
-				echo (" 【key=".$key_before."】");
-				/**********************/
-				for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
-					if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal")
-						echo($str1_st.$xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name.$str1_ed);
-				}
-				echo("</table>");
-			}
-			echo("</td>");
-			/***********************************************************************/
-			/**add(5/28)
-			/***********************************************************************/
-			echo("<td>");
-		  echo($xml->classes->class[$i]->attributes()->usesInternal);
-			echo("<table class=\"usesIn\">");
-			for($j = 0;$j < (count($xml->classes->class[$i]->classRef));$j++){
-				if($xml->classes->class[$i]->classRef[$j]->attributes()->type == "usesInternal")
-					if (strpos($xml->classes->class[$i]->classRef[$j]->attributes()->name, "+") === FALSE){
-						echo($str1_st.$xml->classes->class[$i]->classRef[$j]->attributes()->name.$str1_ed);
-				}else{
-						echo($str2_st.str_replace("+", $str2_ed.$str2_st,$xml->classes->class[$i]->classRef[$j]->attributes()->name).$str2_ed);
-					}
-			}
-			echo("</table>");
-			echo("</td>");
-			/***********************************************************************/
-			/**add(5/28)
-			/***********************************************************************/
-			
-			
-			//echo("<td>".implode("<br />", $combine_uses_ex_before)."</td>");
-			
-			echo("<td>");
-			for($j = 0;$j < count($combine_rank_before);$j++){
-				echo sprintf("%.5f", $combine_rank_before[$j]);
-				if($j != (count($combine_before) - 1)){
-					echo "<br />";
-				}
-			}
-			echo("</td>");
-			echo sprintf("<td>%.5f</td>", $rank[$i]);
 
-			// 評価値の変化を表示
-			echo("<td>-</td>");
+	/**************************/
+	/**************************/
+	echo("
+			<div id=\"container\">
+					<canvas id=\"canvas\" width=\"1000\" height=\"1000\"></canvas>
+			</div>
+			");
 
-			// 評価値の順位の変化を表示
-			// 順位 + ((同一順位の部品数 - 1) * 0.5)
-			echo("<td>");
-			for($j = 0;$j < count($combine_rank_before);$j++){
-				$grade = array_search($rank[$i], $sorted_rank) + 1 + ((count(array_keys($sorted_rank, $rank[$i])) - 1) * 0.5);
-				$grade_before = array_search($combine_rank_before[$j], $sorted_rank_before) + 1 + ((count(array_keys($sorted_rank_before, $combine_rank_before[$j])) - 1) * 0.5);
-				if($grade < $grade_before){
-					echo("<span class=\"rank_up\">".$grade_before."→".$grade." ↑</span>");
-				}else if($grade == $grade_before){
-					echo("<span class=\"rank_unchanged\">".$grade_before."→".$grade." →</span>");
-				}else{
-					echo("<span class=\"rank_down\">".$grade_before."→".$grade." ↓</span>");
-				}
-				if($j != (count($combine_before) - 1)){
-					echo "<br />";
-				}
-			}
-			echo("</td>");
+	echo("
+<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"></script>
+<script type=\"text/javascript\" src=\"js/graph.js\"></script>
+<script type=\"text/javascript\">
+(function($) {
+	var \$canvas, WIN_H, WIN_W, canvas, center, graph, nodes, random;
+	random = function(max) {
+		return ~~(Math.random() * max);
+	};
+	WIN_W = window.innerWidth;
+	WIN_H = window.innerHeight;
+	\$canvas = $('#canvas');
+	\$canvas.attr({
+		'width': WIN_W,
+		'height': WIN_H
+	});
+	canvas = new Canvas(\$canvas[0]);
+	center = {
+		x: canvas.width / 2,
+		y: canvas.height / 2
+};
+			");
 
-			// この統合されたクラスの情報を破棄
-			unset($combine_before, $combine_used_by_before, $combine_uses_in_before, $combine_uses_ex_before, $combine_rank_before);
-
-		}else{
-			
-/****************/
-/*統合されていない*/
-/***************/
-			echo("<tr>");
-			echo("<td class=\"class_name\">".$xml->classes->class[$i]->attributes()->name."</td>");
-			//echo("<td>".$xml->classes->class[$i]->attributes()->usedBy."</td>");
-			
-			/***********************************************************************/
-			/**add(5/28)
-			/***********************************************************************/
-			$str1_st = "<tr><td align=\"left\"><font size=\"-0\">";
-			$str1_ed = "</tr></td>";
-			$str2_st = "<tr><td align=\"left\"><font size=\"-0\" color=\"#FF0000\">";
-			$str2_ed = "</tr></td></font>";
-			/***********************************************************************/
-			echo("<td>");
-		  echo($xml->classes->class[$i]->attributes()->usesInternal);
-			echo("<table class=\"usesIn\">");
-			$not_combine_before = (string)$xml->classes->class[$i]->attributes()->name;
-			/****************
-			echo("<br />".$not_combine_before);
-			/****************/
-			$key_before = array_search($not_combine_before, $list_xml_before);
-			for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
-				if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal")
-					echo($str1_st.$xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name.$str1_ed);
-			}
-			echo("</table>");
-			echo("</td>");
-			/***********************************************************************/
-			/**add(5/27)
-			/***********************************************************************/
-			echo("<td>");
-		  echo($xml->classes->class[$i]->attributes()->usesInternal);
-			echo("<table class=\"usesIn\">");
-			for($j = 0;$j < (count($xml->classes->class[$i]->classRef));$j++){
-				if($xml->classes->class[$i]->classRef[$j]->attributes()->type == "usesInternal")
-					if (strpos($xml->classes->class[$i]->classRef[$j]->attributes()->name, "+") === FALSE){
-						echo($str1_st.$xml->classes->class[$i]->classRef[$j]->attributes()->name.$str1_ed);
-				}else{
-						echo($str2_st.str_replace("+", $str2_ed.$str2_st,$xml->classes->class[$i]->classRef[$j]->attributes()->name).$str2_ed);
-					}
-			}
-			echo("</table>");
-			echo("</td>");
-			/***********************************************************************/
-			/**add(5/27)
-			/***********************************************************************/
-			
-	
-			//echo("<td>".$xml->classes->class[$i]->attributes()->usesExternal."</td>");
-			$key_before = array_search($xml->classes->class[$i]->attributes()->name, $list_xml_before);
-			echo sprintf("<td>%.5f</td>", $rank_before[$key_before]);
-			echo sprintf("<td>%.5f</td>", $rank[$i]);
-
-			// 変動率の定義に従い，評価値の変化を表示
-			$rate = (( ($rank[$i] * count($rank)) / ($rank_before[$key_before] * count($rank_before)) ) ) * 100;
-
-			if($rate > 100){
-				echo sprintf("<td class=\"rank_up\">%.1f%%</td>", $rate);
-			}else if($rate == 0){
-				echo sprintf("<td class=\"rank_unchanged\">%.1f%%</td>", $rate);
-			}else{
-				echo sprintf("<td class=\"rank_down\">%.1f%%</td>", abs($rate));
-			}
-
-			// 評価値の順位の変化を表示
-			// 順位 + ((同一順位の部品数 - 1) * 0.5)
-			$grade = array_search($rank[$i], $sorted_rank) + 1 + ((count(array_keys($sorted_rank, $rank[$i])) - 1) * 0.5);
-			$grade_before = array_search($rank_before[$key_before], $sorted_rank_before) + 1 + ((count(array_keys($sorted_rank_before, $rank_before[$key_before])) - 1) * 0.5);
-
-			if($grade < $grade_before){
-				echo("<td class=\"rank_up\">".$grade_before."→".$grade." ↑</td>");
-			}else if($grade == $grade_before){
-				echo("<td class=\"rank_unchanged\">".$grade_before."→".$grade." →</td>");
-			}else{
-				echo("<td class=\"rank_down\">".$grade_before."→".$grade." ↓</td>");
+		//一番internalの多いものを探す
+		$internal_max=0;$max_class=0;
+		for($i = 0;$i < count($xml_before->classes->children());$i++){
+			if($internal_max < $xml_before->classes->class[$i]->attributes()->usesInternal){
+				$internal_max = (int)$xml_before->classes->class[$i]->attributes()->usesInternal;
+				$max_class = $i;
 			}
 		}
-		echo("</tr>\n");
+
+		echo("nodes = [\n");
+		$node = array();
+		$node_branch = array();
+		for($i = 0;$i < count($xml_before->classes->children());$i++){
+				array_push($node,(string)$xml_before->classes->class[$i]->attributes()->name);
+				array_push($node_branch,$xml_before->classes->class[$i]->attributes()->usesInternal);
+				if($i==$max_class){
+					echo("new Node(\"$i\", center.x, center.y),\n");
+				}else{
+					echo("new Node(\"$i\", center.x - 100 + random(200), center.y - 100 + random(200)),\n");
+				}
+		}
+		echo("];\n");
+		echo("graph = new ForceDirectedGraph(nodes);\n");
+	/**************************/
+	/**************************/
+	for($i = 0;$i < count($node);$i++){
+			$count=count($xml_before->classes->class[$i]->classRef);
+			for($k = 0;$k < count($xml_before->classes->class[$i]->classRef);$k++){
+					$connect = (string)$xml_before->classes->class[$i]->classRef[$k]->attributes()->name;
+					$key = array_search($connect, $node);
+					echo("graph.connect($i, $key);\n");
+			}
 	}
-	echo("</tbody>\n");
-	echo("</table>\n");
+	echo("
+		  canvas.add(graph);
+				return setInterval(function() {
+					graph.balance($max_class);
+					canvas.clear().fill('white');
+					return canvas.draw();
+				}, 50);
+			})(jQuery);
+			</script>
+	");
+
+	echo("<table>");
+	for($i = 0;$i < count($node);$i++){
+		echo("<tr>");
+			echo("<td>".$node[$i]."</td>");
+			echo("<td>".$i."</td>");
+			echo("<td>".$node_branch[$i]."</td>");
+		echo("</tr>");
+	}
+	echo("</table>");
 ?>
 </div>
 <div id="footer">
