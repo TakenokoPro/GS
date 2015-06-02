@@ -32,16 +32,16 @@ $(function(){
 	// -----------------------------------------------------
 
 	// Classycleファイルの設定
-	$file_class = "xml/jmp.xml";
-//	$file_class = "xml/junit.xml";
+//	$file_class = "xml/jmp.xml";
+	$file_class = "xml/junit.xml";
 //	$file_class = "xml/classycle.xml";
 //	$file_class = "xml/jgraphx.xml";
 //	$file_class = "xml/rabbit.xml";
 //	$file_class = "xml/mantissa.xml";
 
 	// CCFinderファイルの設定
-	$file_clone = "clone/jmp.txt";
-//	$file_clone = "clone/junit.txt";
+//	$file_clone = "clone/jmp.txt";
+	$file_clone = "clone/junit.txt";
 //	$file_clone = "clone/classycle.txt";
 //	$file_clone = "clone/jgraphx.txt";
 //	$file_clone = "clone/rabbit.txt";
