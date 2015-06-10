@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Component Rank Calculator</title>
+<title>Component Rank Calculator Graph</title>
 <meta http-equiv="content-style-type" content="text/css" />
 <meta http-equiv="content-script-type" content="text/javascript" />
 <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
@@ -24,7 +24,7 @@ $(function(){
 </head>
 <body>
 <div id="page">
-<div id="header"><h1>Component Rank Calculator</h1></div>
+<div id="header"><h1>Component Rank Calculator Graph</h1></div>
 <div id="main">
 <?php
 	// -----------------------------------------------------
@@ -33,18 +33,18 @@ $(function(){
 
 	// Classycleファイルの設定
 //	$file_class = "xml/jmp.xml";
-	$file_class = "xml/junit.xml";
+//	$file_class = "xml/junit.xml";
 //	$file_class = "xml/classycle.xml";
 //	$file_class = "xml/jgraphx.xml";
-//	$file_class = "xml/rabbit.xml";
+	$file_class = "xml/rabbit.xml";
 //	$file_class = "xml/mantissa.xml";
 
 	// CCFinderファイルの設定
 //	$file_clone = "clone/jmp.txt";
-	$file_clone = "clone/junit.txt";
+//	$file_clone = "clone/junit.txt";
 //	$file_clone = "clone/classycle.txt";
 //	$file_clone = "clone/jgraphx.txt";
-//	$file_clone = "clone/rabbit.txt";
+	$file_clone = "clone/rabbit.txt";
 //	$file_clone = "clone/mantissa.txt";
 
 	// 「遠い」と判断するクラス間の距離の定義（これ「以上」だと遠いと判断）
@@ -546,8 +546,8 @@ $(function(){
 	echo("<table>");
 	for($i = 0;$i < count($node);$i++){
 		echo("<tr>");
-			echo("<td>".$node[$i]."</td>");
 			echo("<td>".$i."</td>");
+			echo("<td>".$node[$i]."</td>");
 			echo("<td>".$node_branch[$i]."</td>");
 		echo("</tr>");
 	}

@@ -55,3 +55,12 @@ div#main table.usesIn{
 	border-spacing: 0;
 	border: #9E9C9B 1px solid;
 }
+div#main tr.combined td.g1{
+	background-color: #bde9ba;
+}
+div#main tr.combined td.g2{
+	background-color: #ffffc0;
+}
+div#main tr.combined td.comb{
+	background-color: #ffffc0;
+}

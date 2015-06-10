@@ -181,11 +181,11 @@ Node = (function() {
 })();
 
 ForceDirectedGraph = (function() {
-  ForceDirectedGraph.BOUNCE = 0.04;//バネ定数(BOUNCE < 0.1[推奨])
+  ForceDirectedGraph.BOUNCE = 0.02;//バネ定数(BOUNCE < 0.1[推奨])
 
   ForceDirectedGraph.ATTENUATION = 0.7;//減衰定数(ATTENUATION < 1[必須])
 
-  ForceDirectedGraph.COULOMB = 100;//クーロン数
+  ForceDirectedGraph.COULOMB = 200;//クーロン数
 
   function ForceDirectedGraph(nodes1) {
     this.nodes = nodes1;
@@ -196,6 +196,8 @@ ForceDirectedGraph = (function() {
   };
 
   ForceDirectedGraph.prototype.connect = function(a, b) {
+		this.nodes[a].r--;
+		this.nodes[b].r++;
     this.nodes[a].connect(this.nodes[b]);
     return this.nodes[b].connect(this.nodes[a]);
   };
