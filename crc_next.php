@@ -498,12 +498,42 @@ $(function(){
 			/***********************************************************************/
 			/**add(5/27)
 			/***********************************************************************/
-			$str1_st = "<tr><td align=\"left\"><font size=\"-0\">";
-			$str1_ed = "</tr></td>";
-			$str2_st = "<tr><td align=\"left\"><font size=\"-0\" color=\"#FF0000\">";
-			$str2_ed = "</tr></td></font>";
+			$str1_st = "<tr><td align=\"left\">";
+			$str1_ed = "</td></tr>";
+			$str2_st = "<tr><td class=\"comb\"　align=\"left\"><font color=\"#FF0000\">";
+			$str2_ed = "</font></td></tr>";
+			$group1_st = "<tr><td class=\"g1\" align=\"left\">";
+			$group1_ed = "</td></tr>";
+			$group2_st = "<tr><td class=\"g2\" align=\"left\">";
+			$group2_ed = "</td></tr>";
+			$Group1 = array();//Group1を入れる
+			$Group2 = array();//Group2を入れる
 			/***********************************************************************/
 			echo("<td>");
+			
+			/***********************************************/
+			/*グループ分け*/
+			for($j = 0;$j < count($combine_before);$j++){
+				$key_before = array_search($combine_before[$j], $list_xml_before);
+				for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
+					if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal")
+						/*********************************/
+						/*add(6/9)*/
+						$temp_string = (string)$xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name;
+						if(!in_array($temp_string,$Group1)){ //Groop1に属さない
+							if(in_array($temp_string,$Group2)){
+								$index = array_search($temp_string,$Group2);
+								$Group2 = array_merge(array_slice($Group2, 0, $index),array_slice($Group2, $index + 1));
+								array_push($Group1,$temp_string);
+							}
+							else array_push($Group2,$temp_string);
+						}
+						/*add(6/9)*/
+						/*********************************/
+				}
+			}
+			/***********************************************/
+			
 			for($j = 0;$j < count($combine_before);$j++){
 				echo($combine_uses_in_before[$j]);
 				echo("<table class=\"usesIn\">");
@@ -514,10 +544,28 @@ $(function(){
 				/**********************/
 				for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
 					if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal")
-						echo($str1_st.$xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name.$str1_ed);
+						$temp_string = $xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name;
+						if(in_array($temp_string,$Group1)){//group1に属する
+							echo($group1_st.$temp_string.$group1_ed);
+						}else if(in_array($temp_string,$Group2)){//group2に属する
+							echo($group2_st.$temp_string.$group2_ed);
+						}else{
+							echo($str1_st.$temp_string.$str1_ed);
+						}
 				}
 				echo("</table>");
 			}
+			/***********************************************************************/
+			/*add(6/9)*
+			echo("<table class=\"usesIn\">");
+			for($g1=0;$g1<count($Group1);$g1++){
+				echo($group1_st.$Group1[$g1].$group1_ed);
+			}
+			for($g2=0;$g2<count($Group2);$g2++)
+				echo($group2_st.$Group2[$g2].$group2_ed);
+			echo("</table>");
+			/*add(6/9)*/
+			/***********************************************************************/
 			echo("</td>");
 			/***********************************************************************/
 			/**add(5/28)
@@ -528,10 +576,17 @@ $(function(){
 			for($j = 0;$j < (count($xml->classes->class[$i]->classRef));$j++){
 				if($xml->classes->class[$i]->classRef[$j]->attributes()->type == "usesInternal")
 					if (strpos($xml->classes->class[$i]->classRef[$j]->attributes()->name, "+") === FALSE){
-						echo($str1_st.$xml->classes->class[$i]->classRef[$j]->attributes()->name.$str1_ed);
+						$temp_string = $xml->classes->class[$i]->classRef[$j]->attributes()->name;
+						if(in_array($temp_string,$Group1)){//group1に属する
+							echo($group1_st.$temp_string.$group1_ed);
+						}else if(in_array($temp_string,$Group2)){//group2に属する
+							echo($group2_st.$temp_string.$group2_ed);
+						}else{
+							echo($str1_st.$temp_string.$str1_ed);
+						}
 				}else{
 						echo($str2_st.str_replace("+", $str2_ed.$str2_st,$xml->classes->class[$i]->classRef[$j]->attributes()->name).$str2_ed);
-					}
+				}
 			}
 			echo("</table>");
 			echo("</td>");
@@ -589,10 +644,10 @@ $(function(){
 			/***********************************************************************/
 			/**add(5/28)
 			/***********************************************************************/
-			$str1_st = "<tr><td align=\"left\"><font size=\"-0\">";
+			$str1_st = "<tr><td align=\"left\">";
 			$str1_ed = "</tr></td>";
-			$str2_st = "<tr><td align=\"left\"><font size=\"-0\" color=\"#FF0000\">";
-			$str2_ed = "</tr></td></font>";
+			$str2_st = "<tr><td align=\"left\"><font color=\"#FF0000\">";
+			$str2_ed = "</font></td></tr>";
 			/***********************************************************************/
 			echo("<td>");
 		  echo($xml->classes->class[$i]->attributes()->usesInternal);
