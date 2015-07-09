@@ -449,7 +449,8 @@ $(function(){
 	}
 	$sorted_rank = array_merge($sorted_rank);
 	rsort($sorted_rank, SORT_NUMERIC);
-
+?>
+<?php
 	// -----------------------------------------------------
 	// 結果表示
 	// -----------------------------------------------------
@@ -466,39 +467,52 @@ $(function(){
 	echo sprintf("解析時間: %.5f 秒\n", $calc_time);
 	echo("</div>\n");
 
+	//同じパッケージのものか分ける
+	$classgroup = array();//パッケージ名
+	$classgroup_number = array();//ノードごとのパッケージの番号
+	$node = array();
+	for($i = 0;$i < count($xml_before->classes->children());$i++)
+			array_push($node,(string)$xml_before->classes->class[$i]->attributes()->name);
+	for($i =0;$i < count($node);$i++){
+		$temp = "";
+		$str_group = explode(".", $node[$i]);
+		for($j=0;$j < count($str_group)-1;$j++){
+			$temp = $temp.".".$str_group[$j];
+		}
+		$group_flag = false; 
+		for($j= 0;$j < count($classgroup);$j++){
+			if($temp == $classgroup[$j]){
+				$classgroup_number[$i] = $j;
+				$group_flag = true; 
+			}
+		}
+		if(!$group_flag){
+				$classgroup[count($classgroup)] = $temp;
+				$classgroup_number[$i] = count($classgroup)-1;
+		}
+	}
+?>
 
-
-	/**************************/
-	/**************************/
-	echo("
-			<div id=\"container\">
-					<canvas id=\"canvas\" width=\"1000\" height=\"1000\"></canvas>
-			</div>
-			");
-
-	echo("
-<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"></script>
-<script type=\"text/javascript\" src=\"js/graph.js\"></script>
-<script type=\"text/javascript\">
+<div id="container">
+	<canvas id="canvas" width="1000" height="1000"></canvas>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"></script>
+<script type="text/javascript" src="js/graph.js"></script>
+<script type="text/javascript">
 (function($) {
-	var \$canvas, WIN_H, WIN_W, canvas, center, graph, nodes, random;
-	random = function(max) {
-		return ~~(Math.random() * max);
-	};
+	var $canvas, WIN_H, WIN_W, canvas, center, graph, random, max_num;
+	Cnodes = [];//クラスタリングをするノードの保管
+	point = [];//座標の文字列
+	random = function(max) {return ~~(Math.random() * max);};
 	WIN_W = window.innerWidth;
 	WIN_H = window.innerHeight;
-	\$canvas = $('#canvas');
-	\$canvas.attr({
-		'width': WIN_W,
-		'height': WIN_H
-	});
-	canvas = new Canvas(\$canvas[0]);
-	center = {
-		x: canvas.width / 2,
-		y: canvas.height / 2
-};
-			");
+	$canvas = $('#canvas');
+	$canvas.attr({'width': WIN_W,'height': WIN_H});
+	canvas = new Canvas($canvas[0]);
+	center = {x:canvas.width/2,y:canvas.height/2};
+	MouseInit();
 
+	<?php
 		//一番internalの多いものを探す
 		$internal_max=0;$max_class=0;
 		for($i = 0;$i < count($xml_before->classes->children());$i++){
@@ -506,7 +520,7 @@ $(function(){
 				$internal_max = (int)$xml_before->classes->class[$i]->attributes()->usesInternal;
 				$max_class = $i;
 			}
-		}
+		}	
 
 		echo("nodes = [\n");
 		$node = array();
@@ -515,14 +529,25 @@ $(function(){
 				array_push($node,(string)$xml_before->classes->class[$i]->attributes()->name);
 				array_push($node_branch,$xml_before->classes->class[$i]->attributes()->usesInternal);
 				if($i==$max_class){
-					echo("new Node(\"$i\", center.x, center.y),\n");
+					echo(
+						"new Node(
+							\"$i\",
+							center.x,
+							center.y,
+							$classgroup_number[$i]
+						),\n");
 				}else{
-					echo("new Node(\"$i\", center.x - 100 + random(200), center.y - 100 + random(200)),\n");
+					echo(
+						"new Node(
+							\"$i\",
+							center.x - 100 + random(200),
+							center.y - 100 + random(200),
+							$classgroup_number[$i]
+						),\n");
 				}
 		}
 		echo("];\n");
 		echo("graph = new ForceDirectedGraph(nodes);\n");
-	/**************************/
 	/**************************/
 	for($i = 0;$i < count($node);$i++){
 			$count=count($xml_before->classes->class[$i]->classRef);
@@ -532,26 +557,45 @@ $(function(){
 					echo("graph.connect($i, $key);\n");
 			}
 	}
-	echo("
-		  canvas.add(graph);
-				return setInterval(function() {
-					graph.balance($max_class);
-					canvas.clear().fill('white');
-					return canvas.draw();
-				}, 50);
-			})(jQuery);
-			</script>
-	");
-
+	?>
+	canvas.add(graph);
+		return setInterval(function() {
+			graph.balance(<?php $max_class ?>);
+			canvas.clear().fill('white');
+			canvas.Cdraw();
+			canvas.draw();
+		}, 10);
+	})(jQuery);
+	</script>
+<form>
+	<input class="clustering" type="button" value="クラスタリング" onClick="ClusteringInit()">
+</form><br>
+<div id="clustering"></div>
+<script language="JavaScript">
+	clustering_str = document.getElementById("clustering")
+</script>
+<?php
 	echo("<table>");
+	echo("<tr><td>番号</td><td>パス</td><td>internal数</td><td onClick=\"colordisplay()\">パッケージ</td><td>座標</td></tr>");
 	for($i = 0;$i < count($node);$i++){
 		echo("<tr>");
 			echo("<td>".$i."</td>");
-			echo("<td>".$node[$i]."</td>");
+			echo("<td class=\"class_name\">".$node[$i]."</td>");
 			echo("<td>".$node_branch[$i]."</td>");
+			echo("<td class=\"class_name\" id=\"col$i\" onClick=\"colordisplay($classgroup_number[$i])\">".$classgroup_number[$i].$classgroup[$classgroup_number[$i]]."</td>");
+			echo("<td id=\"point$i\"></td>");
 		echo("</tr>");
 	}
 	echo("</table>");
+	for($i=0;$i<count($node);$i++){
+		$num = $classgroup_number[$i]%12;
+		echo("
+			<script language=\"JavaScript\">
+				point[$i] = document.getElementById(\"point$i\");
+				document.getElementById(\"col$i\").style.backgroundColor = colorPalette[".$num."];
+				document.getElementById(\"col$i\").style.color = \"#FFF\";
+			</script>");
+	}
 ?>
 </div>
 <div id="footer">

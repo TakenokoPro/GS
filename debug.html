@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Debug page</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#result').dataTable({
+		"bPaginate": false,
+		"bLengthChange": false,
+		"bFilter": false,
+		"bSort": true,
+		"bInfo": false,
+		"bAutoWidth": false
+	});
+});
+</script>
+</head>
+<body>
+<div id="page">
+<div id="header"><h1>Debug page</h1></div>
+<div id="main">
+	
+	<div id="container">
+			<canvas id="canvas" width="800" height="800"></canvas>
+	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"></script>
+<script type="text/javascript" src="js/graph.js"></script>
+<script type="text/javascript">
+(function($) {
+	var $canvas, WIN_H, WIN_W, canvas, center, graph, random;
+	random = function(max) {
+		return ~~(Math.random() * max);
+	};
+	WIN_W = window.innerWidth;
+	WIN_H = document.getElementById("canvas").innerHeight;
+	$canvas = $('#canvas');
+	$canvas.attr({'width': WIN_W,'height': WIN_H});
+	canvas = new Canvas($canvas[0]);
+	center = {x:canvas.width/2,y:canvas.height/2};
+											
+	nodes = [
+			new Node("0", center.x, center.y),
+			new Node("1", center.x - 100 + random(200), center.y - 100 + random(200)),
+			new Node("2", center.x - 100 + random(200), center.y - 100 + random(200)),
+			new Node("3", center.x - 100 + random(200), center.y - 100 + random(200)),
+			new Node("4", center.x - 100 + random(200), center.y - 100 + random(200)),
+			new Node("5", center.x - 100 + random(200), center.y - 100 + random(200)),
+			new Node("6", center.x - 100 + random(200), center.y - 100 + random(200)),
+			new Node("7", center.x - 100 + random(200), center.y - 100 + random(200)),
+			new Node("8", center.x - 100 + random(200), center.y - 100 + random(200)),
+	];
+	graph = new ForceDirectedGraph(nodes);
+	graph.connect(0, 1);
+	graph.connect(0, 2);
+	graph.connect(0, 5);
+	graph.connect(0, 7);
+	graph.connect(1, 3);
+	graph.connect(1, 4);
+	graph.connect(2, 3);
+	graph.connect(2, 8);
+	graph.connect(4, 5);
+	graph.connect(5, 6);
+	graph.connect(6, 7);
+	graph.connect(7, 8);
+
+	canvas.add(graph);
+		return setInterval(function() {
+			graph.balance(0);
+			canvas.clear().fill('white');
+			return canvas.draw();
+		}, 20);
+	})(jQuery);
+	</script>
+	<table width="800">
+		<tr><td>Node</td><td>X座標</td><td>Y座標</td></tr>
+		<tr><td>マウス</td><td><div id="mouseX"></td><td><div id="mouseY"></td></tr>
+		<tr><td>0</td><td><div id="X0"/></td><td><div id="Y0"/></td></tr>
+		<tr><td>1</td><td><div id="X1"/></td><td><div id="Y1"/></td></tr>
+		<tr><td>2</td><td><div id="X2"/></td><td><div id="Y2"/></td></tr>
+		<tr><td>flag</td><td><div id="X3"/></td><td><div id="Y3"/></td></tr>
+		<script type="text/javascript">
+		MouseInit();
+			(function($) {
+				setInterval(function() {
+					document.getElementById("X0").innerHTML = parseInt(nodes[0].getX());
+					document.getElementById("X1").innerHTML = parseInt(nodes[1].getX());
+					document.getElementById("X2").innerHTML = parseInt(nodes[2].getX());
+					document.getElementById("Y0").innerHTML = parseInt(nodes[0].getY());
+					document.getElementById("Y1").innerHTML = parseInt(nodes[1].getY());
+					document.getElementById("Y2").innerHTML = parseInt(nodes[2].getY());
+					document.getElementById("Y3").innerHTML = move_flag;
+				}, 20);
+		})(jQuery);
+		</script>
+	</table>
+
+</div>
+</div></body></html>

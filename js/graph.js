@@ -1,5 +1,13 @@
-var Canvas, ForceDirectedGraph, Node;
+var Canvas, ForceDirectedGraph, Node, MouseMove, CNode ,clusteringGraph;
 
+//======================================================
+//グローバル変数
+//======================================================
+colorPalette = ['#F39800','#EA5504',"#E6002D","#B70171","#36318F","#009E96","#009944","#801E6C","#F39800","#A40000","#5D310C","#0068B7"];
+
+//======================================================
+//キャンバスクラス
+//======================================================
 Canvas = (function() {
   function Canvas(el) {
     this.ctx = el.getContext('2d');
@@ -27,9 +35,7 @@ Canvas = (function() {
   };
 
   Canvas.prototype.fill = function(bg) {
-    if (bg == null) {
-      bg = '#000';
-    }
+    if (bg == null)bg='#000';
     this.keep((function(_this) {
       return function() {
         _this.ctx.fillStyle = bg;
@@ -40,9 +46,7 @@ Canvas = (function() {
   };
 
   Canvas.prototype.circle = function(x, y, r, bg) {
-    if (bg == null) {
-      bg = '#000';
-    }
+    if (bg == null)bg = '#000';
     return this.keep((function(_this) {
       return function() {
         _this.ctx.fillStyle = bg;
@@ -53,13 +57,9 @@ Canvas = (function() {
   };
 
   Canvas.prototype.line = function(fromX, fromY, toX, toY, color, width) {
-    if (color == null) {
-      color = '#999';
-    }
-    if (width == null) {
-      width = 2;
-    }
-    return this.keep((function(_this) {
+    if (color == null)color='#999';
+    if (width == null)width = 2;
+		return this.keep((function(_this) {
       return function() {
         _this.ctx.strokeStyle = color;
         _this.ctx.strokeWidth = width;
@@ -71,12 +71,9 @@ Canvas = (function() {
   };
 
   Canvas.prototype.text = function(txt, x, y, color, font) {
-    if (color == null) {
-      color = 'white';
-    }
-    if (font == null) {
-      font = '14px bold';
-    }
+    if (color == null)color = 'white';
+    if (font == null)font = '12px bold';
+		
     return this.keep((function(_this) {
       return function() {
         _this.ctx.font = font;
@@ -89,76 +86,98 @@ Canvas = (function() {
   };
 
   Canvas.prototype.draw = function() {
-    var el, k, len, ref, results;
-    ref = this.elements;
-    results = [];
-    for (k = 0, len = ref.length; k < len; k++) {
-      el = ref[k];
-      if (el.constructor === ForceDirectedGraph) {
-        results.push(this._drawGraph(el));
-      } else {
-        results.push(void 0);
-      }
+    var k, len, ref;
+    for (k = 0; k < this.elements.length; k++) {
+      if (this.elements[k].constructor === ForceDirectedGraph)
+				this._drawGraph(this.elements[k]);
+				this.drawpoint(this.elements[k]);
     }
-    return results;
+    return;
+  };
+	
+	//クラスタリング時の出力
+	Canvas.prototype.Cdraw = function() {
+    var k, len, ref;
+    for (k = 0; k < Cnodes.length; k++) {
+			if(!Cnodes[k].init){
+				if(Cnodes[k].num<max_num*1/4)rgb_str='#CCC';
+				else if(Cnodes[k].num<max_num*2/4)rgb_str='#999';
+				else if(Cnodes[k].num<max_num*3/4)rgb_str='#666';
+				else if(Cnodes[k].num<max_num*4/4)rgb_str='#333';
+				else rgb_str = '#000';
+				this.circle(Cnodes[k].x, Cnodes[k].y, Cnodes[k].r,rgb_str);
+				this.text(Cnodes[k].value, Cnodes[k].x, Cnodes[k].y);
+			}
+    }
+    return;
   };
 
   Canvas.prototype._drawGraph = function(graph) {
-    var connected, i, j, k, l, len, len1, len2, m, n, node, o, ref, ref1, ref2, ref3, results;
+    var connected, i, j, node;
     connected = [];
-    for (i = k = 0, ref = graph.nodes.length; 0 <= ref ? k < ref : k > ref; i = 0 <= ref ? ++k : --k) {
-      connected[i] = [];
-    }
-    ref1 = graph.nodes;
-    for (i = l = 0, len = ref1.length; l < len; i = ++l) {
-      node = ref1[i];
-      ref2 = node.connections;
-      for (j = m = 0, len1 = ref2.length; m < len1; j = ++m) {
-        n = ref2[j];
-        if (connected[i][j] || connected[j][i]) {
-          continue;
-        }
+    for ( i=0;i<=graph.nodes.length;i++)connected[i]=[];
+    for ( i=0;i<graph.nodes.length;i++) {
+      node = graph.nodes[i];
+      for ( j=0;j<node.connections.length;j++) {
+        if (connected[i][j] || connected[j][i])continue;
         connected[i][j] = true;
-        connected[j][i] = true;
-        this.line(node.x, node.y, n.x, n.y);
+				connected[j][i] = true;
+        this.line(node.x, node.y, node.connections[j].x, node.connections[j].y);
       }
     }
-    ref3 = graph.nodes;
-    results = [];
-    for (o = 0, len2 = ref3.length; o < len2; o++) {
-      node = ref3[o];
-      if (node.isFocus) {
-        this.circle(node.x, node.y, node.r + 5, '#444');
+		//フォーカスで線に色付け(赤色)
+		for ( i=0;i<graph.nodes.length;i++) {
+      node = graph.nodes[i];
+      for ( j=0;j<node.connections.length;j++) {
+				if((i==move_flag)&&move_flag!=0)
+					this.line(node.x, node.y, node.connections[j].x, node.connections[j].y,'#F00');
       }
-      this.circle(node.x, node.y, node.r, node.background);
-      results.push(this.text(node.value, node.x, node.y));
     }
-    return results;
+    for ( i=0; i<graph.nodes.length; i++) {
+      node = graph.nodes[i];
+      if (node.isFocus)this.circle(node.x, node.y, node.r + 5, '#444');
+      if(node.colorflag)this.circle(node.x, node.y, node.r, node.background);else this.circle(node.x, node.y, node.r, '#CCC');
+      this.text(node.value, node.x, node.y);
+    }
+    return;
   };
-
+	
+	//座標情報の表示
+	Canvas.prototype.drawpoint = function(graph) {
+		var centerX = parseInt(graph.nodes[0].x);
+		var centerY = parseInt(graph.nodes[0].y);
+		for ( i=0;i<graph.nodes.length;i++) {
+      node = graph.nodes[i];
+			point[i].innerHTML = "("+(parseInt(node.x)-centerX)+","+(parseInt(node.y)-centerY)+")";
+		}
+		return;
+  };
+	
   return Canvas;
-
 })();
 
+//======================================================
+//ノードクラス
+//======================================================
 Node = (function() {
-  var colorPalette;
 
   Node._lastID = 0;
 
-  colorPalette = ['#556270', '#4ECDC4', '#C7F464', '#FF6B6B', '#C44D58', '#FE5F55', '#777DA7', '#94C9A9', '#885053', '#DDFC74', '#D3F9B5', '#D9B8C4'];
-
-  function Node(value, x1, y1, background, r1) {
+  function Node(value, x1, y1, package, r1) {
     var idx;
     this.value = value;
     this.x = x1;
     this.y = y1;
-    this.background = background;
-    this.r = r1 != null ? r1 : 20;
+		this.package = package;//パッケージ番号
+    this.background = colorPalette[package % colorPalette.length];
+    this.r = r1 != null ? r1 : 10;
     this.id = Node._lastID++;
-    this.connections = [];
+    this.connections = [];//繋がっているノード
     this.vx = 0;
     this.vy = 0;
-    idx = ~~(Math.random() * colorPalette.length);
+		this.colorflag = true;//色の表示
+		
+    idx = ~~(Math.random() * colorPalette.length);//色の選択
     if (!this.background) {
       this.background = colorPalette[idx];
     }
@@ -175,20 +194,25 @@ Node = (function() {
   Node.prototype.blur = function() {
     return this.isFocus = false;
   };
-
-  return Node;
-
+	
+	Node.prototype.getX = function() { return this.x; };
+	Node.prototype.getY = function() { return this.y; };
+	Node.prototype.setX = function(pointX) { this.x=pointX; };
+	Node.prototype.setY = function(pointY) { this.y=pointY; };
+	
+	return Node;
 })();
 
+//======================================================
+//演算クラス
+//======================================================
 ForceDirectedGraph = (function() {
-  ForceDirectedGraph.BOUNCE = 0.02;//バネ定数(BOUNCE < 0.1[推奨])
-
+  ForceDirectedGraph.BOUNCE = 0.01;//バネ定数(BOUNCE < 0.1[推奨])
   ForceDirectedGraph.ATTENUATION = 0.7;//減衰定数(ATTENUATION < 1[必須])
+  ForceDirectedGraph.COULOMB = 50;//クーロン数
 
-  ForceDirectedGraph.COULOMB = 200;//クーロン数
-
-  function ForceDirectedGraph(nodes1) {
-    this.nodes = nodes1;
+  function ForceDirectedGraph(nodes) {
+    this.nodes = nodes;　
   }
 
   ForceDirectedGraph.prototype.add = function(node) {
@@ -196,55 +220,200 @@ ForceDirectedGraph = (function() {
   };
 
   ForceDirectedGraph.prototype.connect = function(a, b) {
-		this.nodes[a].r--;
-		this.nodes[b].r++;
+		//this.nodes[a].r--;
+		//this.nodes[b].r++;
     this.nodes[a].connect(this.nodes[b]);
     return this.nodes[b].connect(this.nodes[a]);
   };
 
   ForceDirectedGraph.prototype.balance = function(max) {
-    var distX, distY, fx, fy, k, l, len, len1, len2, m, n, number, ref, ref1, ref2, results, rsq, targetNode;
-    ref = this.nodes;
-    results = [];
-    for (number = k = 0, len = ref.length; k < len; number = ++k) {
-      targetNode = ref[number];
-      if (targetNode.isFocus) {
-        continue;
-      }
+    var distX, distY, fx, fy, i, number, targetNode;
+    for (number=0;number<this.nodes.length;number++) {
+      targetNode = this.nodes[number];
+      if (targetNode.isFocus)continue;
       fx = 0;
       fy = 0;
-      ref1 = this.nodes;
-      for (l = 0, len1 = ref1.length; l < len1; l++) {
-        n = ref1[l];
-        if (targetNode === n) {
-          continue;
-        }
-        distX = targetNode.x - n.x;
-        distY = targetNode.y - n.y;
+			/*クーロン力*/
+      for (i=0;i<this.nodes.length;i++) {
+        if (targetNode === this.nodes[i])continue;
+				distX = targetNode.x - this.nodes[i].x;
+        distY = targetNode.y - this.nodes[i].y;
         rsq = distX * distX + distY * distY;
         fx += ForceDirectedGraph.COULOMB * distX / rsq;
         fy += ForceDirectedGraph.COULOMB * distY / rsq;
       }
-      ref2 = targetNode.connections;
-      for (m = 0, len2 = ref2.length; m < len2; m++) {
-        n = ref2[m];
-        distX = n.x - targetNode.x;
-        distY = n.y - targetNode.y;
+			/*バネ*/
+      for (i=0;i<targetNode.connections.length;i++) {
+        distX = targetNode.connections[i].x - targetNode.x;
+        distY = targetNode.connections[i].y - targetNode.y;
         fx += ForceDirectedGraph.BOUNCE * distX;
         fy += ForceDirectedGraph.BOUNCE * distY;
       }
+			/*力(fx,fy)を速度に変換*/
       targetNode.vx = (targetNode.vx + fx) * ForceDirectedGraph.ATTENUATION;
       targetNode.vy = (targetNode.vy + fy) * ForceDirectedGraph.ATTENUATION;
+			/*maxの場合は変化させない*/
       if (number !== max) {
         targetNode.x += targetNode.vx;
-        results.push(targetNode.y += targetNode.vy);
-      } else {
-        results.push(void 0);
+        targetNode.y += targetNode.vy;
       }
     }
-    return results;
+    return;
   };
-
+	
   return ForceDirectedGraph;
-
 })();
+
+//======================================================
+//マウス動作
+//======================================================
+function MouseMoveFunc(e){
+	var rect =  document.getElementById("canvas").getBoundingClientRect();
+	mouseX = parseInt(e.clientX - rect.left);
+	mouseY = parseInt(e.clientY - rect.top);
+	if(document.getElementById("mouseX")!=null)
+		document.getElementById("mouseX").innerHTML = mouseX;
+	if(document.getElementById("mouseY")!=null)
+		document.getElementById("mouseY").innerHTML = mouseY;
+}
+function MouseDownFunc(e){
+	for(i=0;i<nodes.length;i++){
+		var diffX = parseInt(nodes[i].getX())-mouseX;diffX *= diffX;
+		var diffY = parseInt(nodes[i].getY())-mouseY;diffY *= diffY;
+		if(diffX+diffY<20*20)move_flag = i;
+	}
+}
+function MouseUpFunc(e){move_flag = 0;}
+function MouseInit(){
+	move_flag = 0;
+	setInterval(function() {
+		if(move_flag!=0){
+			nodes[move_flag].setX(mouseX);
+			nodes[move_flag].setY(mouseY);
+		}
+	}, 20);
+	if(document.addEventListener){//イベントリスナーに対応している
+		document.addEventListener("mousemove" , MouseMoveFunc);
+		document.getElementById("canvas").addEventListener("mousedown",MouseDownFunc);//押下
+		document.getElementById("canvas").addEventListener("mouseup",MouseUpFunc);//押上
+	}else if(document.attachEvent){
+		document.attachEvent("onmousemove" , MouseMoveFunc);
+	}
+}
+//======================================================
+//その他動作
+//======================================================
+function colordisplay(numbar){
+	if(numbar==null){
+		for(i=0;i<nodes.length;i++)
+			nodes[i].colorflag = true;
+		return 0;
+	}
+	for(i=0;i<nodes.length;i++){
+		if(nodes[i].package == numbar)
+			nodes[i].colorflag = true;
+		else
+			nodes[i].colorflag = false;
+	}
+}
+//======================================================
+//クラスタリング
+//======================================================
+CNode = (function() {
+  CNode._lastID = 0;
+  function CNode(value, x1, y1) {
+    this.value = value;
+    this.x = x1;
+    this.y = y1;
+    this.r = 10;
+    this.id = Node._lastID++;
+		this.num = 1;//クラスタリングした時にまとめたクラスの数
+		this.exist = true;
+		this.init = true;
+		this.min = null;//一番小さいクラス
+  }
+	CNode.prototype.getX = function() { return this.x; };
+	CNode.prototype.getY = function() { return this.y; };
+	CNode.prototype.setX = function(pointX) { this.x=pointX; };
+	CNode.prototype.setY = function(pointY) { this.y=pointY; };
+	return CNode;
+})();
+
+clusteringGraph = (function() {
+	connectA = [];//くっついたノード
+	connectB = [];//くっついたノード
+	
+  function clusteringGraph(nodes) {
+		this.nodes = nodes;
+		max_num = this.nodes.length;
+		for(i=0;i<this.nodes.length;i++)
+			this.nodes[i].min = i;
+	}
+	
+  clusteringGraph.prototype.calc = function() {
+		connectA.length=0;
+		connectB.length=0;
+		while(this.exist_count()>1){
+			min_length = null;
+			for(i=0;i<this.nodes.length;i++){
+				if(!this.nodes[i].exist)continue;
+				for(j=i+1;j<this.nodes.length;j++){
+					if(!this.nodes[j].exist)continue;
+					dist = calcDistance(this.nodes[i].x,this.nodes[i].y,this.nodes[j].x,this.nodes[j].y);
+					if(min_length==null || min_length > dist ){
+						min_length = dist;
+						min_nodeA = i;
+						min_nodeB = j;
+					}
+				}
+			}
+			connectA.push(this.nodes[min_nodeA].min);connectB.push(this.nodes[min_nodeB].min);
+			this.nodes.push(new CNode(
+				this.nodes[min_nodeA].value+","+this.nodes[min_nodeB].value,
+				(this.nodes[min_nodeA].x+this.nodes[min_nodeB].x)/2,
+				(this.nodes[min_nodeA].y+this.nodes[min_nodeB].y)/2
+			));
+			this.nodes[this.nodes.length-1].num = this.nodes[min_nodeA].num+this.nodes[min_nodeB].num;
+			this.nodes[this.nodes.length-1].r = 5+this.nodes[this.nodes.length-1].num*5;
+			this.nodes[this.nodes.length-1].init = false;
+			if(this.nodes[min_nodeA].min<this.nodes[min_nodeB].min)
+				this.nodes[this.nodes.length-1].min = this.nodes[min_nodeA].min;
+			else
+				this.nodes[this.nodes.length-1].min = this.nodes[min_nodeB].min;
+			this.nodes[min_nodeA].exist = false;
+			this.nodes[min_nodeB].exist = false;
+		}
+		clustering_str.innerHTML = "";
+		for(i=0;i<connectA.length;i++)
+			clustering_str.innerHTML += "["+connectA[i]+"---"+connectB[i]+"]";
+  };
+	
+	clusteringGraph.prototype.exist_count = function() {
+		exist_count = 0;
+		for(i=0;i<this.nodes.length;i++)
+			if(this.nodes[i].exist)exist_count++;
+		return exist_count;
+  };
+  return clusteringGraph;
+})();
+
+//実行用関数
+function ClusteringInit(){
+	Cnodes.length = 0;
+	for(i=0;i<nodes.length;i++)
+		Cnodes.push(new CNode(nodes[i].value,nodes[i].x,nodes[i].y));
+	clustering = new clusteringGraph(Cnodes);
+	clustering.calc();
+}
+
+//======================================================
+//関数
+//======================================================
+//2点間の距離
+function calcDistance(x1,y1,x2,y2) {
+　　var a, b, d;
+　　a = x1 - x2;
+　　b = y1 - y2;
+　　d = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+　　return d;
+};

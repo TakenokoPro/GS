@@ -32,17 +32,17 @@ $(function(){
 	// -----------------------------------------------------
 
 	// Classycleファイルの設定
-	$file_class = "xml/jmp.xml";
+//	$file_class = "xml/jmp.xml";
 //	$file_class = "xml/junit.xml";
-//	$file_class = "xml/classycle.xml";
+	$file_class = "xml/classycle.xml";
 //	$file_class = "xml/jgraphx.xml";
 //	$file_class = "xml/rabbit.xml";
 //	$file_class = "xml/mantissa.xml";
 
 	// CCFinderファイルの設定
-	$file_clone = "clone/jmp.txt";
+//	$file_clone = "clone/jmp.txt";
 //	$file_clone = "clone/junit.txt";
-//	$file_clone = "clone/classycle.txt";
+	$file_clone = "clone/classycle.txt";
 //	$file_clone = "clone/jgraphx.txt";
 //	$file_clone = "clone/rabbit.txt";
 //	$file_clone = "clone/mantissa.txt";
@@ -470,9 +470,49 @@ $(function(){
 	echo("<table summary=\"解析結果\" id=\"result\">\n");
 	echo("<thead>\n");
 	//echo("<th>Class Name</th><th>usedBy</th><th>usesIn</th><th>usesEx</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th>\n");
-	echo("<th>Class Name</th><th>usesIn_before</th><th>usesIn_after</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th>\n");
+	echo("<th>Class Name</th><th>usesIn_before</th><th>usesIn_after</th><th>Before</th><th>After</th><th>Up/Down</th><th>Rank</th><th>Group</th>\n");
 	echo("</thead>\n");
 	echo("<tbody>\n");
+
+	/*(6/12)********************************************************************/
+	//Groupを入れる(6/12)
+	$result_Group1 = array();//Group1を入れる
+	$result_Group2 = array();//Group2を入れる
+	/*先に最終的なグループを計算*/
+	for($i = 0;$i < (count($xml->classes->class));$i++){
+		if(strpos($xml->classes->class[$i]->attributes()->name, "+") == true){
+			$combine_before = explode(" + ", $xml->classes->class[$i]->attributes()->name);
+			for($j = 0;$j < count($combine_before);$j++){
+				$key_before = array_search($combine_before[$j], $list_xml_before);
+				for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
+					if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal"){
+						$temp_string = (string)$xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name;
+						if(!in_array($temp_string,$result_Group1)){ //result_Groop1に属さない
+							if(in_array($temp_string,$result_Group2)){
+								$index = array_search($temp_string,$result_Group2);
+								$Group2 = array_merge(array_slice($result_Group2, 0, $index),array_slice($result_Group2, $index + 1));
+								array_push($result_Group1,$temp_string);
+							}else array_push($result_Group2,$temp_string);
+						}
+					}
+				}
+			}
+		}
+	}
+	/***************************************************************************/
+	/***********************************************************************/
+	/**add(5/27)
+	/***********************************************************************/
+	$str1_st = "<tr><td align=\"left\">";
+	$str1_ed = "</td></tr>";
+	$str2_st = "<tr><td class=\"comb\"　align=\"left\"><font color=\"#FF0000\">";
+	$str2_ed = "</font></td></tr>";
+	$group1_st = "<tr><td class=\"g1\" align=\"left\">";
+	$group1_ed = "</td></tr>";
+	$group2_st = "<tr><td class=\"g2\" align=\"left\">";
+	$group2_ed = "</td></tr>";
+	/***********************************************************************/
+
 	for($i = 0;$i < (count($xml->classes->class));$i++){
 		// 統合されたクラスかどうかで異なる表示
 		if(strpos($xml->classes->class[$i]->attributes()->name, "+") == true){
@@ -494,25 +534,12 @@ $(function(){
 			}
 			//echo("<td>".implode("<br />", $combine_used_by_before)."</td>");
 			//echo("<td>".implode("<br />", $combine_uses_in_before)."</td>");
-			
-			/***********************************************************************/
-			/**add(5/27)
-			/***********************************************************************/
-			$str1_st = "<tr><td align=\"left\">";
-			$str1_ed = "</td></tr>";
-			$str2_st = "<tr><td class=\"comb\"　align=\"left\"><font color=\"#FF0000\">";
-			$str2_ed = "</font></td></tr>";
-			$group1_st = "<tr><td class=\"g1\" align=\"left\">";
-			$group1_ed = "</td></tr>";
-			$group2_st = "<tr><td class=\"g2\" align=\"left\">";
-			$group2_ed = "</td></tr>";
-			$Group1 = array();//Group1を入れる
-			$Group2 = array();//Group2を入れる
-			/***********************************************************************/
 			echo("<td>");
 			
 			/***********************************************/
 			/*グループ分け*/
+			$Group1 = array();//Group1を入れる
+			$Group2 = array();//Group2を入れる
 			for($j = 0;$j < count($combine_before);$j++){
 				$key_before = array_search($combine_before[$j], $list_xml_before);
 				for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
@@ -543,7 +570,7 @@ $(function(){
 				echo (" 【key=".$key_before."】");
 				/**********************/
 				for($k = 0;$k < (count($xml_before->classes->class[$key_before]->classRef));$k++){
-					if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal")
+					if($xml_before->classes->class[$key_before]->classRef[$k]->attributes()->type == "usesInternal"){
 						$temp_string = $xml_before->classes->class[$key_before]->classRef[$k]->attributes()->name;
 						if(in_array($temp_string,$Group1)){//group1に属する
 							echo($group1_st.$temp_string.$group1_ed);
@@ -552,6 +579,7 @@ $(function(){
 						}else{
 							echo($str1_st.$temp_string.$str1_ed);
 						}
+					}
 				}
 				echo("</table>");
 			}
@@ -628,7 +656,13 @@ $(function(){
 				}
 			}
 			echo("</td>");
-
+			
+			/**********************************************/
+			/*グループの表示(6/12)*/
+			echo("<td>-</td>");
+			/**********************************************/
+			
+			
 			// この統合されたクラスの情報を破棄
 			unset($combine_before, $combine_used_by_before, $combine_uses_in_before, $combine_uses_ex_before, $combine_rank_before);
 
@@ -712,11 +746,35 @@ $(function(){
 			}else{
 				echo("<td class=\"rank_down\">".$grade_before."→".$grade." ↓</td>");
 			}
+			
+			/**********************************************/
+			/*グループの表示(6/12)*/
+			$temp_string = $xml->classes->class[$i]->attributes()->name;
+			if(in_array($temp_string,$result_Group1)){//group1に属する
+				echo("<td class=\"g1\">1</td>");
+			}else if(in_array($temp_string,$result_Group2)){//group2に属する
+				echo("<td class=\"g2\">2</td>");
+			}else{
+				echo("<td class=\"g3\">3</td>");
+			}
+			/**********************************************/
 		}
 		echo("</tr>\n");
 	}
 	echo("</tbody>\n");
 	echo("</table>\n");
+
+	/***********************************************************************/
+	/*add(6/12)*
+	echo("<table class=\"usesIn\">");
+	for($g1=0;$g1<count($result_Group1);$g1++){
+		echo($group1_st.$result_Group1[$g1].$group1_ed);
+	}
+	for($g2=0;$g2<count($result_Group2);$g2++)
+		echo($group2_st.$result_Group2[$g2].$group2_ed);
+	echo("</table>");
+	/*add(6/12)*/
+	/***********************************************************************/
 ?>
 </div>
 <div id="footer">
