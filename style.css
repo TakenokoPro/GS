@@ -73,14 +73,39 @@ div#main td.g2{
 div#main td.g3{
 	background-color: #ffffff;
 }
+/*************************************************************/
+/*ボタン関係*/
 input.clustering{
 	font-size:1.4em;
 	font-weight: bold;
 	padding: 10px 30px;
+	margin-bottom: 10px;
 	background-color: brown;
 	color: white;
 	border-style: none;
 }
 input.clustering:hover{
 	background-color:darksalmon;
+}
+div#main table.option td{
+	font-size:1.4em;
+	font-weight: bold;
+	background-color:#0073a8;
+	color: white;
+}
+div#main table.option input{
+	font-size:1.4em;
+	font-weight: bold;
+	padding: 2px 50px;
+	margin: 1px;
+	background-color:#0073a8;
+	color: white;
+	border-style: none;
+}
+div#main table.option input:hover{
+	background-color:dodgerblue;
+}
+div#main div#clustering{
+	word-wrap:break-word;
+	white-space: normal;
 }

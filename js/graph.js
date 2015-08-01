@@ -91,6 +91,7 @@ Canvas = (function() {
       if (this.elements[k].constructor === ForceDirectedGraph)
 				this._drawGraph(this.elements[k]);
 				this.drawpoint(this.elements[k]);
+				this.drawaxis();
     }
     return;
   };
@@ -104,7 +105,7 @@ Canvas = (function() {
 				else if(Cnodes[k].num<max_num*2/4)rgb_str='#999';
 				else if(Cnodes[k].num<max_num*3/4)rgb_str='#666';
 				else if(Cnodes[k].num<max_num*4/4)rgb_str='#333';
-				else rgb_str = '#000';
+				else rgb_str = '#F66';
 				this.circle(Cnodes[k].x, Cnodes[k].y, Cnodes[k].r,rgb_str);
 				this.text(Cnodes[k].value, Cnodes[k].x, Cnodes[k].y);
 			}
@@ -148,8 +149,33 @@ Canvas = (function() {
 		var centerY = parseInt(graph.nodes[0].y);
 		for ( i=0;i<graph.nodes.length;i++) {
       node = graph.nodes[i];
-			point[i].innerHTML = "("+(parseInt(node.x)-centerX)+","+(parseInt(node.y)-centerY)+")";
+			//point[i].innerHTML = "("+(parseInt(node.x)-centerX)+","+(parseInt(node.y)-centerY)+")";
+			point[i].innerHTML = "("+parseInt(node.x)+","+parseInt(node.y)+")";
+			//端っこは背景色を赤
+			if(node.edge())
+				point[i].style.backgroundColor ='#faa';
+			else
+				point[i].style.backgroundColor ='#eee';
 		}
+		return;
+  };
+	
+	//軸の表示
+	Canvas.prototype.drawaxis = function() {
+		var wid = this.width;
+    var hei = this.height;
+		for(i=1;i<(wid/100);i++){
+			this.line( 100*i, 0, 100*i, 20, '#CCC');
+			this.text(100*i, 100*i, 20, '#999');
+		}
+		for(i=1;i<(hei/100);i++){
+			this.line( 0, 100*i, 20, 100*i, '#CCC');
+			this.text(100*i, 20, 100*i, '#999');
+		}
+		this.line( 0, 0, 0, hei, '#CCC');
+		this.line( 0, hei, wid, hei, '#CCC');
+		this.line( wid, 0, wid, hei, '#CCC');
+		this.line( 0, 0, wid, 0, '#CCC');
 		return;
   };
 	
@@ -186,6 +212,10 @@ Node = (function() {
   Node.prototype.connect = function(node) {
     return this.connections.push(node);
   };
+    
+  Node.prototype.connect_count = function() {
+    return this.connections.length;
+  };
 
   Node.prototype.focus = function() {
     return this.isFocus = true;
@@ -194,6 +224,14 @@ Node = (function() {
   Node.prototype.blur = function() {
     return this.isFocus = false;
   };
+	
+	//端っこにあるかを判定
+	Node.prototype.edge = function() {
+		if(this.x-this.r<=0||this.y-this.r<=0||WIN_W<=this.x+this.r||WIN_H<=this.y+this.r)
+			 return true;
+		else return false;
+  };
+	
 	
 	Node.prototype.getX = function() { return this.x; };
 	Node.prototype.getY = function() { return this.y; };
@@ -207,9 +245,9 @@ Node = (function() {
 //演算クラス
 //======================================================
 ForceDirectedGraph = (function() {
-  ForceDirectedGraph.BOUNCE = 0.01;//バネ定数(BOUNCE < 0.1[推奨])
+  ForceDirectedGraph.BOUNCE = 0.03;//バネ定数(BOUNCE < 0.1[推奨])
   ForceDirectedGraph.ATTENUATION = 0.7;//減衰定数(ATTENUATION < 1[必須])
-  ForceDirectedGraph.COULOMB = 50;//クーロン数
+  ForceDirectedGraph.COULOMB = 20;//クーロン数
 
   function ForceDirectedGraph(nodes) {
     this.nodes = nodes;　
@@ -256,10 +294,38 @@ ForceDirectedGraph = (function() {
       if (number !== max) {
         targetNode.x += targetNode.vx;
         targetNode.y += targetNode.vy;
+				//後で端っこのは動かない処理
+				if(targetNode.x-targetNode.r<=0)targetNode.x = targetNode.r;
+				if(targetNode.y-targetNode.r<=0)targetNode.y = targetNode.r;
+				if(WIN_W<=targetNode.x+targetNode.r)targetNode.x = WIN_W-targetNode.r;
+				if(WIN_H<=targetNode.y+targetNode.r)targetNode.y = WIN_H-targetNode.r;
       }
+			/*クーロン力の出力*/
+			coulomb_str.innerHTML = ForceDirectedGraph.COULOMB;
+			bounce_str.innerHTML = ForceDirectedGraph.BOUNCE;
     }
     return;
   };
+	
+	//クーロン力の変化
+	ForceDirectedGraph.prototype.coulomb_add = function(bool) {
+		if(bool)
+    	return ForceDirectedGraph.COULOMB += 1;
+		else if(ForceDirectedGraph.COULOMB>1)
+    	return ForceDirectedGraph.COULOMB -= 1;
+		
+  };
+	
+	//バネ力の変化
+	ForceDirectedGraph.prototype.bounce_add = function(bool) {
+		ForceDirectedGraph.BOUNCE *= 100;
+		if(bool)
+    	ForceDirectedGraph.BOUNCE += 1;
+		else if(ForceDirectedGraph.BOUNCE>1)
+    	ForceDirectedGraph.BOUNCE -= 1;
+			return ForceDirectedGraph.BOUNCE = Math.round(ForceDirectedGraph.BOUNCE)/ 100;
+  };
+	
 	
   return ForceDirectedGraph;
 })();
@@ -331,17 +397,22 @@ CNode = (function() {
 		this.exist = true;
 		this.init = true;
 		this.min = null;//一番小さいクラス
+		
+		if(this.x-this.r<=0||this.y-this.r<=0||WIN_W<=this.x+this.r||WIN_H<=this.y+this.r)
+			this.exist = false;
   }
 	CNode.prototype.getX = function() { return this.x; };
 	CNode.prototype.getY = function() { return this.y; };
 	CNode.prototype.setX = function(pointX) { this.x=pointX; };
 	CNode.prototype.setY = function(pointY) { this.y=pointY; };
+	
 	return CNode;
 })();
 
 clusteringGraph = (function() {
 	connectA = [];//くっついたノード
 	connectB = [];//くっついたノード
+	connect_len = [];//くっついたノードの距離
 	
   function clusteringGraph(nodes) {
 		this.nodes = nodes;
@@ -353,6 +424,8 @@ clusteringGraph = (function() {
   clusteringGraph.prototype.calc = function() {
 		connectA.length=0;
 		connectB.length=0;
+		connect_len.length=0;
+		
 		while(this.exist_count()>1){
 			min_length = null;
 			for(i=0;i<this.nodes.length;i++){
@@ -367,14 +440,16 @@ clusteringGraph = (function() {
 					}
 				}
 			}
-			connectA.push(this.nodes[min_nodeA].min);connectB.push(this.nodes[min_nodeB].min);
+			connectA.push(this.nodes[min_nodeA].min);
+			connectB.push(this.nodes[min_nodeB].min);
+			connect_len.push(min_length);
 			this.nodes.push(new CNode(
 				this.nodes[min_nodeA].value+","+this.nodes[min_nodeB].value,
 				(this.nodes[min_nodeA].x+this.nodes[min_nodeB].x)/2,
 				(this.nodes[min_nodeA].y+this.nodes[min_nodeB].y)/2
 			));
 			this.nodes[this.nodes.length-1].num = this.nodes[min_nodeA].num+this.nodes[min_nodeB].num;
-			this.nodes[this.nodes.length-1].r = 5+this.nodes[this.nodes.length-1].num*5;
+			this.nodes[this.nodes.length-1].r = 10+this.nodes[this.nodes.length-1].num*1;
 			this.nodes[this.nodes.length-1].init = false;
 			if(this.nodes[min_nodeA].min<this.nodes[min_nodeB].min)
 				this.nodes[this.nodes.length-1].min = this.nodes[min_nodeA].min;
@@ -385,7 +460,24 @@ clusteringGraph = (function() {
 		}
 		clustering_str.innerHTML = "";
 		for(i=0;i<connectA.length;i++)
-			clustering_str.innerHTML += "["+connectA[i]+"---"+connectB[i]+"]";
+			clustering_str.innerHTML += "["+connectA[i]+"-"+connectB[i]+"="+connect_len[i]+"] ";
+  };
+	
+	//クラスタリングして得た結果をXMLに変換
+	clusteringGraph.prototype.ConvertXML = function() {
+		//XML用のActiveXObjectの生成
+		var doc =　new ActiveXObject("Msxml2.DOMDocument.3.0");
+		var node =　doc.createProcessingInstruction("xml", "version=\"1.0\" encoding=\"UTF-8\" ");
+		doc.appendChild(node);
+		var rootNode =　doc.createElement("ClusteringNode");
+		doc.appendChild(rootNode);
+		for(i=0;i<connectA.length;i++){
+			var elt = doc.createElement("row");
+			var att1 = doc.createAttribute("A");att1.text = connectA[i];elt.attributes.setNamedItem(att1);
+			var att2 = doc.createAttribute("B");att2.text = connectB[i];elt.attributes.setNamedItem(att2);
+			var att3 = doc.createAttribute("len");att3.text = connect_len[i];elt.attributes.setNamedItem(att3);
+			rootNode.appendChild(elt);
+		}
   };
 	
 	clusteringGraph.prototype.exist_count = function() {
@@ -417,3 +509,4 @@ function calcDistance(x1,y1,x2,y2) {
 　　d = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
 　　return d;
 };
+

@@ -481,7 +481,7 @@ $(function(){
 <script type=\"text/javascript\" src=\"js/graph.js\"></script>
 <script type=\"text/javascript\">
 (function($) {
-	var \$canvas, WIN_H, WIN_W, canvas, center, graph, nodes, random;
+	var \$canvas, canvas, center, nodes, random;
 	random = function(max) {
 		return ~~(Math.random() * max);
 	};
@@ -497,6 +497,7 @@ $(function(){
 		x: canvas.width / 2,
 		y: canvas.height / 2
 };
+	MouseInit();
 			");
 
 		//一番internalの多いものを探す
@@ -537,7 +538,7 @@ $(function(){
 				return setInterval(function() {
 					graph.balance($max_class);
 					canvas.clear().fill('white');
-					return canvas.draw();
+					canvas.draw();
 				}, 50);
 			})(jQuery);
 			</script>
@@ -553,6 +554,27 @@ $(function(){
 	}
 	echo("</table>");
 ?>
+<form>
+	<table class="option">
+		<tr>
+			<td>クーロン力(こちらで調整)</td><td><span id="coulomb"></span></td>
+			<td><input type="button" value="＋" onClick="graph.coulomb_add(true)"></td>
+			<td><input type="button" value="－" onClick="graph.coulomb_add(false)"></td>
+		</tr>
+		<tr>
+			<td>バネ定数</td><td><span id="bounce"></span></td>
+			<td><input type="button" value="＋" onClick="graph.bounce_add(true)"></td>
+			<td><input type="button" value="－" onClick="graph.bounce_add(false)"></td>
+		</tr>
+	</table>
+</form><br>
+<div id="clustering"></div>
+<script language="JavaScript">
+	clustering_str = document.getElementById("coulomb");
+	coulomb_str = document.getElementById("coulomb");
+	bounce_str = document.getElementById("bounce");
+</script>
+
 </div>
 <div id="footer">
 <p id="copyright">Yokomori Lab.</p>
